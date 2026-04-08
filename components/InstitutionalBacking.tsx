@@ -47,7 +47,7 @@ export function InstitutionalBacking() {
         </motion.h2>
       </div>
 
-      <div className="flex flex-col lg:flex-row h-[700px] w-full gap-2 px-2">
+      <div className="flex flex-col lg:flex-row h-[315px] lg:h-[700px] w-full gap-2 px-2">
         {backingItems.map((item, idx) => (
           <motion.div
             key={idx}
@@ -89,19 +89,19 @@ export function InstitutionalBacking() {
             />
 
             {/* Content Container */}
-            <div className={`absolute inset-0 flex flex-col items-center justify-end pb-16 px-8 text-center text-white transition-all duration-700 ${hoveredIndex === idx ? 'opacity-100' : 'opacity-80'}`}>
+            <div className={`absolute inset-0 flex flex-col items-center justify-end pb-8 lg:pb-16 px-6 lg:px-8 text-center text-white transition-all duration-700 ${hoveredIndex === idx ? 'opacity-100' : 'opacity-80'}`}>
               <div className="max-w-md w-full">
                 <motion.h3 
                   animate={{
                     y: hoveredIndex === idx ? 0 : 40,
                   }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tracking-tight"
+                  className={`font-bold tracking-tight transition-all duration-500 ${hoveredIndex === idx ? 'text-lg md:text-xl lg:text-4xl mb-4' : 'text-sm md:text-base lg:text-4xl mb-4'}`}
                 >
                   {item.title}
                 </motion.h3>
                 
                 <div className={`overflow-hidden transition-all duration-700 ${hoveredIndex === idx ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-lg md:text-xl font-light text-white/90 leading-relaxed border-t border-white/20 pt-4 mt-2">
+                  <p className="text-xs lg:text-xl font-light text-white/90 leading-relaxed border-t border-white/20 pt-2 lg:pt-4 mt-2">
                     {item.description}
                   </p>
                 </div>
