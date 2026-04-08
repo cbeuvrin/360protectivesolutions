@@ -103,12 +103,12 @@ export default function ExecutiveProtectionPage() {
                whileInView={{ opacity: 1, scale: 1 }}
                transition={{ duration: 0.8 }}
                viewport={{ once: true }}
-               className="lg:w-1/2"
+               className="relative rounded-[2rem] overflow-hidden shadow-2xl h-[500px]"
             >
               <img 
                 src="/images/services/driver-2.png" 
                 alt="WSO Professional Security Driver" 
-                className="rounded-2xl shadow-2xl w-full h-[450px] object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </motion.div>
           </div>
