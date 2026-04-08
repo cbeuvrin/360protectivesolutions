@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useModal } from "@/context/ModalContext";
 
 export function Hero() {
+    const { openModal } = useModal();
     return (
         <section className="relative h-screen min-h-[600px] w-full flex items-center overflow-hidden">
             {/* Background Video */}
@@ -92,12 +94,12 @@ export function Hero() {
                         }}
                         className="flex flex-wrap gap-4"
                     >
-                        <Link
-                            href="#contact"
-                            className="inline-block px-8 py-3.5 bg-primary text-white text-base md:text-lg font-bold uppercase tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm"
+                        <button
+                            onClick={openModal}
+                            className="inline-block px-8 py-3.5 bg-primary text-white text-base md:text-lg font-bold uppercase tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm cursor-pointer"
                         >
                             Get Started
-                        </Link>
+                        </button>
                     </motion.div>
                 </motion.div>
             </div>

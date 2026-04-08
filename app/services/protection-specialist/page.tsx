@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import { useModal } from "@/context/ModalContext";
 import { 
   Shield, 
   Target, 
@@ -63,6 +64,8 @@ const techTactical = [
 ];
 
 export default function ProtectionSpecialistPage() {
+  const { openModal } = useModal();
+  
   const fadeIn: any = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
@@ -121,12 +124,12 @@ export default function ProtectionSpecialistPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link 
-              href="/#contact"
-              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105"
+            <button 
+              onClick={openModal}
+              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
             >
-              CONTACT A PROTECTION SPECIALIST
-            </Link>
+              Request Assessment
+            </button>
           </motion.div>
         </div>
       </section>

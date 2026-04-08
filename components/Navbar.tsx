@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Plus, Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import { useModal } from "@/context/ModalContext";
 
 const services = [
     { name: "Anti-Piracy Film Surveillance", href: "/services/anti-piracy" },
@@ -61,6 +62,7 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [hidden, setHidden] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+    const { openModal } = useModal();
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -138,12 +140,12 @@ export function Navbar() {
 
                     <div className="h-6 w-[1px] bg-black/10 mx-6 hidden xl:block" />
 
-                    <Link 
-                        href="#contact"
-                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-black uppercase tracking-widest text-[13px] whitespace-nowrap"
+                    <button 
+                        onClick={openModal}
+                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-black uppercase tracking-widest text-[13px] whitespace-nowrap cursor-pointer"
                     >
                         Get Started
-                    </Link>
+                    </button>
 
                     {/* Mobile Menu Icon */}
                     <button
@@ -194,13 +196,15 @@ export function Navbar() {
                             ))}
                         </div>
                         <div className="mt-8 pt-6 border-t border-black/5 flex justify-center">
-                            <Link 
-                                href="#contact"
-                                className="w-full md:hidden py-4 bg-primary text-white text-center rounded-xl font-bold uppercase tracking-widest hover:bg-red-700 transition-colors"
-                                onClick={() => setIsOpen(false)}
+                            <button 
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    openModal();
+                                }}
+                                className="w-full md:hidden py-4 bg-primary text-white text-center rounded-xl font-bold uppercase tracking-widest hover:bg-red-700 transition-colors cursor-pointer"
                             >
                                 Get Started
-                            </Link>
+                            </button>
                         </div>
                     </motion.div>
                 )}

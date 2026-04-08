@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, MapPin, Phone } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 
 export function ContactSection() {
     return (
@@ -48,24 +49,8 @@ export function ContactSection() {
                     </div>
 
                     <div className="bg-white/5 p-8 md:p-12 border border-white/10 rounded-sm">
-                        <h3 className="text-2xl font-bold mb-6">Request a Consultation</h3>
-                        <form className="space-y-6">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-400 mb-2">Name</label>
-                                <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white focus:border-primary focus:outline-none transition-colors" />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                                <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white focus:border-primary focus:outline-none transition-colors" />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
-                                <textarea rows={4} className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white focus:border-primary focus:outline-none transition-colors"></textarea>
-                            </div>
-                            <button className="w-full py-4 bg-white text-dark-blue font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">
-                                Send Message
-                            </button>
-                        </form>
+                        <h3 className="text-2xl font-bold mb-8">Request a Confidential Consultation</h3>
+                        <ContactForm dark />
                     </div>
                 </div>
             </div>

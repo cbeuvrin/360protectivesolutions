@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, ArrowRight } from "lucide-react";
+import { useModal } from "@/context/ModalContext";
 
 const serviceList = [
     { 
@@ -33,6 +34,7 @@ const serviceList = [
 
 export function ServicesGrid() {
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+    const { openModal } = useModal();
 
     return (
         <section id="services" className="py-32 bg-gray-50/50 w-full">
@@ -102,12 +104,12 @@ export function ServicesGrid() {
                                                     <p className="text-gray-500 text-lg leading-relaxed mb-8">
                                                         {service.desc}
                                                     </p>
-                                                    <Link 
-                                                        href="#contact"
-                                                        className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[13px] hover:gap-4 transition-all"
+                                                    <button 
+                                                        onClick={openModal}
+                                                        className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[13px] hover:gap-4 transition-all cursor-pointer"
                                                     >
-                                                        Learn more <ArrowRight size={16} />
-                                                    </Link>
+                                                        Consult with an expert <ArrowRight size={16} />
+                                                    </button>
                                                 </div>
                                             </motion.div>
                                         )}

@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import { useModal } from "@/context/ModalContext";
 import { Shield, Target, Users, BookOpen, Warehouse, Activity, Calendar, Award, Star, History, Briefcase, FileText } from "lucide-react";
 
 const competencies = [
@@ -55,6 +56,7 @@ const differentiators = [
 ];
 
 export default function FederalContractingPage() {
+  const { openModal } = useModal();
   return (
     <main className="min-h-screen bg-white font-sans text-gray-900 overflow-x-hidden">
       <Navbar />
@@ -106,12 +108,12 @@ export default function FederalContractingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <a 
-              href="#contact"
-              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105"
+            <button 
+              onClick={openModal}
+              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
             >
               Contact our federal liaison
-            </a>
+            </button>
           </motion.div>
         </div>
       </section>

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "Tailored Solutions for Elite Security",
 };
 
+import { ModalProvider } from "@/context/ModalContext";
+import { ContactModal } from "@/components/ContactModal";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +25,10 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} antialiased`}
       >
-        {children}
+        <ModalProvider>
+          {children}
+          <ContactModal />
+        </ModalProvider>
       </body>
     </html>
   );
