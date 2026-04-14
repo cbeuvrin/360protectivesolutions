@@ -82,7 +82,7 @@ export default function FederalContractingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block"
+            className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block"
           >
             Government Divisions
           </motion.span>
@@ -90,7 +90,7 @@ export default function FederalContractingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6"
           >
             Federal Contracting & <br className="hidden md:block" /> Government Services
           </motion.h1>
@@ -110,7 +110,7 @@ export default function FederalContractingPage() {
           >
             <button 
               onClick={openModal}
-              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
+              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold  tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
             >
               Contact our federal liaison
             </button>
@@ -128,7 +128,7 @@ export default function FederalContractingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
-                className="text-xl md:text-3xl lg:text-4xl font-bold tracking-tight text-dark uppercase"
+                className="text-xl md:text-3xl lg:text-4xl font-bold tracking-tight text-dark "
               >
                 Corporate Overview
               </motion.h2>
@@ -164,7 +164,7 @@ export default function FederalContractingPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">SDVOSB</h4>
-                    <p className="text-sm text-gray-500 uppercase tracking-widest">Service-Disabled Veteran-Owned</p>
+                    <p className="text-sm text-gray-500  tracking-widest">Service-Disabled Veteran-Owned</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -173,7 +173,7 @@ export default function FederalContractingPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Minority-Owned</h4>
-                    <p className="text-sm text-gray-500 uppercase tracking-widest">Business Enterprise (MBE)</p>
+                    <p className="text-sm text-gray-500  tracking-widest">Business Enterprise (MBE)</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -182,7 +182,7 @@ export default function FederalContractingPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Capability Statement</h4>
-                    <p className="text-sm text-gray-500 uppercase tracking-widest text-[#CB9332]">Request Documentation</p>
+                    <p className="text-sm text-gray-500  tracking-widest text-[#CB9332]">Request Documentation</p>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default function FederalContractingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
-              className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block"
+              className="text-primary font-black  tracking-[0.3em] text-[10px] mb-4 block"
             >
               Our Capabilities
             </motion.span>
@@ -245,7 +245,7 @@ export default function FederalContractingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
-                className="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block"
+                className="text-primary font-black  tracking-[0.4em] text-[10px] mb-4 block"
               >
                 The WSO Advantage
               </motion.span>
@@ -308,18 +308,18 @@ export default function FederalContractingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
               <div className="space-y-8">
                 <div>
-                  <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 block mb-2 font-black">Business Type</label>
+                  <label className="text-[10px]  tracking-[0.3em] text-gray-400 block mb-2 font-black">Business Type</label>
                   <p className="text-xl font-bold">SDVOSB</p>
                   <p className="text-gray-500 text-sm italic">Service-Disabled Veteran-Owned Small Business</p>
                 </div>
                 <div>
-                  <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 block mb-2 font-black">Status</label>
+                  <label className="text-[10px]  tracking-[0.3em] text-gray-400 block mb-2 font-black">Status</label>
                   <p className="text-xl font-bold">Minority-Owned Business</p>
                 </div>
               </div>
               <div className="space-y-8 md:border-l md:border-gray-200 md:pl-12">
                 <div>
-                  <label className="text-[10px] uppercase tracking-[0.3em] text-gray-400 block mb-2 font-black">Certifications</label>
+                  <label className="text-[10px]  tracking-[0.3em] text-gray-400 block mb-2 font-black">Certifications</label>
                   <ul className="space-y-3 font-bold text-lg">
                     <li>NYPD Dignitary Protection</li>
                     <li>IAPPA Member</li>
@@ -355,10 +355,10 @@ export default function FederalContractingPage() {
             attention to detail, and professional time management.
           </motion.p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <button className="bg-white text-black px-12 py-6 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all duration-300 shadow-black/20 shadow-2xl">
+            <button className="bg-white text-black px-12 py-6 rounded-full font-bold  tracking-widest text-sm hover:scale-105 transition-all duration-300 shadow-black/20 shadow-2xl">
               Contact our federal liaison
             </button>
-            <p className="text-sm font-bold uppercase tracking-widest text-white/70">
+            <p className="text-sm font-bold  tracking-widest text-white/70">
               Response within 24 hours
             </p>
           </div>

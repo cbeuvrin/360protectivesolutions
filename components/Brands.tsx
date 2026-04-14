@@ -16,7 +16,7 @@ export function Brands() {
     return (
         <section className="py-12 bg-gray-50 border-b border-gray-100">
             <div className="container mx-auto px-6 md:px-12 lg:px-20">
-                <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">
+                <p className="text-center text-sm font-semibold text-gray-500  tracking-widest mb-8">
                     Trusted by world-class brands & organizations
                 </p>
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">

@@ -45,7 +45,7 @@ export function Preloader() {
                                 alt="Worldwide Security Options" 
                                 className="h-20 w-auto object-contain mb-6"
                             />
-                            <p className="text-gray-500 text-xs md:text-sm uppercase tracking-[0.3em] font-medium whitespace-nowrap">
+                            <p className="text-gray-500 text-xs md:text-sm  tracking-[0.3em] font-medium whitespace-nowrap">
                                 powered by <span className="text-primary italic font-black">360 protective solutions</span>
                             </p>
                         </motion.div>
@@ -61,7 +61,7 @@ export function Preloader() {
                         </div>
 
                         {/* Percentage */}
-                        <div className="flex justify-between items-center text-[10px] uppercase tracking-widest font-bold">
+                        <div className="flex justify-between items-center text-[10px]  tracking-widest font-bold">
                             <span className="text-gray-600">Loading System</span>
                             <span className="text-primary italic font-black">{Math.min(progress, 100)}%</span>
                         </div>

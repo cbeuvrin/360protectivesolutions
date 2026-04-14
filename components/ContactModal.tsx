@@ -38,7 +38,7 @@ export function ContactModal() {
                 >
                   <X size={24} />
                 </button>
-                <span className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-2 block">
+                <span className="text-primary font-black  tracking-[0.3em] text-[10px] mb-2 block">
                   Confidential Request
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold font-heading">
@@ -57,7 +57,7 @@ export function ContactModal() {
               {/* Footer / Badge */}
               <div className="bg-gray-50 p-4 border-t border-gray-100 flex justify-center items-center gap-4 grayscale opacity-50">
                 <img src="/images/logo.png" alt="360" className="h-6 w-auto" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-dark-blue">
+                <span className="text-[10px] font-bold  tracking-widest text-dark-blue">
                   Elite Protection Group
                 </span>
               </div>

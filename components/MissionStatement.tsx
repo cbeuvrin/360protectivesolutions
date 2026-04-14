@@ -13,7 +13,7 @@ export function MissionStatement() {
                     viewport={{ once: true }}
                     className="flex flex-col items-center"
                 >
-                    <h4 className="text-[14px] md:text-sm font-black text-[#ce161f] uppercase tracking-[0.4em] mb-10 font-heading text-center">
+                    <h4 className="text-[14px] md:text-sm font-black text-[#ce161f]  tracking-[0.4em] mb-10 font-heading text-center">
                         100% Military & Law Enforcement Veteran-Owned
                     </h4>
                     <p className="text-xl md:text-2xl lg:text-3xl text-dark-blue leading-[1.3] font-sans text-center font-light">

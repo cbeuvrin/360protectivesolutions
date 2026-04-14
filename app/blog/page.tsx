@@ -36,7 +36,7 @@ export default function BlogPage() {
                     <motion.span 
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block"
+                        className="text-primary font-black  tracking-[0.4em] text-[10px] mb-4 block"
                     >
                         Intelligence & Strategic Updates
                     </motion.span>
@@ -44,7 +44,7 @@ export default function BlogPage() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 uppercase leading-[0.9]"
+                        className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8  leading-[0.9]"
                     >
                         WSO <span className="text-primary italic font-black">Strategic</span> Blog
                     </motion.h1>
@@ -65,7 +65,7 @@ export default function BlogPage() {
             {loading ? (
                 <div className="py-32 text-center">
                     <div className="inline-block w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4" />
-                    <p className="text-xs font-black uppercase tracking-widest text-dark-blue opacity-50">Loading Intelligence...</p>
+                    <p className="text-xs font-black  tracking-widest text-dark-blue opacity-50">Loading Intelligence...</p>
                 </div>
             ) : (
                 <>
@@ -77,7 +77,7 @@ export default function BlogPage() {
 
                     {/* Pagination / Load More */}
                     <section className="py-24 text-center bg-gray-50 border-t border-gray-100">
-                        <button className="px-12 py-5 bg-dark-blue text-white font-black uppercase tracking-[0.2em] text-xs hover:bg-primary transition-all rounded-sm shadow-xl">
+                        <button className="px-12 py-5 bg-dark-blue text-white font-black  tracking-[0.2em] text-xs hover:bg-primary transition-all rounded-sm shadow-xl">
                             Explore Full Archive
                         </button>
                     </section>

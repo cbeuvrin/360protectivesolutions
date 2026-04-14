@@ -98,7 +98,7 @@ export default function ProtectionSpecialistPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block"
+            className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block"
           >
             Elite Guarding Services
           </motion.span>
@@ -106,7 +106,7 @@ export default function ProtectionSpecialistPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6"
           >
             Protection <br className="hidden md:block" /> Specialists
           </motion.h1>
@@ -126,7 +126,7 @@ export default function ProtectionSpecialistPage() {
           >
             <button 
               onClick={openModal}
-              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
+              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold  tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
             >
               Request Assessment
             </button>
@@ -141,7 +141,7 @@ export default function ProtectionSpecialistPage() {
             <div className="space-y-6">
               <motion.h2 
                 {...fadeIn}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-dark uppercase"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-dark "
               >
                 Sophisticated Shield of Security
               </motion.h2>
@@ -155,7 +155,7 @@ export default function ProtectionSpecialistPage() {
               <motion.div 
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: 0.2 }}
-                className="pt-4 flex items-center gap-4 text-primary font-bold uppercase tracking-widest text-xs"
+                className="pt-4 flex items-center gap-4 text-primary font-bold  tracking-widest text-xs"
               >
                 <div className="h-px w-12 bg-primary" />
                 Proven Tactical Excellence
@@ -175,7 +175,7 @@ export default function ProtectionSpecialistPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-10 left-10 text-white">
-                <p className="text-xs font-black uppercase tracking-[0.3em] mb-2">Residential & Commercial</p>
+                <p className="text-xs font-black  tracking-[0.3em] mb-2">Residential & Commercial</p>
                 <h4 className="text-2xl font-bold">Unwavering Vigilance</h4>
               </div>
             </motion.div>
@@ -187,7 +187,7 @@ export default function ProtectionSpecialistPage() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="text-center mb-16">
-            <motion.span {...fadeIn} className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">
+            <motion.span {...fadeIn} className="text-primary font-black  tracking-[0.3em] text-[10px] mb-4 block">
               Global Elite Standards
             </motion.span>
             <motion.h2 {...fadeIn} transition={{ delay: 0.1 }} className="text-3xl md:text-5xl font-bold tracking-tight text-dark">
@@ -229,7 +229,7 @@ export default function ProtectionSpecialistPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="text-center mb-16">
-            <motion.span {...fadeIn} className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">
+            <motion.span {...fadeIn} className="text-primary font-black  tracking-[0.3em] text-[10px] mb-4 block">
               Versatile Protection
             </motion.span>
             <motion.h2 {...fadeIn} transition={{ delay: 0.1 }} className="text-3xl md:text-5xl font-bold tracking-tight text-dark">
@@ -262,7 +262,7 @@ export default function ProtectionSpecialistPage() {
         <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/3">
-              <motion.span {...fadeIn} className="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">
+              <motion.span {...fadeIn} className="text-primary font-black  tracking-[0.4em] text-[10px] mb-4 block">
                 The Tech Frontier
               </motion.span>
               <motion.h2 {...fadeIn} transition={{ delay: 0.1 }} className="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-tighter">
@@ -274,12 +274,12 @@ export default function ProtectionSpecialistPage() {
               <div className="flex items-center gap-6">
                  <div className="text-center">
                     <p className="text-3xl font-bold text-white">100%</p>
-                    <p className="text-[10px] uppercase tracking-widest text-primary">Vigilance</p>
+                    <p className="text-[10px]  tracking-widest text-primary">Vigilance</p>
                  </div>
                  <div className="h-10 w-px bg-white/10" />
                  <div className="text-center">
                     <p className="text-3xl font-bold text-white">24/7</p>
-                    <p className="text-[10px] uppercase tracking-widest text-primary">Support</p>
+                    <p className="text-[10px]  tracking-widest text-primary">Support</p>
                  </div>
               </div>
             </div>
@@ -337,7 +337,7 @@ export default function ProtectionSpecialistPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold mb-8 tracking-tighter uppercase"
+            className="text-4xl md:text-6xl font-bold mb-8 tracking-tighter "
           >
             Secure What Matters Most
           </motion.h2>
@@ -353,13 +353,13 @@ export default function ProtectionSpecialistPage() {
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <Link 
               href="/#contact"
-              className="bg-white text-primary px-12 py-6 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all duration-300 shadow-2xl hover:bg-dark-blue hover:text-white"
+              className="bg-white text-primary px-12 py-6 rounded-full font-bold  tracking-widest text-sm hover:scale-105 transition-all duration-300 shadow-2xl hover:bg-dark-blue hover:text-white"
             >
               CONTACT A PROTECTION SPECIALIST
             </Link>
             <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-white/70">
+                <p className="text-xs font-bold  tracking-[0.3em] text-white/70">
                     Your safety is our priority
                 </p>
             </div>

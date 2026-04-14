@@ -125,10 +125,10 @@ export default function ResidentialSecurityPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <span className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
+                        <span className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
                             Premium Living
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6">
+                        <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6">
                             Residential Security & <br className="hidden md:block" />
                             <span className="text-primary italic font-black">Private Estates</span>
                         </h1>
@@ -137,7 +137,7 @@ export default function ResidentialSecurityPage() {
                         </p>
                         <button 
                             onClick={openModal}
-                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
+                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
                         >
                             Request a Residential Security Consultation
                         </button>
@@ -161,7 +161,7 @@ export default function ResidentialSecurityPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Your Partner for a <br />
                                 <span className="text-primary italic font-light">Safer Community</span>
                             </h2>
@@ -189,7 +189,7 @@ export default function ResidentialSecurityPage() {
                                     className="bg-gray-50 p-8 rounded-sm border border-black/5 flex flex-col items-center text-center group hover:bg-dark-blue transition-colors duration-500"
                                 >
                                     <sector.icon size={40} className="text-primary mb-6 group-hover:scale-110 transition-transform" />
-                                    <h3 className="text-lg font-black text-dark-blue group-hover:text-white mb-4 uppercase leading-tight">{sector.title}</h3>
+                                    <h3 className="text-lg font-black text-dark-blue group-hover:text-white mb-4  leading-tight">{sector.title}</h3>
                                     <p className="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed">{sector.description}</p>
                                 </motion.div>
                             ))}
@@ -209,8 +209,8 @@ export default function ResidentialSecurityPage() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <span className="text-primary font-black uppercase tracking-[0.3em] text-sm">The WSO Ambassador Approach</span>
-                                <h2 className="text-3xl md:text-5xl font-black mt-4 mb-8 uppercase leading-tight">
+                                <span className="text-primary font-black  tracking-[0.3em] text-sm">The WSO Ambassador Approach</span>
+                                <h2 className="text-3xl md:text-5xl font-black mt-4 mb-8  leading-tight">
                                     Luxury Residential <br />
                                     <span className="text-primary italic font-light">Specialists</span>
                                 </h2>
@@ -228,7 +228,7 @@ export default function ResidentialSecurityPage() {
                                                 <module.icon className="text-primary italic font-black" size={20} />
                                             </div>
                                             <div>
-                                                <h4 className="font-bold uppercase tracking-wider text-sm mb-1">{module.title}</h4>
+                                                <h4 className="font-bold  tracking-wider text-sm mb-1">{module.title}</h4>
                                                 <p className="text-gray-500 text-xs leading-relaxed">{module.description}</p>
                                             </div>
                                         </div>
@@ -253,7 +253,7 @@ export default function ResidentialSecurityPage() {
                                 <div className="absolute inset-0 flex items-center justify-center text-center p-12">
                                     <div className="max-w-xs">
                                         <Shield size={64} className="text-primary mx-auto mb-6" />
-                                        <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter">Security as a Luxury Amenity</h3>
+                                        <h3 className="text-2xl font-black  mb-4 tracking-tighter">Security as a Luxury Amenity</h3>
                                         <p className="text-gray-400 text-sm leading-relaxed">
                                             Enhancing the lifestyle of those who call your property home through discretion and excellence.
                                         </p>
@@ -269,8 +269,8 @@ export default function ResidentialSecurityPage() {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm md:text-base">Advanced Protection</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase text-dark-blue">Integrated Technology & Risk Management</h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm md:text-base">Advanced Protection</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4  text-dark-blue">Integrated Technology & Risk Management</h2>
                         <div className="w-20 h-1.5 bg-primary mx-auto mt-8" />
                         <p className="text-gray-500 mt-8 max-w-2xl mx-auto italic">
                             We increase resident peace of mind through cost-effective, high-tech configurations that never compromise on safety.
@@ -288,7 +288,7 @@ export default function ResidentialSecurityPage() {
                                 className="bg-gray-50 border border-black/5 p-8 hover:shadow-xl transition-all group"
                             >
                                 <feature.icon className="text-primary mb-6 group-hover:scale-110 transition-transform" size={32} />
-                                <h4 className="text-lg font-black text-dark-blue uppercase mb-4 tracking-tighter">{feature.title}</h4>
+                                <h4 className="text-lg font-black text-dark-blue  mb-4 tracking-tighter">{feature.title}</h4>
                                 <p className="text-gray-500 text-sm leading-relaxed">{feature.description}</p>
                             </motion.div>
                         ))}
@@ -299,17 +299,17 @@ export default function ResidentialSecurityPage() {
             {/* Final CTA */}
             <section className="py-24 bg-gray-50 border-y border-black/5">
                 <div className="container mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto">Elevate Your Resident Experience</h2>
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto">Elevate Your Resident Experience</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
                         Discover the peace of mind that comes from a security program designed specifically for the nuances of residential life. We don't just protect your property; we enhance the lifestyle of your community.
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         Request a Residential Consultation
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm">
                         Secure your community. Contact WSO today.
                     </p>
                 </div>

@@ -77,10 +77,10 @@ export default function VirtualGuardPage() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-6 inline-block">
+                            <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 The Fusion of AI & Elite Surveillance
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]">
+                            <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]">
                                 Virtual <span className="text-primary italic font-black">Guard Services</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-500 font-light mb-10 max-w-3xl leading-relaxed">
@@ -88,7 +88,7 @@ export default function VirtualGuardPage() {
                             </p>
                             <button 
                                 onClick={openModal}
-                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                             >
                                 Request a Virtual Guard Proposal
                             </button>
@@ -104,8 +104,8 @@ export default function VirtualGuardPage() {
             <section className="py-24 bg-white relative">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm md:text-base">Elite Capability</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase text-dark-blue">Why Choose WSO for Virtual Guarding?</h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm md:text-base">Elite Capability</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4  text-dark-blue">Why Choose WSO for Virtual Guarding?</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -119,7 +119,7 @@ export default function VirtualGuardPage() {
                                 className="bg-gray-50 p-12 border border-black/5 hover:border-primary/20 hover:bg-white transition-all group"
                             >
                                 <reason.icon size={48} className="text-primary mb-8 transition-transform group-hover:scale-110" />
-                                <h4 className="text-xl font-black text-dark-blue uppercase mb-4 tracking-tighter">{reason.title}</h4>
+                                <h4 className="text-xl font-black text-dark-blue  mb-4 tracking-tighter">{reason.title}</h4>
                                 <p className="text-gray-500 text-sm leading-relaxed">{reason.description}</p>
                             </motion.div>
                         ))}
@@ -132,7 +132,7 @@ export default function VirtualGuardPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black mb-8  leading-tight">
                                 Intelligent <br />
                                 <span className="text-primary italic font-black">Security Features</span>
                             </h2>
@@ -147,7 +147,7 @@ export default function VirtualGuardPage() {
                                             <feature.icon size={24} className="text-primary group-hover:text-white transition-colors" />
                                         </div>
                                         <div>
-                                            <h4 className="font-black uppercase tracking-widest text-[11px] mb-2">{feature.title}</h4>
+                                            <h4 className="font-black  tracking-widest text-[11px] mb-2">{feature.title}</h4>
                                             <p className="text-gray-500 text-xs leading-relaxed">{feature.description}</p>
                                         </div>
                                     </div>
@@ -167,10 +167,10 @@ export default function VirtualGuardPage() {
                                     <Shield size={400} strokeWidth={0.5} className="text-primary italic font-black" />
                                 </div>
                                 <Zap size={80} className="text-primary animate-pulse mb-6 relative z-10" />
-                                <h4 className="text-2xl font-black text-white uppercase italic relative z-10 text-center">AI-Powered <br /> <span className="text-primary italic font-black">Vigilance</span></h4>
+                                <h4 className="text-2xl font-black text-white  italic relative z-10 text-center">AI-Powered <br /> <span className="text-primary italic font-black">Vigilance</span></h4>
                                 <div className="mt-8 flex gap-2 items-center relative z-10 bg-dark-blue/80 px-4 py-2 border border-white/10 backdrop-blur-sm">
                                     <div className="w-2 h-2 bg-primary rounded-full animate-ping" />
-                                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary">Live Asset Protection</span>
+                                    <span className="text-[10px] font-bold  tracking-widest text-primary">Live Asset Protection</span>
                                 </div>
                             </motion.div>
                         </div>
@@ -182,7 +182,7 @@ export default function VirtualGuardPage() {
             {/* Customization Section */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto">Customizable Security for Your Business</h2>
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto">Customizable Security for Your Business</h2>
                     <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto italic font-light leading-relaxed">
                         We understand that every business is unique. Whether you need targeted perimeter protection or a hybrid model, we can design the perfect strategy.
                     </p>
@@ -191,7 +191,7 @@ export default function VirtualGuardPage() {
                         {["24/7 Monitoring", "Perimeter Protection", "Hybrid Models", "Remote Access Control"].map((item, i) => (
                             <div key={i} className="flex items-center gap-3">
                                 <CheckCircle2 className="text-primary italic font-black" size={24} />
-                                <span className="text-sm font-black text-dark-blue uppercase tracking-widest">{item}</span>
+                                <span className="text-sm font-black text-dark-blue  tracking-widest">{item}</span>
                             </div>
                         ))}
                     </div>
@@ -201,17 +201,17 @@ export default function VirtualGuardPage() {
             {/* Final CTA */}
             <section className="py-24 bg-gray-50 border-y border-black/5 text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto">Secure Your Future Today</h2>
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto">Secure Your Future Today</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
                         Experience the power of virtual guarding. Trust Worldwide Security Options to elevate your property protection to unprecedented levels.
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         Request a Virtual Guard Proposal
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm italic">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm italic">
                         The ultimate fusion of AI and human expertise. Contact us today.
                     </p>
                 </div>

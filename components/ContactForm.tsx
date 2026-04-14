@@ -37,7 +37,7 @@ export function ContactForm({ dark = false }: ContactFormProps) {
       : "bg-gray-50 border-gray-200 text-dark-blue placeholder:text-gray-400 focus:border-primary"
   }`;
 
-  const labelClasses = `block text-xs font-black uppercase tracking-widest mb-2 ${
+  const labelClasses = `block text-xs font-black  tracking-widest mb-2 ${
     dark ? "text-gray-400" : "text-dark-blue/60"
   }`;
 
@@ -110,7 +110,7 @@ export function ContactForm({ dark = false }: ContactFormProps) {
 
       <button
         type="submit"
-        className="w-full py-5 bg-primary text-white font-black uppercase tracking-[0.2em] text-xs hover:bg-red-700 transition-all duration-300 shadow-xl hover:scale-[1.01]"
+        className="w-full py-5 bg-primary text-white font-black  tracking-[0.2em] text-xs hover:bg-red-700 transition-all duration-300 shadow-xl hover:scale-[1.01]"
       >
         Request Assessment
       </button>

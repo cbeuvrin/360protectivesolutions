@@ -23,14 +23,14 @@ export default function ContactPage() {
           <motion.span 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block"
+            className="text-primary font-black  tracking-[0.4em] text-[10px] mb-4 block"
           >
             Confidential Inquiry
           </motion.span>
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter "
           >
             Contact
           </motion.h1>
@@ -58,7 +58,7 @@ export default function ContactPage() {
                     <MapPin className="text-primary italic font-black" size={20} />
                   </div>
                   <div>
-                    <h4 className="text-xs font-black uppercase tracking-widest text-dark-blue/40 mb-1">Headquarters</h4>
+                    <h4 className="text-xs font-black  tracking-widest text-dark-blue/40 mb-1">Headquarters</h4>
                     <p className="text-dark-blue font-bold">New York City, NY</p>
                     <p className="text-gray-500 text-sm font-light">Tri-State Operations Center</p>
                   </div>
@@ -69,7 +69,7 @@ export default function ContactPage() {
                     <Phone className="text-primary italic font-black" size={20} />
                   </div>
                   <div>
-                    <h4 className="text-xs font-black uppercase tracking-widest text-dark-blue/40 mb-1">Direct Line</h4>
+                    <h4 className="text-xs font-black  tracking-widest text-dark-blue/40 mb-1">Direct Line</h4>
                     <p className="text-dark-blue font-bold">+1 (555) 360-PROT</p>
                     <p className="text-gray-500 text-sm font-light">Available 24/7</p>
                   </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     <Mail className="text-primary italic font-black" size={20} />
                   </div>
                   <div>
-                    <h4 className="text-xs font-black uppercase tracking-widest text-dark-blue/40 mb-1">Confidential Email</h4>
+                    <h4 className="text-xs font-black  tracking-widest text-dark-blue/40 mb-1">Confidential Email</h4>
                     <p className="text-dark-blue font-bold">ops@360protectivesolutions.com</p>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export default function ContactPage() {
               <div className="p-8 bg-gray-50 border border-gray-100 rounded-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <ShieldCheck className="text-primary italic font-black" size={24} />
-                  <span className="font-bold text-dark-blue uppercase tracking-widest text-xs">Vetted & Licensed</span>
+                  <span className="font-bold text-dark-blue  tracking-widest text-xs">Vetted & Licensed</span>
                 </div>
                 <p className="text-xs text-gray-400 leading-normal">
                   Worldwide Security Options is a licensed and insured private security firm. 

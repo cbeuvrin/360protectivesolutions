@@ -81,7 +81,7 @@ export function LandscapeStats() {
                             className="flex flex-col items-center"
                         >
                             <AnimatedCounter value={stat.val} />
-                            <h3 className="text-base font-bold text-dark-blue mt-4 uppercase tracking-widest font-heading text-center">
+                            <h3 className="text-base font-bold text-dark-blue mt-4  tracking-widest font-heading text-center">
                                 {stat.label}
                             </h3>
                         </motion.div>

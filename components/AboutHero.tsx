@@ -18,7 +18,7 @@ export function AboutHero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-6"
+                            className="text-primary font-black  tracking-[0.3em] text-xs mb-6"
                         >
                             The Gold Standard in Executive Protection
                         </motion.h4>

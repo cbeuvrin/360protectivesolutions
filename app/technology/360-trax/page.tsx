@@ -70,10 +70,10 @@ export default function TraxPage() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-6 inline-block">
+                            <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Real-Time Accountability
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]">
+                            <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]">
                                 360 <span className="text-primary italic font-black">TRAX</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-500 font-light mb-10 max-w-2xl leading-relaxed">
@@ -82,7 +82,7 @@ export default function TraxPage() {
                             <div className="flex flex-wrap gap-6">
                                 <button 
                                     onClick={openModal}
-                                    className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                                    className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                                 >
                                     Request a Live Demo
                                 </button>
@@ -90,7 +90,7 @@ export default function TraxPage() {
                                     <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center animate-pulse">
                                         <Cpu size={20} className="text-primary italic font-black" />
                                     </div>
-                                    <span className="font-bold uppercase tracking-widest text-[10px]">Powered by Silvertrac Software</span>
+                                    <span className="font-bold  tracking-widest text-[10px]">Powered by Silvertrac Software</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -126,12 +126,12 @@ export default function TraxPage() {
                                 <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-sm">
                                     <Play size={20} className="text-white fill-white" />
                                 </div>
-                                <span className="text-white font-black uppercase tracking-widest text-xs">What is 360 TRAX?</span>
+                                <span className="text-white font-black  tracking-widest text-xs">What is 360 TRAX?</span>
                             </div>
                         </motion.div>
 
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Embracing <br />
                                 <span className="text-primary italic font-black">Today's Technology</span>
                             </h2>
@@ -144,11 +144,11 @@ export default function TraxPage() {
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="flex gap-3 items-center">
                                     <CheckCircle2 className="text-primary italic font-black" size={20} />
-                                    <span className="text-[11px] font-black text-dark-blue uppercase tracking-widest">Verified Data</span>
+                                    <span className="text-[11px] font-black text-dark-blue  tracking-widest">Verified Data</span>
                                 </div>
                                 <div className="flex gap-3 items-center">
                                     <CheckCircle2 className="text-primary italic font-black" size={20} />
-                                    <span className="text-[11px] font-black text-dark-blue uppercase tracking-widest">GPS Stamped</span>
+                                    <span className="text-[11px] font-black text-dark-blue  tracking-widest">GPS Stamped</span>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,7 @@ export default function TraxPage() {
             <section className="py-24 bg-gray-50">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="max-w-4xl mx-auto text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase">A Complete Situational Awareness Platform</h2>
+                        <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 ">A Complete Situational Awareness Platform</h2>
                         <p className="text-xl text-gray-500 font-light">
                             360 TRAX is more than just a reporting tool. It allows our officers to document every patrol, incident, and maintenance issue instantly from the field.
                         </p>
@@ -179,7 +179,7 @@ export default function TraxPage() {
                                 <div className="w-16 h-16 bg-gray-50 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
                                     <benefit.icon size={32} className="text-primary group-hover:text-white transition-colors" />
                                 </div>
-                                <h4 className="text-lg font-black text-dark-blue uppercase mb-4 tracking-tighter">{benefit.title}</h4>
+                                <h4 className="text-lg font-black text-dark-blue  mb-4 tracking-tighter">{benefit.title}</h4>
                                 <p className="text-gray-500 text-sm leading-relaxed">{benefit.description}</p>
                             </motion.div>
                         ))}
@@ -192,8 +192,8 @@ export default function TraxPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2">
-                            <span className="text-primary font-black uppercase tracking-[0.3em] text-sm">Industry-Specific Solutions</span>
-                            <h2 className="text-3xl md:text-5xl font-black mt-4 mb-12 uppercase leading-tight text-dark-blue">
+                            <span className="text-primary font-black  tracking-[0.3em] text-sm">Industry-Specific Solutions</span>
+                            <h2 className="text-3xl md:text-5xl font-black mt-4 mb-12  leading-tight text-dark-blue">
                                 Tailored Technology <br />
                                 <span className="text-primary italic font-black">for Your Sector</span>
                             </h2>
@@ -212,7 +212,7 @@ export default function TraxPage() {
                                             <solution.icon size={28} className="text-white" />
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-black text-dark-blue uppercase mb-3 tracking-tight">{solution.title}</h4>
+                                            <h4 className="text-xl font-black text-dark-blue  mb-3 tracking-tight">{solution.title}</h4>
                                             <p className="text-gray-600 leading-relaxed max-w-md">{solution.description}</p>
                                         </div>
                                     </motion.div>
@@ -224,21 +224,21 @@ export default function TraxPage() {
                             <div className="space-y-4">
                                 <div className="bg-gray-100 aspect-[4/5] rounded-sm flex flex-col justify-end p-8 overflow-hidden relative group">
                                     <BarChart3 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black/5 w-32 h-32 group-hover:scale-110 transition-transform duration-700" />
-                                    <h5 className="font-black text-dark-blue uppercase tracking-widest text-[10px] relative z-10">Data Analytics</h5>
+                                    <h5 className="font-black text-dark-blue  tracking-widest text-[10px] relative z-10">Data Analytics</h5>
                                 </div>
                                 <div className="bg-primary aspect-square rounded-sm flex flex-col justify-end p-8 relative z-10 overflow-hidden group">
                                     <Smartphone className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/10 w-24 h-24 group-hover:rotate-12 transition-transform duration-700" />
-                                    <h5 className="font-black text-white uppercase tracking-widest text-[10px] relative z-10">Mobile Apps</h5>
+                                    <h5 className="font-black text-white  tracking-widest text-[10px] relative z-10">Mobile Apps</h5>
                                 </div>
                             </div>
                             <div className="space-y-4 pt-12">
                                 <div className="bg-dark-blue aspect-square rounded-sm flex flex-col justify-end p-8 relative overflow-hidden group">
                                     <MapPin className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/5 w-24 h-24 group-hover:scale-110 transition-transform duration-700" />
-                                    <h5 className="font-black text-white uppercase tracking-widest text-[10px] relative z-10">GPS Tracking</h5>
+                                    <h5 className="font-black text-white  tracking-widest text-[10px] relative z-10">GPS Tracking</h5>
                                 </div>
                                 <div className="bg-gray-100 aspect-[4/5] rounded-sm flex flex-col justify-end p-8 relative overflow-hidden group">
                                     <Bell className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black/5 w-32 h-32 group-hover:scale-110 transition-transform duration-700" />
-                                    <h5 className="font-black text-dark-blue uppercase tracking-widest text-[10px] relative z-10">Live Alerts</h5>
+                                    <h5 className="font-black text-dark-blue  tracking-widest text-[10px] relative z-10">Live Alerts</h5>
                                 </div>
                             </div>
                         </div>
@@ -249,22 +249,22 @@ export default function TraxPage() {
             {/* Transparency Section */}
             <section className="py-24 bg-dark-blue text-white">
                 <div className="container mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase max-w-3xl mx-auto">Transparency You Can Trust</h2>
+                    <h2 className="text-3xl md:text-5xl font-black mb-8  max-w-3xl mx-auto">Transparency You Can Trust</h2>
                     <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                         At Worldwide Security Options, we believe that accountability is the foundation of a professional partnership. With 360 TRAX, we close the gap between the field and the office.
                     </p>
                     <div className="w-16 h-1 bg-primary mx-auto mb-12" />
-                    <p className="text-gray-300 font-bold uppercase tracking-[0.2em] italic mb-16">
+                    <p className="text-gray-300 font-bold  tracking-[0.2em] italic mb-16">
                         "The 360-degree view of your security posture that you deserve."
                     </p>
                     
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-white hover:text-dark-blue text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
+                        className="bg-primary hover:bg-white hover:text-dark-blue text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
                     >
                         Request a Live System Demonstration
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-xs">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-xs">
                         Experience the future of security management.
                     </p>
                 </div>

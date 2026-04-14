@@ -35,7 +35,7 @@ export function ExecutiveBio() {
                                     className="group relative flex items-center h-14"
                                 >
                                     {/* Text Pill first (Background) */}
-                                    <div className="bg-[#0077B5] text-white py-3 pl-14 pr-8 rounded-full font-bold uppercase tracking-widest text-[10px] shadow-lg z-10 transition-all duration-300 group-hover:pr-10 whitespace-nowrap">
+                                    <div className="bg-[#0077B5] text-white py-3 pl-14 pr-8 rounded-full font-bold  tracking-widest text-[10px] shadow-lg z-10 transition-all duration-300 group-hover:pr-10 whitespace-nowrap">
                                         Connect on LinkedIn
                                     </div>
                                     {/* Icon Circle (Foreground - Offset to the left) */}
@@ -55,7 +55,7 @@ export function ExecutiveBio() {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <span className="inline-block text-primary font-black uppercase tracking-[0.2em] text-xs mb-3">
+                            <span className="inline-block text-primary font-black  tracking-[0.2em] text-xs mb-3">
                                 Chief Executive Officer / Founder
                             </span>
                             <h2 className="text-3xl md:text-5xl font-bold text-dark-blue leading-tight mb-8">

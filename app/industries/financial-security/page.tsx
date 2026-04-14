@@ -109,10 +109,10 @@ export default function FinancialSecurityPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <span className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
+                        <span className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
                             Mission Critical
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6">
+                        <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6">
                             Financial Institution <br className="hidden md:block" />
                             <span className="text-primary italic font-black">Security</span>
                         </h1>
@@ -121,7 +121,7 @@ export default function FinancialSecurityPage() {
                         </p>
                         <button 
                             onClick={openModal}
-                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
+                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
                         >
                             CONSULT WITH A FINANCIAL SECURITY EXPERT
                         </button>
@@ -145,7 +145,7 @@ export default function FinancialSecurityPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Integrated Shield for <br />
                                 <span className="text-primary italic font-light">Financial Interests</span>
                             </h2>
@@ -169,7 +169,7 @@ export default function FinancialSecurityPage() {
                             transition={{ duration: 0.8 }}
                             className="bg-gray-50 p-12 rounded-sm border border-black/5 shadow-inner"
                         >
-                            <h3 className="text-2xl font-black text-dark-blue mb-8 uppercase">Comprehensive Security for Financial Facilities</h3>
+                            <h3 className="text-2xl font-black text-dark-blue mb-8 ">Comprehensive Security for Financial Facilities</h3>
                             <div className="space-y-8">
                                 {facilityTypes.map((type, i) => (
                                     <div key={i} className="flex gap-4">
@@ -177,7 +177,7 @@ export default function FinancialSecurityPage() {
                                             <type.icon size={24} className="text-primary italic font-black" />
                                         </div>
                                         <div>
-                                            <h4 className="font-black text-dark-blue uppercase text-sm mb-1">{type.name}</h4>
+                                            <h4 className="font-black text-dark-blue  text-sm mb-1">{type.name}</h4>
                                             <p className="text-gray-500 text-sm leading-relaxed">{type.desc}</p>
                                         </div>
                                     </div>
@@ -192,8 +192,8 @@ export default function FinancialSecurityPage() {
             <section className="py-24 bg-dark-blue text-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm md:text-base">Elite Capability</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase">Integrated Protection Strategies</h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm md:text-base">Elite Capability</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4 ">Integrated Protection Strategies</h2>
                         <div className="w-20 h-1.5 bg-primary mx-auto mt-8" />
                     </div>
 
@@ -208,7 +208,7 @@ export default function FinancialSecurityPage() {
                                 className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all group"
                             >
                                 <service.icon className="text-primary mb-6 group-hover:scale-110 transition-transform" size={40} />
-                                <h4 className="text-lg font-black uppercase mb-4 tracking-tighter">{service.title}</h4>
+                                <h4 className="text-lg font-black  mb-4 tracking-tighter">{service.title}</h4>
                                 <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
                             </motion.div>
                         ))}
@@ -240,7 +240,7 @@ export default function FinancialSecurityPage() {
                         </motion.div>
                         
                         <div className="order-1 lg:order-2">
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">Specialized Financial <br /><span className="text-primary italic font-black">Security Training</span></h2>
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">Specialized Financial <br /><span className="text-primary italic font-black">Security Training</span></h2>
                             <p className="text-gray-600 text-lg mb-12">
                                 Our professionals undergo a rigorous curriculum designed specifically for the banking and financial services industry, focusing on high-risk mitigation and regulatory excellence.
                             </p>
@@ -259,7 +259,7 @@ export default function FinancialSecurityPage() {
                                             <CheckCircle2 className="text-primary italic font-black" size={24} />
                                         </div>
                                         <div>
-                                            <h4 className="text-lg font-black text-dark-blue uppercase mb-2">{feature.title}</h4>
+                                            <h4 className="text-lg font-black text-dark-blue  mb-2">{feature.title}</h4>
                                             <p className="text-gray-500 leading-relaxed">{feature.description}</p>
                                         </div>
                                     </motion.div>
@@ -275,18 +275,18 @@ export default function FinancialSecurityPage() {
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2" />
                 <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
                     <div className="max-w-4xl">
-                        <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase leading-tight">Proactive Risk Management</h2>
+                        <h2 className="text-3xl md:text-5xl font-black mb-8  leading-tight">Proactive Risk Management</h2>
                         <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                             Through our integrated workforce management platform, we extract maximum value from security expenditures by improving response times and proactively mitigating incidents. At WSO, we don't just react to threats—<span className="text-primary font-bold">tenemos el compromiso de anticiparnos a ellos.</span>
                         </p>
                         <div className="flex flex-wrap gap-8">
                             <div className="flex items-center gap-3">
                                 <Zap className="text-primary italic font-black" />
-                                <span className="font-bold uppercase tracking-widest text-sm">Real-time Response</span>
+                                <span className="font-bold  tracking-widest text-sm">Real-time Response</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <AlertTriangle className="text-primary italic font-black" />
-                                <span className="font-bold uppercase tracking-widest text-sm">Predictive Analysis</span>
+                                <span className="font-bold  tracking-widest text-sm">Predictive Analysis</span>
                             </div>
                         </div>
                     </div>
@@ -296,17 +296,17 @@ export default function FinancialSecurityPage() {
             {/* Final CTA */}
             <section className="py-24 bg-white border-y border-black/5">
                 <div className="container mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto">Safeguard your institution with the experts</h2>
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto">Safeguard your institution with the experts</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
                         Contact us today for a comprehensive risk assessment tailored to your organization's specific security requirements.
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         CONSULT WITH A FINANCIAL SECURITY EXPERT
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm">
                         Worldwide Security Options
                     </p>
                 </div>

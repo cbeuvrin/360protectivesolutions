@@ -100,10 +100,10 @@ export default function CareersPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-6 inline-block">
+                            <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Join the Elite On-Call Force
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]">
+                            <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]">
                                 360 <span className="text-primary italic font-black">Alliance</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-500 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -111,7 +111,7 @@ export default function CareersPage() {
                             </p>
                             <button 
                                 onClick={openModal}
-                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                             >
                                 Inquire About Selection
                             </button>
@@ -124,8 +124,8 @@ export default function CareersPage() {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm md:text-base">The Pipeline</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase text-dark-blue">The Selection Process: <br /><span className="text-primary italic font-black">Your First Test</span></h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm md:text-base">The Pipeline</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4  text-dark-blue">The Selection Process: <br /><span className="text-primary italic font-black">Your First Test</span></h2>
                         <p className="text-gray-500 mt-6 max-w-2xl mx-auto italic">We observe every step of your interaction with our firm. Precision is not optional.</p>
                     </div>
 
@@ -142,8 +142,8 @@ export default function CareersPage() {
                                 <div className="text-primary mb-6 transition-transform group-hover:scale-110">
                                     <step.icon size={48} />
                                 </div>
-                                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">Step 0{i+1}</span>
-                                <h4 className="text-xl font-black text-dark-blue uppercase mb-4 tracking-tighter group-hover:text-white">{step.title}</h4>
+                                <span className="text-[10px] font-bold text-gray-400  tracking-[0.3em] mb-4">Step 0{i+1}</span>
+                                <h4 className="text-xl font-black text-dark-blue  mb-4 tracking-tighter group-hover:text-white">{step.title}</h4>
                                 <p className="text-gray-500 text-xs leading-relaxed group-hover:text-gray-400">{step.description}</p>
                             </motion.div>
                         ))}
@@ -156,7 +156,7 @@ export default function CareersPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Current <br />
                                 <span className="text-primary italic font-black">Opportunities</span>
                             </h2>
@@ -170,8 +170,8 @@ export default function CareersPage() {
                                         <div className="flex gap-4 items-center">
                                             <opp.icon size={24} className={opp.available ? 'text-primary' : 'text-gray-400'} />
                                             <div>
-                                                <h4 className="font-black text-dark-blue uppercase tracking-tight">{opp.title}</h4>
-                                                <span className={`text-[10px] font-bold uppercase tracking-widest ${opp.available ? 'text-primary' : 'text-gray-500'}`}>{opp.status}</span>
+                                                <h4 className="font-black text-dark-blue  tracking-tight">{opp.title}</h4>
+                                                <span className={`text-[10px] font-bold  tracking-widest ${opp.available ? 'text-primary' : 'text-gray-500'}`}>{opp.status}</span>
                                             </div>
                                         </div>
                                         {opp.available && (
@@ -193,7 +193,7 @@ export default function CareersPage() {
                                 className="bg-gray-100 aspect-square rounded-sm overflow-hidden p-16 flex flex-col justify-center items-center text-center border border-black/5"
                             >
                                 <ShieldCheck size={120} className="text-dark-blue mb-8" />
-                                <h3 className="text-3xl font-black text-dark-blue uppercase tracking-tighter mb-4 italic">Unparalleled <br /> Proficiency</h3>
+                                <h3 className="text-3xl font-black text-dark-blue  tracking-tighter mb-4 italic">Unparalleled <br /> Proficiency</h3>
                                 <p className="text-gray-500 text-sm max-w-xs mx-auto">Commitment to excellence and tactical mastery are the standards of the 360 Alliance.</p>
                             </motion.div>
                         </div>
@@ -204,8 +204,8 @@ export default function CareersPage() {
             {/* Criteria for Excellence Section - Dark Theme */}
             <section className="py-24 bg-dark-blue text-white overflow-hidden relative">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center mb-16 relative z-10">
-                    <span className="text-primary font-black uppercase tracking-[0.4em] text-sm">Standards of the Force</span>
-                    <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase leading-tight">Our Criteria for <br /><span className="text-primary italic font-black">Excellence</span></h2>
+                    <span className="text-primary font-black  tracking-[0.4em] text-sm">Standards of the Force</span>
+                    <h2 className="text-3xl md:text-5xl font-black mt-4  leading-tight">Our Criteria for <br /><span className="text-primary italic font-black">Excellence</span></h2>
                     <p className="text-gray-400 mt-8 max-w-2xl mx-auto font-light">
                         We prioritize candidates with backgrounds in elite military units, law enforcement, and specialized high-threat security environments.
                     </p>
@@ -217,7 +217,7 @@ export default function CareersPage() {
                             <div className="w-16 h-16 bg-primary/10 mx-auto flex items-center justify-center mb-8 border border-white/5 group-hover:bg-primary transition-colors">
                                 <item.icon size={32} className="text-primary group-hover:text-white transition-colors" />
                             </div>
-                            <h4 className="text-xl font-black uppercase mb-4 tracking-tighter">{item.title}</h4>
+                            <h4 className="text-xl font-black  mb-4 tracking-tighter">{item.title}</h4>
                             <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
                         </div>
                     ))}
@@ -227,7 +227,7 @@ export default function CareersPage() {
             {/* Ready to Apply Section */}
             <section className="py-24 bg-white text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto leading-tight">
                         Are You Ready to <br />
                         <span className="text-primary italic font-black">Apply?</span>
                     </h2>
@@ -236,11 +236,11 @@ export default function CareersPage() {
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         Ready to Apply
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm italic">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm italic">
                         The ultimate first impression. Representative of the Elite.
                     </p>
                 </div>

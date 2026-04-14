@@ -51,7 +51,7 @@ export default function AntiPiracyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-6"
+                className="text-primary font-black  tracking-[0.3em] text-xs mb-6"
               >
                 Exclusivity Secured
               </motion.h4>
@@ -59,7 +59,7 @@ export default function AntiPiracyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]"
+                className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]"
               >
                 Anti-Piracy Film Surveillance: <br />
                 <span className="text-primary italic font-black">Protecting the Silver Screen.</span>
@@ -79,7 +79,7 @@ export default function AntiPiracyPage() {
               >
                 <Link 
                   href="/#contact" 
-                  className="inline-block px-10 py-5 bg-primary text-white font-black uppercase tracking-[0.2em] text-xs hover:bg-red-700 transition-all rounded-sm shadow-xl"
+                  className="inline-block px-10 py-5 bg-primary text-white font-black  tracking-[0.2em] text-xs hover:bg-red-700 transition-all rounded-sm shadow-xl"
                 >
                   Request a Confidential Consultation
                 </Link>
@@ -134,7 +134,7 @@ export default function AntiPiracyPage() {
                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-500">
                   {layer.icon}
                 </div>
-                <h3 className="text-xl font-bold text-dark-blue mb-4 uppercase tracking-tighter">
+                <h3 className="text-xl font-bold text-dark-blue mb-4  tracking-tighter">
                   {layer.title}
                 </h3>
                 <p className="text-gray-600 font-light leading-relaxed text-sm">
@@ -166,7 +166,7 @@ export default function AntiPiracyPage() {
             </motion.div>
 
             <div className="lg:w-1/2">
-              <motion.span {...fadeIn} className="text-primary font-bold uppercase tracking-widest text-xs mb-4 block underline decoration-2 underline-offset-8">
+              <motion.span {...fadeIn} className="text-primary font-bold  tracking-widest text-xs mb-4 block underline decoration-2 underline-offset-8">
                 Trust & Authority
               </motion.span>
               <motion.h2 {...fadeIn} transition={{ delay: 0.1 }} className="text-3xl md:text-5xl font-bold text-dark-blue mb-8">
@@ -192,7 +192,7 @@ export default function AntiPiracyPage() {
                   >
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
                     <div>
-                      <h4 className="font-bold text-dark-blue uppercase tracking-widest text-xs mb-1">{item.title}</h4>
+                      <h4 className="font-bold text-dark-blue  tracking-widest text-xs mb-1">{item.title}</h4>
                       <p className="text-gray-500 font-light text-sm">{item.text}</p>
                     </div>
                   </motion.div>
@@ -212,18 +212,18 @@ export default function AntiPiracyPage() {
                 viewport={{ once: true }}
                 className="max-w-4xl mx-auto border border-white/10 p-12 md:p-20 relative rounded-sm bg-dark-blue"
             >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary px-8 py-2 font-black uppercase tracking-widest text-xs">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary px-8 py-2 font-black  tracking-widest text-xs">
                     Integration Strategy
                 </div>
                 <Radio className="w-12 h-12 text-primary mx-auto mb-8 animate-pulse shadow-[0_0_20px_rgba(181,23,23,0.5)]" />
-                <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight uppercase">
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight ">
                     Real-Time Piracy Neutralization.
                 </h2>
                 <p className="text-xl text-gray-100 font-light leading-relaxed">
                     "Our strategy thrives on integration. Night vision agents, CCTV command centers, and infrared teams operate on a single, encrypted communication loop. When a threat is detected, the response is swift, coordinated, and silent."
                 </p>
                 
-                <div className="mt-12 flex flex-wrap justify-center gap-8 opacity-70 text-xs font-bold uppercase tracking-[0.3em]">
+                <div className="mt-12 flex flex-wrap justify-center gap-8 opacity-70 text-xs font-bold  tracking-[0.3em]">
                     <span>CCTV Hub</span>
                     <span className="text-primary italic font-black">/</span>
                     <span>NVG Teams</span>
@@ -237,7 +237,7 @@ export default function AntiPiracyPage() {
       {/* Why WSO? Section (Centered version) */}
       <section className="py-24 bg-white border-t border-gray-100">
           <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-dark-blue mb-16 uppercase tracking-tighter leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-dark-blue mb-16  tracking-tighter leading-tight">
                 Why WSO for <br />
                 <span className="text-primary italic font-black">Film Security?</span>
               </h2>
@@ -259,7 +259,7 @@ export default function AntiPiracyPage() {
                               0{idx + 1}
                           </div>
                           <div>
-                              <h3 className="text-xl font-bold text-dark-blue mb-4 uppercase tracking-tight">{item.title}</h3>
+                              <h3 className="text-xl font-bold text-dark-blue mb-4  tracking-tight">{item.title}</h3>
                               <p className="text-gray-600 font-light leading-relaxed">{item.text}</p>
                           </div>
                       </motion.div>
@@ -279,7 +279,7 @@ export default function AntiPiracyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter"
+                className="text-4xl md:text-6xl font-black mb-6  tracking-tighter"
               >
                 Don’t Let Your Content Leak.
               </motion.h2>
@@ -300,7 +300,7 @@ export default function AntiPiracyPage() {
               >
                 <Link 
                     href="/#contact"
-                    className="inline-block px-12 py-5 bg-primary text-white font-black uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-primary transition-all rounded-sm shadow-2xl"
+                    className="inline-block px-12 py-5 bg-primary text-white font-black  tracking-[0.2em] text-xs hover:bg-white hover:text-primary transition-all rounded-sm shadow-2xl"
                 >
                     Get a Professional Quote
                 </Link>

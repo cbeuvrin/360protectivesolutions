@@ -79,10 +79,10 @@ export default function EventSecurityPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <span className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
+                        <span className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
                             Venue Management
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6">
+                        <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6">
                             Event Security & <br className="hidden md:block" />
                             <span className="text-primary italic font-black">Venue Management</span>
                         </h1>
@@ -91,7 +91,7 @@ export default function EventSecurityPage() {
                         </p>
                         <button 
                             onClick={openModal}
-                            className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl border border-primary/20"
+                            className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl border border-primary/20"
                         >
                             Request an Event Security Proposal
                         </button>
@@ -109,7 +109,7 @@ export default function EventSecurityPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Comprehensive Protection for <br />
                                 <span className="text-primary italic font-light">Multipurpose Venues</span>
                             </h2>
@@ -138,8 +138,8 @@ export default function EventSecurityPage() {
                                 >
                                     <venue.icon className="text-primary group-hover:scale-110 transition-transform" size={24} />
                                     <div>
-                                        <h4 className="text-sm font-black text-dark-blue uppercase tracking-widest mb-1">{venue.title}</h4>
-                                        <p className="text-xs text-gray-500 uppercase tracking-tighter">{venue.description}</p>
+                                        <h4 className="text-sm font-black text-dark-blue  tracking-widest mb-1">{venue.title}</h4>
+                                        <p className="text-xs text-gray-500  tracking-tighter">{venue.description}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -152,8 +152,8 @@ export default function EventSecurityPage() {
             <section className="py-24 bg-dark-blue text-white overflow-hidden relative">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm">Tactical Support</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase">Specialized Event Security Services</h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm">Tactical Support</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4 ">Specialized Event Security Services</h2>
                         <div className="w-20 h-1.5 bg-primary mx-auto mt-8" />
                     </div>
 
@@ -168,7 +168,7 @@ export default function EventSecurityPage() {
                                 className="bg-white/5 border border-white/10 p-10 hover:bg-white/10 transition-all group relative"
                             >
                                 <service.icon className="text-primary mb-8 group-hover:rotate-12 transition-transform" size={40} />
-                                <h4 className="text-xl font-black uppercase mb-4 tracking-tighter">{service.title}</h4>
+                                <h4 className="text-xl font-black  mb-4 tracking-tighter">{service.title}</h4>
                                 <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
                                 <div className="absolute top-4 right-4 text-white/5 font-black text-4xl italic select-none">0{index + 1}</div>
                             </motion.div>
@@ -201,7 +201,7 @@ export default function EventSecurityPage() {
                         </motion.div>
                         
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">Emergency Preparedness & Tactical Training</h2>
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">Emergency Preparedness & Tactical Training</h2>
                             <p className="text-gray-600 text-lg mb-12">
                                 We go beyond standard guard services by integrating advanced safety protocols into every event plan:
                             </p>
@@ -220,7 +220,7 @@ export default function EventSecurityPage() {
                                             {i + 1}
                                         </div>
                                         <div>
-                                            <h4 className="text-lg font-black text-dark-blue uppercase mb-2">{item.title}</h4>
+                                            <h4 className="text-lg font-black text-dark-blue  mb-2">{item.title}</h4>
                                             <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
                                         </div>
                                     </motion.div>
@@ -234,18 +234,18 @@ export default function EventSecurityPage() {
             {/* Final CTA */}
             <section className="py-24 bg-gray-50 border-t border-black/5">
                 <div className="container mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto tracking-tighter">Experience the Gold Standard in Event Safety</h2>
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto tracking-tighter">Experience the Gold Standard in Event Safety</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
                         At Worldwide Security Options, we understand that a safe event is a successful event. Our dedicated professionals are trained to handle the complexities of New York and New Jersey’s most prominent venues with precision and discretion.
                     </p>
                     <div className="space-y-8">
                         <button 
                             onClick={openModal}
-                            className="bg-primary hover:bg-red-700 text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                            className="bg-primary hover:bg-red-700 text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                         >
                             Request an Event Security Proposal
                         </button>
-                        <p className="text-gray-400 font-bold uppercase tracking-[0.3em] text-sm">
+                        <p className="text-gray-400 font-bold  tracking-[0.3em] text-sm">
                             Ensure your event's success. Partner with the experts.
                         </p>
                     </div>

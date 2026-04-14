@@ -97,10 +97,10 @@ export default function VirtualEngineeringPage() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-6 inline-block">
+                            <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Centralized Vision Powered
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]">
+                            <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]">
                                 Virtual <span className="text-primary italic font-black">Engineering</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-500 font-light mb-10 max-w-3xl leading-relaxed">
@@ -108,7 +108,7 @@ export default function VirtualEngineeringPage() {
                             </p>
                             <button 
                                 onClick={openModal}
-                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                             >
                                 Request an Engineering Demo
                             </button>
@@ -122,7 +122,7 @@ export default function VirtualEngineeringPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Transform Your Vision into <br />
                                 <span className="text-primary italic font-black">Digital Reality</span>
                             </h2>
@@ -137,7 +137,7 @@ export default function VirtualEngineeringPage() {
                                             <service.icon size={24} className="text-primary italic font-black" />
                                         </div>
                                         <div>
-                                            <h4 className="font-black text-dark-blue uppercase tracking-widest text-[11px] mb-2">{service.title}</h4>
+                                            <h4 className="font-black text-dark-blue  tracking-widest text-[11px] mb-2">{service.title}</h4>
                                             <p className="text-gray-500 text-xs leading-relaxed">{service.description}</p>
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@ export default function VirtualEngineeringPage() {
                                 <div className="absolute inset-0 border border-white/10 m-20" />
                             </motion.div>
                             <div className="absolute -bottom-6 -right-6 bg-white p-10 border border-black/5 shadow-2xl">
-                                <span className="text-primary font-black block text-sm uppercase mb-2">Accuracy Rate</span>
+                                <span className="text-primary font-black block text-sm  mb-2">Accuracy Rate</span>
                                 <span className="text-3xl font-black text-dark-blue">99.9%</span>
                             </div>
                         </div>
@@ -170,8 +170,8 @@ export default function VirtualEngineeringPage() {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-20">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm">Strategic Partnership</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase text-dark-blue">Why Choose WSO for Your Project?</h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm">Strategic Partnership</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4  text-dark-blue">Why Choose WSO for Your Project?</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -187,7 +187,7 @@ export default function VirtualEngineeringPage() {
                                 <div className="w-20 h-20 bg-gray-50 mx-auto flex items-center justify-center mb-8 border border-black/5 group-hover:bg-primary transition-colors">
                             <prop.icon size={32} className="text-primary group-hover:text-white transition-colors" />
                                 </div>
-                                <h4 className="text-xl font-black text-dark-blue uppercase mb-4 tracking-tighter">{prop.title}</h4>
+                                <h4 className="text-xl font-black text-dark-blue  mb-4 tracking-tighter">{prop.title}</h4>
                                 <p className="text-gray-500 text-sm leading-relaxed max-w-xs mx-auto">{prop.description}</p>
                             </motion.div>
                         ))}
@@ -200,7 +200,7 @@ export default function VirtualEngineeringPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2">
-                            <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase leading-tight text-dark-blue">
+                            <h2 className="text-3xl md:text-5xl font-black mb-8  leading-tight text-dark-blue">
                                 Significant Time and <br />
                                 <span className="text-primary italic font-black">Cost Savings</span>
                             </h2>
@@ -215,7 +215,7 @@ export default function VirtualEngineeringPage() {
                                             <TrendingDown className="text-primary italic font-black" size={24} />
                                         </div>
                                         <div>
-                                            <h4 className="text-lg font-black uppercase mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
+                                            <h4 className="text-lg font-black  mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
                                             <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
                                         </div>
                                     </div>
@@ -228,11 +228,11 @@ export default function VirtualEngineeringPage() {
                                 {industrySectors.map((sector, i) => (
                                     <div key={i} className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all group">
                                         <sector.icon size={32} className="text-primary mb-6" />
-                                        <h5 className="font-black uppercase tracking-widest text-xs">{sector.name}</h5>
+                                        <h5 className="font-black  tracking-widest text-xs">{sector.name}</h5>
                                     </div>
                                 ))}
                                 <div className="bg-primary p-8 flex flex-col justify-center items-center text-center">
-                                    <h5 className="font-black uppercase tracking-widest text-[10px] mb-2">Project Success</h5>
+                                    <h5 className="font-black  tracking-widest text-[10px] mb-2">Project Success</h5>
                                     <span className="text-4xl font-black">100%</span>
                                 </div>
                             </div>
@@ -244,17 +244,17 @@ export default function VirtualEngineeringPage() {
             {/* Final CTA */}
             <section className="py-24 bg-white border-y border-black/5 text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto">Unlock Your Potential with WSO</h2>
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto">Unlock Your Potential with WSO</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
                         Optimize your outcomes. Maximize your efficiency. Let Worldwide Security Options be your trusted partner in transforming your vision into a digital reality.
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         Request an Engineering Demo
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm italic">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm italic">
                         Transforming vision into digital reality. Contact us today.
                     </p>
                 </div>

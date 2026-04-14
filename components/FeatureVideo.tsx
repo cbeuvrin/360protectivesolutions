@@ -66,7 +66,7 @@ export function FeatureVideo() {
                     >
                         <Link
                             href="#contact"
-                            className="inline-block px-12 py-5 bg-[#ce161f] text-white text-base md:text-lg font-bold uppercase tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm shadow-xl shadow-red-900/20 text-center w-full lg:w-auto min-w-[240px]"
+                            className="inline-block px-12 py-5 bg-[#ce161f] text-white text-base md:text-lg font-bold  tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm shadow-xl shadow-red-900/20 text-center w-full lg:w-auto min-w-[240px]"
                         >
                             Contact Us Today
                         </Link>

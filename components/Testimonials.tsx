@@ -15,7 +15,7 @@ export function Testimonials() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
           >
-            <span className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 block">
+            <span className="text-primary font-black  tracking-[0.3em] text-xs mb-4 block">
               What they say about us
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-blue tracking-tight leading-[1.1] mb-8">

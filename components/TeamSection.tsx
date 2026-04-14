@@ -45,7 +45,7 @@ export function TeamSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="text-primary font-bold uppercase tracking-widest text-xs"
+                        className="text-primary font-bold  tracking-widest text-xs"
                     >
                         Success through unity
                     </motion.span>
@@ -89,7 +89,7 @@ export function TeamSection() {
                             </div>
                             
                             <div className="p-8 flex flex-col flex-grow">
-                                <span className="text-primary font-bold uppercase tracking-[0.2em] text-[10px] mb-2">
+                                <span className="text-primary font-bold  tracking-[0.2em] text-[10px] mb-2">
                                     {member.role}
                                 </span>
                                 <h3 className="text-2xl font-bold text-dark-blue mb-4">

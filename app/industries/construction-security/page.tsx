@@ -82,10 +82,10 @@ export default function ConstructionSecurityPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <span className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
+                        <span className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
                             Industrial Protection
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6">
+                        <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6">
                             Construction Site <br className="hidden md:block" />
                             <span className="text-primary italic font-black">Security</span>
                         </h1>
@@ -94,7 +94,7 @@ export default function ConstructionSecurityPage() {
                         </p>
                         <button 
                             onClick={openModal}
-                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
+                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
                         >
                             Request a Construction Site Evaluation
                         </button>
@@ -112,8 +112,8 @@ export default function ConstructionSecurityPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-black uppercase tracking-widest text-sm">Our Primary Mission</span>
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mt-4 mb-8 uppercase leading-tight">
+                            <span className="text-primary font-black  tracking-widest text-sm">Our Primary Mission</span>
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mt-4 mb-8  leading-tight">
                                 Functioning as a <br />
                                 <span className="text-primary italic font-light font-serif">Strategic Partner</span>
                             </h2>
@@ -135,12 +135,12 @@ export default function ConstructionSecurityPage() {
                             className="bg-dark-blue p-12 text-white rounded-sm shadow-2xl relative overflow-hidden"
                         >
                             <div className="relative z-10">
-                                <h3 className="text-2xl font-black mb-6 uppercase tracking-tighter">Advanced Access Control & Digital Logging</h3>
+                                <h3 className="text-2xl font-black mb-6  tracking-tighter">Advanced Access Control & Digital Logging</h3>
                                 <p className="text-gray-400 leading-relaxed mb-8 italic">
                                     We utilize a sophisticated vendor and visitor log-in system powered by digital reporting technology. This ensures an accurate, real-time record of everyone entering or exiting the site.
                                 </p>
                                 <div className="p-6 border-l-4 border-primary bg-white/5">
-                                    <p className="font-bold uppercase tracking-widest text-sm">
+                                    <p className="font-bold  tracking-widest text-sm">
                                         No equipment or material is released without authorized written consent, ensuring total accountability for your inventory.
                                     </p>
                                 </div>
@@ -155,7 +155,7 @@ export default function ConstructionSecurityPage() {
             <section className="py-24 bg-gray-50 border-y border-black/5">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-black text-dark-blue uppercase">Our Commitment to Operational Excellence</h2>
+                        <h2 className="text-3xl md:text-5xl font-black text-dark-blue ">Our Commitment to Operational Excellence</h2>
                         <div className="w-20 h-1.5 bg-primary mx-auto mt-8" />
                     </div>
 
@@ -172,7 +172,7 @@ export default function ConstructionSecurityPage() {
                                 <div className="w-16 h-16 bg-gray-50 flex items-center justify-center rounded-sm mb-6 group-hover:bg-primary group-hover:text-white transition-all">
                                     <pillar.icon size={30} />
                                 </div>
-                                <h4 className="text-lg font-black text-dark-blue uppercase mb-4 tracking-tighter">{pillar.title}</h4>
+                                <h4 className="text-lg font-black text-dark-blue  mb-4 tracking-tighter">{pillar.title}</h4>
                                 <p className="text-gray-500 text-sm leading-relaxed">{pillar.description}</p>
                             </motion.div>
                         ))}
@@ -185,7 +185,7 @@ export default function ConstructionSecurityPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">Specialized Construction Security Programs</h2>
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">Specialized Construction Security Programs</h2>
                             <p className="text-gray-600 text-lg mb-12">
                                 Our specialized programs are designed to mitigate the specific challenges of the New York and New Jersey construction landscape:
                             </p>
@@ -211,7 +211,7 @@ export default function ConstructionSecurityPage() {
                                         <service.icon size={24} />
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-black text-dark-blue uppercase mb-2 tracking-tighter">{service.title}</h4>
+                                        <h4 className="text-lg font-black text-dark-blue  mb-2 tracking-tighter">{service.title}</h4>
                                         <p className="text-gray-500 text-sm leading-relaxed">{service.description}</p>
                                     </div>
                                 </motion.div>
@@ -224,21 +224,21 @@ export default function ConstructionSecurityPage() {
             {/* Final CTA */}
             <section className="py-24 bg-dark-blue text-white overflow-hidden relative">
                 <div className="container relative z-10 mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-6xl font-black mb-8 uppercase max-w-4xl mx-auto tracking-tighter">Lead Your Project with Peace of Mind</h2>
+                    <h2 className="text-3xl md:text-6xl font-black mb-8  max-w-4xl mx-auto tracking-tighter">Lead Your Project with Peace of Mind</h2>
                     <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto italic font-light">
                         When you partner with WSO, you receive a dedicated security infrastructure designed to keep your project on track and your assets safe.
                     </p>
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                         <button 
                             onClick={openModal}
-                            className="bg-primary hover:bg-red-700 text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                            className="bg-primary hover:bg-red-700 text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                         >
                             Request a Construction Site Evaluation
                         </button>
                     </div>
                     <div className="mt-12 flex flex-col items-center gap-4">
-                        <p className="text-primary font-black uppercase tracking-[0.3em] text-sm italic">Protect your site. Secure your investment.</p>
-                        <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">Contact Worldwide Security Options today.</p>
+                        <p className="text-primary font-black  tracking-[0.3em] text-sm italic">Protect your site. Secure your investment.</p>
+                        <p className="text-gray-500 font-bold  tracking-widest text-xs">Contact Worldwide Security Options today.</p>
                     </div>
                 </div>
                 

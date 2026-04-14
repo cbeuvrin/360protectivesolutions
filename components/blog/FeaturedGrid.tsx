@@ -49,12 +49,12 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                             <Link href={`/blog/${displayPosts[0].slug}`} className="block h-full cursor-pointer">
                                 <img src={getFeaturedImage(displayPosts[0])} alt={displayPosts[0].title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
-                                    <span className="bg-primary/95 text-white font-black uppercase text-[10px] tracking-[0.3em] py-1.5 px-4 mb-6 inline-block w-fit">
+                                    <span className="bg-primary/95 text-white font-black  text-[10px] tracking-[0.3em] py-1.5 px-4 mb-6 inline-block w-fit">
                                         {getCategory(displayPosts[0])}
                                     </span>
-                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter leading-none group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[0].title.rendered }} />
+                                    <h2 className="text-3xl md:text-5xl font-black text-white mb-6  tracking-tighter leading-none group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[0].title.rendered }} />
                                     <div className="flex gap-6 mt-4 opacity-70">
-                                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white">
+                                        <div className="flex items-center gap-2 text-xs font-bold  tracking-widest text-white">
                                             <Calendar size={14} className="text-primary" /> {formatPostDate(displayPosts[0].date)}
                                         </div>
                                     </div>
@@ -77,12 +77,12 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                                 <Link href={`/blog/${displayPosts[1].slug}`} className="block h-full cursor-pointer">
                                     <img src={getFeaturedImage(displayPosts[1])} alt={displayPosts[1].title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent flex flex-col justify-end p-8">
-                                        <span className="bg-primary/95 text-white font-black uppercase text-[10px] tracking-[0.3em] py-1.5 px-4 mb-4 inline-block w-fit">
+                                        <span className="bg-primary/95 text-white font-black  text-[10px] tracking-[0.3em] py-1.5 px-4 mb-4 inline-block w-fit">
                                             {getCategory(displayPosts[1])}
                                         </span>
-                                        <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[1].title.rendered }} />
+                                        <h3 className="text-xl md:text-2xl font-black text-white  tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[1].title.rendered }} />
                                         <div className="flex gap-4 mt-6 opacity-60">
-                                            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white">
+                                            <div className="flex items-center gap-2 text-[10px] font-bold  tracking-widest text-white">
                                                 <Calendar size={12} className="text-primary" /> {formatPostDate(displayPosts[1].date)}
                                             </div>
                                         </div>
@@ -105,12 +105,12 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                                     <Link href={`/blog/${post.slug}`} className="block h-full cursor-pointer">
                                         <img src={getFeaturedImage(post)} alt={post.title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent flex flex-col justify-end p-6">
-                                            <span className="bg-primary/95 text-white font-black uppercase text-[8px] tracking-[0.3em] py-1 px-3 mb-3 inline-block w-fit">
+                                            <span className="bg-primary/95 text-white font-black  text-[8px] tracking-[0.3em] py-1 px-3 mb-3 inline-block w-fit">
                                                 {getCategory(post)}
                                             </span>
-                                            <h4 className="text-[10px] md:text-xs font-black text-white uppercase tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                                            <h4 className="text-[10px] md:text-xs font-black text-white  tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                                             <div className="flex gap-3 mt-4 opacity-50">
-                                                <div className="flex items-center gap-2 text-[8px] font-black uppercase text-white">
+                                                <div className="flex items-center gap-2 text-[8px] font-black  text-white">
                                                     <Calendar size={10} className="text-primary font-black" /> {formatPostDate(post.date)}
                                                 </div>
                                             </div>

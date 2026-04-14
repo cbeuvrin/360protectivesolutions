@@ -32,7 +32,7 @@ export function InstitutionalBacking() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 block"
+          className="text-primary font-black  tracking-[0.3em] text-xs mb-4 block"
         >
           Institutional Excellence
         </motion.span>

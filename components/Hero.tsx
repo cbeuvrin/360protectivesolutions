@@ -64,9 +64,9 @@ export function Hero() {
                                 transition: { duration: 0.8, ease: "easeOut" } 
                             }
                         }}
-                        className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 tracking-wider max-w-2xl uppercase"
+                        className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 tracking-wider max-w-2xl"
                     >
-                        100% MILITARY & LAW ENFORCEMENT <br /> VETERAN-OWNED SECURITY SERVICE
+                        100% Military & Law Enforcement <br /> Veteran-Owned Security Service
                     </motion.h2>
 
                     <motion.p 
@@ -96,7 +96,7 @@ export function Hero() {
                     >
                         <button
                             onClick={openModal}
-                            className="inline-block px-8 py-3.5 bg-primary text-white text-base md:text-lg font-bold uppercase tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm cursor-pointer"
+                            className="inline-block px-8 py-3.5 bg-primary text-white text-base md:text-lg font-bold tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm cursor-pointer"
                         >
                             Get Started
                         </button>

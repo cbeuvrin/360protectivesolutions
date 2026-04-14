@@ -105,10 +105,10 @@ export default function MediaCenterPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-6 inline-block">
+                            <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Expert Security Analysis
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]">
+                            <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]">
                                 Media <span className="text-primary italic font-black">Center</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-500 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -117,17 +117,17 @@ export default function MediaCenterPage() {
                             <div className="flex flex-col items-center gap-8">
                                 <button 
                                     onClick={openModal}
-                                    className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                                    className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                                 >
                                     Request an Interview
                                 </button>
                                 <div className="flex items-center gap-6 px-4">
-                                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Seen On:</span>
+                                    <span className="text-[10px] font-bold text-gray-400  tracking-widest">Seen On:</span>
                                     <div className="flex flex-wrap justify-center gap-6 opacity-40">
-                                        <span className="font-black text-dark-blue text-xs uppercase tracking-tighter">Univision</span>
-                                        <span className="font-black text-dark-blue text-xs uppercase tracking-tighter">Telemundo</span>
-                                        <span className="font-black text-dark-blue text-xs uppercase tracking-tighter">Bloomberg</span>
-                                        <span className="font-black text-dark-blue text-xs uppercase tracking-tighter">CBS</span>
+                                        <span className="font-black text-dark-blue text-xs  tracking-tighter">Univision</span>
+                                        <span className="font-black text-dark-blue text-xs  tracking-tighter">Telemundo</span>
+                                        <span className="font-black text-dark-blue text-xs  tracking-tighter">Bloomberg</span>
+                                        <span className="font-black text-dark-blue text-xs  tracking-tighter">CBS</span>
                                     </div>
                                 </div>
                             </div>
@@ -140,8 +140,8 @@ export default function MediaCenterPage() {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm md:text-base">In the Headlines</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase text-dark-blue">Featured Media <br /><span className="text-primary italic font-black">Appearances</span></h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm md:text-base">In the Headlines</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4  text-dark-blue">Featured Media <br /><span className="text-primary italic font-black">Appearances</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -157,20 +157,20 @@ export default function MediaCenterPage() {
                                 <div className="p-8">
                                     <div className="flex justify-between items-start mb-6">
                                         <div className="bg-dark-blue px-3 py-1 rounded-sm">
-                                            <span className="text-[9px] font-black text-white uppercase tracking-widest">{item.type}</span>
+                                            <span className="text-[9px] font-black text-white  tracking-widest">{item.type}</span>
                                         </div>
                                         <div className="text-primary italic font-black">
                                             <Mic size={20} />
                                         </div>
                                     </div>
-                                    <span className="block text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-2">{item.outlet}</span>
-                                    <h4 className="text-xl font-black text-dark-blue uppercase mb-4 tracking-tighter leading-tight group-hover:text-primary transition-colors">{item.title}</h4>
+                                    <span className="block text-[10px] font-bold text-primary  tracking-[0.3em] mb-2">{item.outlet}</span>
+                                    <h4 className="text-xl font-black text-dark-blue  mb-4 tracking-tighter leading-tight group-hover:text-primary transition-colors">{item.title}</h4>
                                     <p className="text-gray-500 text-xs leading-relaxed mb-8">{item.description}</p>
                                     <a 
                                         href={item.link} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-dark-blue font-black uppercase tracking-widest text-[10px] border-b-2 border-primary/20 hover:border-primary transition-all pb-1"
+                                        className="inline-flex items-center gap-2 text-dark-blue font-black  tracking-widest text-[10px] border-b-2 border-primary/20 hover:border-primary transition-all pb-1"
                                     >
                                         Watch / Read Now <ExternalLink size={12} />
                                     </a>
@@ -185,16 +185,16 @@ export default function MediaCenterPage() {
             <section className="py-24 bg-dark-blue text-white overflow-hidden relative">
                 <div className="container mx-auto px-6 text-center relative z-10">
                     <Quote size={64} className="text-primary mx-auto mb-10 opacity-50" />
-                    <h2 className="text-2xl md:text-4xl font-black uppercase italic max-w-4xl mx-auto leading-tight mb-8">
+                    <h2 className="text-2xl md:text-4xl font-black  italic max-w-4xl mx-auto leading-tight mb-8">
                         "We need to give businesses a sense of security and the tools to protect themselves."
                     </h2>
                     <div className="flex flex-col items-center">
-                        <span className="text-primary font-black uppercase tracking-widest text-sm mb-2">Nelson Vergara</span>
-                        <span className="text-white/40 font-bold uppercase tracking-[0.3em] text-[10px]">Founder & CEO, WSO</span>
+                        <span className="text-primary font-black  tracking-widest text-sm mb-2">Nelson Vergara</span>
+                        <span className="text-white/40 font-bold  tracking-[0.3em] text-[10px]">Founder & CEO, WSO</span>
                     </div>
                 </div>
                 <div className="absolute top-0 right-0 w-full h-full opacity-[0.03] select-none pointer-events-none">
-                    <span className="text-[20vw] font-black uppercase tracking-tighter absolute -bottom-20 -right-20">IMPACT</span>
+                    <span className="text-[20vw] font-black  tracking-tighter absolute -bottom-20 -right-20">IMPACT</span>
                 </div>
             </section>
 
@@ -203,8 +203,8 @@ export default function MediaCenterPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
-                            <span className="text-primary font-black uppercase tracking-[0.3em] text-sm">Forged in Action</span>
-                            <h2 className="text-3xl md:text-5xl font-black mt-4 mb-8 uppercase text-dark-blue leading-tight">A Legacy of Courage: <br /><span className="text-primary italic font-black">The WSO Story</span></h2>
+                            <span className="text-primary font-black  tracking-[0.3em] text-sm">Forged in Action</span>
+                            <h2 className="text-3xl md:text-5xl font-black mt-4 mb-8  text-dark-blue leading-tight">A Legacy of Courage: <br /><span className="text-primary italic font-black">The WSO Story</span></h2>
                             <p className="text-gray-600 text-lg mb-12 leading-relaxed">
                                 The leadership at Worldwide Security Options is forged in real-world experience. Our founder’s commitment to protection is personal and proven.
                             </p>
@@ -222,8 +222,8 @@ export default function MediaCenterPage() {
                                             <item.icon size={24} className="text-primary group-hover:text-white" />
                                         </div>
                                         <div>
-                                            <h4 className="font-black text-dark-blue uppercase tracking-tight text-sm group-hover:text-primary transition-colors">{item.title}</h4>
-                                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{item.outlet}</span>
+                                            <h4 className="font-black text-dark-blue  tracking-tight text-sm group-hover:text-primary transition-colors">{item.title}</h4>
+                                            <span className="text-[10px] font-bold text-gray-400  tracking-widest">{item.outlet}</span>
                                         </div>
                                         <ArrowRight size={16} className="ml-auto text-primary opacity-0 group-hover:opacity-100 transition-all" />
                                     </a>
@@ -240,15 +240,15 @@ export default function MediaCenterPage() {
                                 className="bg-dark-blue p-16 rounded-sm relative overflow-hidden text-white"
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 -m-16 rounded-full" />
-                                <h3 className="text-3xl md:text-5xl font-black uppercase leading-none mb-10 italic">A Cop's <br /> Courage <br /> <span className="text-primary italic font-black">Under Fire</span></h3>
+                                <h3 className="text-3xl md:text-5xl font-black  leading-none mb-10 italic">A Cop's <br /> Courage <br /> <span className="text-primary italic font-black">Under Fire</span></h3>
                                 <p className="text-gray-400 text-sm leading-relaxed mb-8">
                                     Off-duty Officer Nelson Vergara survived a shootout in the Bronx, taking two bullets yet successfully apprehending both suspects. He was officially recognized by NYC leadership for his bravery.
                                 </p>
                                 <div className="flex items-center gap-4 border-t border-white/10 pt-8 mt-8">
                                     <Award size={32} className="text-primary italic font-black" />
                                     <div>
-                                        <span className="block font-black uppercase text-xs tracking-widest">Mayoral Recognition</span>
-                                        <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-widest">NYPD & U.S. Marines Veteran</span>
+                                        <span className="block font-black  text-xs tracking-widest">Mayoral Recognition</span>
+                                        <span className="block text-[10px] text-gray-500 font-bold  tracking-widest">NYPD & U.S. Marines Veteran</span>
                                     </div>
                                 </div>
                             </motion.div>
@@ -260,7 +260,7 @@ export default function MediaCenterPage() {
             {/* Media Inquiries Section */}
             <section className="py-24 bg-gray-50 border-y border-black/5 text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto leading-tight">
                         Media <br />
                         <span className="text-primary italic font-black">Inquiries</span>
                     </h2>
@@ -269,11 +269,11 @@ export default function MediaCenterPage() {
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         Request Media Kit
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm italic">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm italic">
                         Technical analysis. Real-world insights. Every interview counts.
                     </p>
                 </div>

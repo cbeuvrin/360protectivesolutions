@@ -37,7 +37,7 @@ export function AboutVideos() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block"
+          className="text-primary font-black  tracking-[0.3em] text-[10px] mb-4 block"
         >
           Institutional Excellence
         </motion.span>

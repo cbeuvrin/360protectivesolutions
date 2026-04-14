@@ -57,7 +57,7 @@ export function WhyChooseUs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="text-[14px] font-black text-gray-400 uppercase tracking-[0.4em] mb-6 font-heading"
+                        className="text-[14px] font-black text-gray-400  tracking-[0.4em] mb-6 font-heading"
                     >
                         Why Choose Us
                     </motion.h4>

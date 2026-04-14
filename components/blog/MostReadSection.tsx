@@ -28,7 +28,7 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
         <section className="py-24 px-6 md:px-12 lg:px-24 bg-white">
             <div className="max-w-[1400px] mx-auto">
                 <div className="mb-12">
-                    <h2 className="text-3xl font-black text-dark-blue uppercase tracking-tighter italic">Most Read</h2>
+                    <h2 className="text-3xl font-black text-dark-blue  tracking-tighter italic">Most Read</h2>
                     <div className="w-16 h-1 bg-primary mt-2" />
                 </div>
 
@@ -53,9 +53,9 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                                         <span className="inline-block px-3 py-1 bg-gray-50 text-blue-600 text-[10px] font-bold border border-blue-600/30 mb-4 rounded-sm">
                                             {getCategory(post)}
                                         </span>
-                                        <h3 className="text-xl font-black text-dark-blue uppercase tracking-tighter leading-tight mb-6 group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                                        <h3 className="text-xl font-black text-dark-blue  tracking-tighter leading-tight mb-6 group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                                         <div className="flex gap-4 opacity-50 mt-auto">
-                                            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-dark-blue">
+                                            <div className="flex items-center gap-2 text-[10px] font-bold  tracking-widest text-dark-blue">
                                                 <Calendar size={12} className="text-primary" /> {formatPostDate(post.date)}
                                             </div>
                                         </div>
@@ -80,9 +80,9 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                                     <img src={getFeaturedImage(post)} alt={post.title.rendered} className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="text-[11px] font-black text-dark-blue uppercase tracking-tight mb-3 leading-snug group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                                    <h4 className="text-[11px] font-black text-dark-blue  tracking-tight mb-3 leading-snug group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                                     <div className="flex gap-4 opacity-40">
-                                        <div className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-widest text-dark-blue">
+                                        <div className="flex items-center gap-1.5 text-[9px] font-bold  tracking-widest text-dark-blue">
                                             <Calendar size={10} className="text-primary font-black" /> {formatPostDate(post.date)}
                                         </div>
                                     </div>

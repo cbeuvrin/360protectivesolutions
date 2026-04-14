@@ -41,7 +41,7 @@ export default function ExecutiveProtectionPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block"
+            className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block"
           >
             Elite Personnel & Transport
           </motion.span>
@@ -49,7 +49,7 @@ export default function ExecutiveProtectionPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6"
           >
             Executive Protection <br className="hidden md:block" /> & Security Drivers
           </motion.h1>
@@ -69,7 +69,7 @@ export default function ExecutiveProtectionPage() {
           >
             <button 
               onClick={openModal}
-              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
+              className="inline-block bg-white text-black px-10 py-5 rounded-full font-bold  tracking-widest text-xs hover:bg-primary transition-all duration-300 shadow-2xl hover:scale-105 cursor-pointer"
             >
               Request a Confidential Consultation
             </button>
@@ -84,11 +84,11 @@ export default function ExecutiveProtectionPage() {
             <div className="space-y-6">
               <motion.h2 
                 {...fadeIn}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-dark uppercase"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-dark "
               >
                 Personal & Corporate Safety
               </motion.h2>
-                <motion.span {...fadeIn} className="text-primary font-bold uppercase tracking-widest text-xs mb-4 block underline decoration-2 underline-offset-8">
+                <motion.span {...fadeIn} className="text-primary font-bold  tracking-widest text-xs mb-4 block underline decoration-2 underline-offset-8">
                     The Standard of Excellence
                 </motion.span>
                 <motion.h2 {...fadeIn} transition={{ delay: 0.1 }} className="text-3xl md:text-5xl font-bold text-dark-blue mb-8">
@@ -130,7 +130,7 @@ export default function ExecutiveProtectionPage() {
               <div className="w-20 h-20 rounded-sm bg-gray-50 flex items-center justify-center mb-8 border-b-4 border-primary shadow-lg">
                 <Briefcase className="w-10 h-10 text-dark-blue" />
               </div>
-              <h3 className="text-2xl font-bold text-dark-blue mb-6 uppercase tracking-tight">Executive Protection Specialists</h3>
+              <h3 className="text-2xl font-bold text-dark-blue mb-6  tracking-tight">Executive Protection Specialists</h3>
               <p className="text-gray-600 font-light leading-relaxed">
                 Our team consists of highly trained professionals with extensive experience in the field. Every specialist has undergone Executive Protection Training in NYC, mastering the skills necessary to ensure your safety in high-profile events, international travel, or sensitive business meetings. We don't just react; we mitigate risks before they manifest.
               </p>
@@ -147,7 +147,7 @@ export default function ExecutiveProtectionPage() {
               <div className="w-20 h-20 rounded-sm bg-gray-50 flex items-center justify-center mb-8 border-b-4 border-primary shadow-lg">
                 <Car className="w-10 h-10 text-dark-blue" />
               </div>
-              <h3 className="text-2xl font-bold text-dark-blue mb-6 uppercase tracking-tight">Elite Security Drivers</h3>
+              <h3 className="text-2xl font-bold text-dark-blue mb-6  tracking-tight">Elite Security Drivers</h3>
               <p className="text-gray-600 font-light leading-relaxed">
                 Our drivers are experts in more than just navigation. They possess extensive knowledge of defensive driving techniques, strategic route planning, and real-time traffic management. Undergoing rigorous tactical training, they ensure a secure and efficient transportation experience in any environment.
               </p>
@@ -183,7 +183,7 @@ export default function ExecutiveProtectionPage() {
                     className="p-8 border border-white/5 rounded-sm hover:bg-white/5 transition-all"
                 >
                     <div className="text-primary mb-6 flex justify-center">{item.icon}</div>
-                    <h4 className="text-lg font-bold mb-3 uppercase tracking-widest">{item.title}</h4>
+                    <h4 className="text-lg font-bold mb-3  tracking-widest">{item.title}</h4>
                     <p className="text-sm text-gray-400 font-light leading-relaxed">{item.text}</p>
                 </motion.div>
             ))}
@@ -195,7 +195,7 @@ export default function ExecutiveProtectionPage() {
       <section className="py-24 bg-white border-b border-gray-100">
           <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
               <Star className="w-12 h-12 text-primary mx-auto mb-8 animate-pulse" />
-              <h2 className="text-3xl md:text-5xl font-bold text-dark-blue mb-8 uppercase tracking-tighter">
+              <h2 className="text-3xl md:text-5xl font-bold text-dark-blue mb-8  tracking-tighter">
                 The <span className="text-primary italic font-black">NYC Standard</span> of Protection.
               </h2>
               <div className="max-w-4xl mx-auto">
@@ -203,7 +203,7 @@ export default function ExecutiveProtectionPage() {
                     "As top providers of Executive Protection Training in NYC, our specialists operate under the most demanding standards in the industry. This academic and tactical foundation ensures that our agents are prepared for the constantly evolving threats of the modern world."
                   </p>
                   
-                  <div className="mt-12 flex flex-wrap justify-center gap-8 text-[11px] font-black uppercase tracking-[0.3em] text-dark-blue/60">
+                  <div className="mt-12 flex flex-wrap justify-center gap-8 text-[11px] font-black  tracking-[0.3em] text-dark-blue/60">
                       <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary italic font-black"/> Real-World Tactical Mastery</span>
                       <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary italic font-black"/> Scrutinized Training Modules</span>
                       <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary italic font-black"/> Advanced Defensive Tactics</span>
@@ -224,7 +224,7 @@ export default function ExecutiveProtectionPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter"
+                className="text-4xl md:text-6xl font-black mb-6  tracking-tighter"
               >
                 Secure Your Assets. <br /> Protect Your Future.
               </motion.h2>
@@ -245,7 +245,7 @@ export default function ExecutiveProtectionPage() {
               >
                 <Link 
                     href="/#contact"
-                    className="inline-block px-12 py-5 bg-white text-primary font-black uppercase tracking-[0.2em] text-xs hover:bg-dark-blue hover:text-white transition-all rounded-sm shadow-2xl"
+                    className="inline-block px-12 py-5 bg-white text-primary font-black  tracking-[0.2em] text-xs hover:bg-dark-blue hover:text-white transition-all rounded-sm shadow-2xl"
                 >
                     Consult with a Specialist
                 </Link>

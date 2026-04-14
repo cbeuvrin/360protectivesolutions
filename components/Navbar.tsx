@@ -24,7 +24,7 @@ const industries = [
     { name: "Port & Maritime Security", href: "/industries/port-maritime-security" },
     { name: "Residential Security & Private Estates", href: "/industries/residential-security" },
     { name: "Warehouse & Logistics Security", href: "/industries/warehouse-security" },
-    { name: "REQUEST A FACILITY ASSESSMENT", href: "/contact" },
+    { name: "Request a Facility Assessment", href: "/contact" },
 ];
 
 const technologySubMenu = [
@@ -115,7 +115,7 @@ export function Navbar() {
                             >
                                 <Link
                                     href={link.href}
-                                    className="text-[11px] font-black text-dark-blue hover:text-primary transition-all duration-300 uppercase tracking-[0.1em] 2xl:tracking-[0.2em] whitespace-nowrap flex items-center gap-1.5"
+                                    className="text-[11px] font-black text-dark-blue hover:text-primary transition-all duration-300  tracking-[0.1em] 2xl:tracking-[0.2em] whitespace-nowrap flex items-center gap-1.5"
                                 >
                                     {link.name}
                                     {link.subMenu && <ChevronDown size={14} className={cn("transition-transform duration-300", hoveredLink === link.name && "rotate-180")} />}
@@ -136,7 +136,7 @@ export function Navbar() {
                                                     key={sIdx}
                                                     href={sub.href}
                                                     className={cn(
-                                                        "block px-6 py-3 text-[10px] font-bold uppercase tracking-widest transition-all border-l-2 border-transparent",
+                                                        "block px-6 py-3 text-[10px] font-bold  tracking-widest transition-all border-l-2 border-transparent",
                                                         sub.name.includes("FACILITY ASSESSMENT") 
                                                             ? "text-primary hover:bg-primary/5 border-l-primary" 
                                                             : "text-dark-blue hover:text-primary hover:bg-gray-50 hover:border-primary"
@@ -156,7 +156,7 @@ export function Navbar() {
 
                     <button 
                         onClick={openModal}
-                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-black uppercase tracking-[0.1em] 2xl:tracking-[0.2em] text-[12px] 2xl:text-[13px] whitespace-nowrap cursor-pointer"
+                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-black  tracking-[0.1em] 2xl:tracking-[0.2em] text-[12px] 2xl:text-[13px] whitespace-nowrap cursor-pointer"
                     >
                         Get Started
                     </button>
@@ -186,7 +186,7 @@ export function Navbar() {
                                 <div key={link.name} className="flex flex-col">
                                     <Link
                                         href={link.href}
-                                        className="text-sm font-bold text-dark-blue hover:text-primary transition-colors uppercase tracking-widest p-4 rounded-xl hover:bg-black/5 flex items-center justify-between group"
+                                        className="text-sm font-bold text-dark-blue hover:text-primary transition-colors  tracking-widest p-4 rounded-xl hover:bg-black/5 flex items-center justify-between group"
                                         onClick={() => !link.subMenu && setIsOpen(false)}
                                     >
                                         {link.name}
@@ -198,7 +198,7 @@ export function Navbar() {
                                                 <Link
                                                     key={sIdx}
                                                     href={sub.href}
-                                                    className="text-[10px] font-bold text-gray-500 hover:text-primary transition-colors uppercase tracking-widest p-3 rounded-lg hover:bg-black/5"
+                                                    className="text-[10px] font-bold text-gray-500 hover:text-primary transition-colors  tracking-widest p-3 rounded-lg hover:bg-black/5"
                                                     onClick={() => setIsOpen(false)}
                                                 >
                                                     {sub.name}

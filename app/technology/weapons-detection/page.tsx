@@ -76,10 +76,10 @@ export default function WeaponsDetectionPage() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-6 inline-block">
+                            <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Proactive Intelligence Response
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]">
+                            <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]">
                                 AI <span className="text-primary italic font-black">Weapons Detection</span>
                             </h1>
  Broadway-style weight update
@@ -88,7 +88,7 @@ export default function WeaponsDetectionPage() {
                             </p>
                             <button 
                                 onClick={openModal}
-                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                                className="bg-primary hover:bg-black text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                             >
                                 Request a Smart Camera Audit
                             </button>
@@ -129,12 +129,12 @@ export default function WeaponsDetectionPage() {
                                 <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-sm">
                                     <Play size={20} className="text-white fill-white" />
                                 </div>
-                                <span className="text-white font-black uppercase tracking-widest text-xs">Stopping Threats at the Perimeter</span>
+                                <span className="text-white font-black  tracking-widest text-xs">Stopping Threats at the Perimeter</span>
                             </div>
                         </motion.div>
 
                         <div>
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 React Before a <br />
                                 <span className="text-primary italic font-black">Threat Escalates</span>
                             </h2>
@@ -149,8 +149,8 @@ export default function WeaponsDetectionPage() {
                                     <Shield size={24} className="text-primary italic font-black" />
                                 </div>
                                 <div>
-                                    <span className="block font-black text-xs uppercase tracking-widest">Actuate Powered</span>
-                                    <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-widest">Enterprise Threat Intelligence</span>
+                                    <span className="block font-black text-xs  tracking-widest">Actuate Powered</span>
+                                    <span className="block text-[10px] text-gray-500 font-bold  tracking-widest">Enterprise Threat Intelligence</span>
                                 </div>
                             </div>
                         </div>
@@ -162,8 +162,8 @@ export default function WeaponsDetectionPage() {
             <section className="py-24 bg-gray-50">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm">Advanced Capability</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase text-dark-blue">Why Choose WSO's AI Detection?</h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm">Advanced Capability</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4  text-dark-blue">Why Choose WSO's AI Detection?</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -179,7 +179,7 @@ export default function WeaponsDetectionPage() {
                                 <div className="w-14 h-14 bg-gray-50 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
                             <feature.icon size={28} className="text-primary group-hover:text-white transition-colors" />
                                 </div>
-                                <h4 className="text-lg font-black text-dark-blue uppercase mb-4 tracking-tighter">{feature.title}</h4>
+                                <h4 className="text-lg font-black text-dark-blue  mb-4 tracking-tighter">{feature.title}</h4>
                                 <p className="text-gray-500 text-xs leading-relaxed">{feature.description}</p>
                             </motion.div>
                         ))}
@@ -192,7 +192,7 @@ export default function WeaponsDetectionPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 A Comprehensive <br />
                                 <span className="text-primary italic font-black">Safety Ecosystem</span>
                             </h2>
@@ -207,7 +207,7 @@ export default function WeaponsDetectionPage() {
                                             <item.icon size={24} className="text-white" />
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-black text-dark-blue uppercase tracking-tight mb-2">{item.title}</h4>
+                                            <h4 className="text-xl font-black text-dark-blue  tracking-tight mb-2">{item.title}</h4>
                                             <p className="text-gray-500 text-sm leading-relaxed max-w-sm">{item.description}</p>
                                         </div>
                                     </div>
@@ -218,11 +218,11 @@ export default function WeaponsDetectionPage() {
                         <div className="lg:w-1/2">
                             <div className="bg-dark-blue p-16 rounded-sm relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 -m-16 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                                <span className="text-primary font-black uppercase tracking-[0.4em] text-xs mb-8 block">Active Response</span>
-                                <h3 className="text-4xl md:text-6xl font-black text-white uppercase italic leading-none mb-10">ALIVE <br /> Survival <br /> Training</h3>
+                                <span className="text-primary font-black  tracking-[0.4em] text-xs mb-8 block">Active Response</span>
+                                <h3 className="text-4xl md:text-6xl font-black text-white  italic leading-none mb-10">ALIVE <br /> Survival <br /> Training</h3>
                                 <div className="flex items-center gap-4 text-white/60">
                                     <Zap size={20} className="text-primary italic font-black" />
-                                    <span className="font-bold uppercase tracking-widest text-[10px]">Situational Awareness Specialist Certified</span>
+                                    <span className="font-bold  tracking-widest text-[10px]">Situational Awareness Specialist Certified</span>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ export default function WeaponsDetectionPage() {
             {/* Seamless Integration */}
             <section className="py-24 bg-gray-50 border-y border-black/5 text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto leading-tight">
                         Seamless Integration, <br />
                         <span className="text-primary italic font-black">Absolute Vigilance.</span>
                     </h2>
@@ -243,11 +243,11 @@ export default function WeaponsDetectionPage() {
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         Request a Smart Camera System Audit
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm italic">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm italic">
                         Proactive Weapons Detection. Contact us today.
                     </p>
                 </div>

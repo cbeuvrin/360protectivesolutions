@@ -108,10 +108,10 @@ export default function WarehouseSecurityPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <span className="bg-primary text-white font-black uppercase tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
+                        <span className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
                             Supply Chain Integrity
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6">
+                        <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6">
                             Warehouse & <br className="hidden md:block" />
                             <span className="text-primary italic font-black">Logistics Security</span>
                         </h1>
@@ -120,7 +120,7 @@ export default function WarehouseSecurityPage() {
                         </p>
                         <button 
                             onClick={openModal}
-                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
+                            className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
                         >
                             Request a Logistics Security Audit
                         </button>
@@ -144,7 +144,7 @@ export default function WarehouseSecurityPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Securing the Flow of <br />
                                 <span className="text-primary italic font-light">Global Commerce</span>
                             </h2>
@@ -173,7 +173,7 @@ export default function WarehouseSecurityPage() {
                                         className="bg-gray-50 p-8 rounded-sm border border-black/5 flex flex-col items-center text-center group hover:bg-primary transition-all duration-500"
                                     >
                                         <feature.icon size={32} className="text-primary group-hover:text-white mb-4 transition-transform group-hover:scale-110" />
-                                        <h3 className="text-xs font-black text-dark-blue group-hover:text-white uppercase tracking-wider">{feature.title}</h3>
+                                        <h3 className="text-xs font-black text-dark-blue group-hover:text-white  tracking-wider">{feature.title}</h3>
                                     </motion.div>
                                 ))}
                             </div>
@@ -187,8 +187,8 @@ export default function WarehouseSecurityPage() {
             <section className="py-24 bg-dark-blue text-white">
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="text-center mb-16">
-                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm md:text-base">Specialized Logistics Guarding</span>
-                        <h2 className="text-3xl md:text-5xl font-black mt-4 uppercase">Reliable Protection for Distribution Centers</h2>
+                        <span className="text-primary font-black  tracking-[0.3em] text-sm md:text-base">Specialized Logistics Guarding</span>
+                        <h2 className="text-3xl md:text-5xl font-black mt-4 ">Reliable Protection for Distribution Centers</h2>
                         <div className="w-20 h-1.5 bg-primary mx-auto mt-8" />
                     </div>
 
@@ -203,7 +203,7 @@ export default function WarehouseSecurityPage() {
                                 className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-all group"
                             >
                                 <service.icon className="text-primary mb-6 group-hover:scale-110 transition-transform" size={40} />
-                                <h4 className="text-lg font-black uppercase mb-4 tracking-tighter">{service.title}</h4>
+                                <h4 className="text-lg font-black  mb-4 tracking-tighter">{service.title}</h4>
                                 <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
                             </motion.div>
                         ))}
@@ -216,7 +216,7 @@ export default function WarehouseSecurityPage() {
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2 order-2 lg:order-1">
-                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  leading-tight">
                                 Why WSO is the Right <br />
                                 <span className="text-primary italic font-light">Choice for Logistics</span>
                             </h2>
@@ -238,7 +238,7 @@ export default function WarehouseSecurityPage() {
                                             <reason.icon size={24} className="text-primary italic font-black" />
                                         </div>
                                         <div>
-                                            <h4 className="text-lg font-black text-dark-blue uppercase mb-2">{reason.title}</h4>
+                                            <h4 className="text-lg font-black text-dark-blue  mb-2">{reason.title}</h4>
                                             <p className="text-gray-500 leading-relaxed">{reason.description}</p>
                                         </div>
                                     </motion.div>
@@ -265,17 +265,17 @@ export default function WarehouseSecurityPage() {
             {/* Final CTA */}
             <section className="py-24 bg-gray-50 border-y border-black/5 text-center">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8 uppercase max-w-4xl mx-auto">Protect Your Supply Chain Today</h2>
+                    <h2 className="text-3xl md:text-5xl font-black text-dark-blue mb-8  max-w-4xl mx-auto">Protect Your Supply Chain Today</h2>
                     <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
                         Don't let your logistics be a target. At WSO, we don't just protect your property; we ensure the continuity of your business.
                     </p>
                     <button 
                         onClick={openModal}
-                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black uppercase tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
+                        className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
                         Request a Logistics Security Audit
                     </button>
-                    <p className="mt-8 text-gray-500 font-bold uppercase tracking-widest text-sm">
+                    <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm">
                         Contact Worldwide Security Options today.
                     </p>
                 </div>

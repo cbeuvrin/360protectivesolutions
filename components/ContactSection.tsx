@@ -26,7 +26,7 @@ export function ContactSection() {
                             />
                             <button
                                 type="button"
-                                className="px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest hover:bg-red-700 transition-colors rounded-sm"
+                                className="px-8 py-4 bg-primary text-white font-bold  tracking-widest hover:bg-red-700 transition-colors rounded-sm"
                             >
                                 Subscribe
                             </button>

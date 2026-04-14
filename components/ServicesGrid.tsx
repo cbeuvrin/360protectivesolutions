@@ -106,7 +106,7 @@ export function ServicesGrid() {
                                                     </p>
                                                     <button 
                                                         onClick={openModal}
-                                                        className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[13px] hover:gap-4 transition-all cursor-pointer"
+                                                        className="inline-flex items-center gap-2 text-primary font-black  tracking-widest text-[13px] hover:gap-4 transition-all cursor-pointer"
                                                     >
                                                         Consult with an expert <ArrowRight size={16} />
                                                     </button>
