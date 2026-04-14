@@ -16,7 +16,7 @@ const serviceList = [
     },
     { 
         title: "Protection Specialist", 
-        desc: "In the retail industry, security omnipresence coupled with situational awareness & proper training are paramount in loss prevention. Our 360 Protection Specialists provides the security service needed to stop the ongoing threat of retail item shrinkage." 
+        desc: "In the retail industry, security omnipresence coupled with situational awareness & proper training are paramount in loss prevention. Our Worldwide Security Options Specialists provides the security service needed to stop the ongoing threat of retail item shrinkage." 
     },
     { 
         title: "Camera Monitoring", 
@@ -24,7 +24,7 @@ const serviceList = [
     },
     { 
         title: "Weapons Detection Artificial Intelligence", 
-        desc: "360 Protective Solutions partnered with Actuate to offer comprehensive access to a proactive and digital security response. By providing a digital and human situational awareness system." 
+        desc: "Worldwide Security Options partnered with Actuate to offer comprehensive access to a proactive and digital security response. By providing a digital and human situational awareness system." 
     },
     { 
         title: "360 TRAX", 

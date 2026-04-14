@@ -104,7 +104,7 @@ export default function ForceProtectionPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-2xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-6 max-w-5xl mx-auto leading-tight md:leading-none uppercase px-6"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6"
           >
             Force Protection <br className="hidden md:block" /> Specialists
           </motion.h1>
@@ -134,7 +134,7 @@ export default function ForceProtectionPage() {
 
       {/* Corporate Overview Section */}
       <section className="py-16 md:py-24 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div className="space-y-6">
               <motion.h2 
@@ -183,7 +183,7 @@ export default function ForceProtectionPage() {
 
       {/* Why Trust WSO Section */}
       <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="text-center mb-16">
             <motion.span {...fadeIn} className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">
               The WSO Difference
@@ -225,7 +225,7 @@ export default function ForceProtectionPage() {
 
       {/* Comprehensive Operational Range Grid */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="text-center mb-16">
             <motion.span {...fadeIn} className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block text-center">
               Multifaceted Solutions
@@ -260,7 +260,7 @@ export default function ForceProtectionPage() {
 
       {/* Advanced Technology & Strategy Section */}
       <section className="py-32 bg-dark-blue text-white overflow-hidden relative">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/3">
               <motion.span {...fadeIn} className="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">
@@ -305,7 +305,7 @@ export default function ForceProtectionPage() {
             {...fadeIn}
             className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-50 mb-8 border border-gray-100"
           >
-            <Lock className="text-primary" size={32} />
+            <Lock className="text-primary italic font-black" size={32} />
           </motion.div>
           <motion.h2 {...fadeIn} transition={{ delay: 0.1 }} className="text-3xl md:text-5xl font-bold mb-8 tracking-tighter">
             Discretion and Confidentiality

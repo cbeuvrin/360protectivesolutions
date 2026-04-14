@@ -9,17 +9,15 @@ export function Footer() {
             <div className="container mx-auto px-6 md:px-12 lg:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
                     {/* Brand / About */}
-                    <div className="flex flex-col items-center md:items-start">
-                        <Link href="/" className="mb-8 inline-block group">
-                            <div className="bg-white p-2 rounded-full flex items-center justify-center w-36 h-36 hover:scale-105 transition-transform duration-300 shadow-2xl overflow-hidden">
-                                <img 
-                                    src="/images/logo.png" 
-                                    alt="360 PROTECTION" 
-                                    className="h-[85%] w-[85%] object-contain"
-                                />
-                            </div>
+                    <div className="flex flex-col items-center gap-8">
+                        <Link href="/" className="inline-block group">
+                            <img 
+                                src="/images/wso31.png" 
+                                alt="WORLDWIDE SECURITY OPTIONS" 
+                                className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+                            />
                         </Link>
-                        <div className="flex space-x-4 mb-4 md:mb-0 justify-center md:justify-start">
+                        <div className="flex space-x-6">
                             <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Facebook size={20} /></a>
                             <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Twitter size={20} /></a>
                             <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Linkedin size={20} /></a>
@@ -63,7 +61,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 text-center md:text-left">
-                    <p className="mb-4 md:mb-0">&copy; {new Date().getFullYear()} 360 Protective Solutions. <br className="md:hidden" /> All rights reserved.</p>
+                    <p className="mb-4 md:mb-0">&copy; {new Date().getFullYear()} Worldwide Security Options. <br className="md:hidden" /> All rights reserved.</p>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
                         <span>NY License #11000123456</span>
                         <span className="hidden md:block">|</span>

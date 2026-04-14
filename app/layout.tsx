@@ -8,12 +8,13 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Executive Protection NYC | 360 Protective Solutions",
+  title: "Executive Protection NYC | Worldwide Security Options",
   description: "Tailored Solutions for Elite Security",
 };
 
 import { ModalProvider } from "@/context/ModalContext";
 import { ContactModal } from "@/components/ContactModal";
+import { Preloader } from "@/components/Preloader";
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} antialiased`}
       >
+        <Preloader />
         <ModalProvider>
           {children}
           <ContactModal />

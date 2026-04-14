@@ -59,10 +59,10 @@ export default function AntiPiracyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold text-dark-blue leading-tight mb-8"
+                className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]"
               >
                 Anti-Piracy Film Surveillance: <br />
-                <span className="text-primary font-black">Protecting the Silver Screen.</span>
+                <span className="text-primary italic font-black">Protecting the Silver Screen.</span>
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -225,9 +225,9 @@ export default function AntiPiracyPage() {
                 
                 <div className="mt-12 flex flex-wrap justify-center gap-8 opacity-70 text-xs font-bold uppercase tracking-[0.3em]">
                     <span>CCTV Hub</span>
-                    <span className="text-primary">/</span>
+                    <span className="text-primary italic font-black">/</span>
                     <span>NVG Teams</span>
-                    <span className="text-primary">/</span>
+                    <span className="text-primary italic font-black">/</span>
                     <span>Encrypted Comms</span>
                 </div>
             </motion.div>
@@ -239,7 +239,7 @@ export default function AntiPiracyPage() {
           <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
               <h2 className="text-3xl md:text-5xl font-bold text-dark-blue mb-16 uppercase tracking-tighter leading-tight">
                 Why WSO for <br />
-                <span className="text-primary">Film Security?</span>
+                <span className="text-primary italic font-black">Film Security?</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
                   {[

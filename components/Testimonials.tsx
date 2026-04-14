@@ -19,7 +19,7 @@ export function Testimonials() {
               What they say about us
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-blue tracking-tight leading-[1.1] mb-8">
-              Testimonials from Satisfied Clients of 360 Protective Solutions
+              Testimonials from Satisfied Clients of Worldwide Security Options
             </h2>
           </motion.div>
         </div>

@@ -49,7 +49,7 @@ export default function ExecutiveProtectionPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-2xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-6 max-w-5xl mx-auto leading-tight md:leading-none uppercase px-6"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6"
           >
             Executive Protection <br className="hidden md:block" /> & Security Drivers
           </motion.h1>
@@ -79,7 +79,7 @@ export default function ExecutiveProtectionPage() {
 
       {/* Service Definition Section */}
       <section className="py-16 md:py-24 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div className="space-y-6">
               <motion.h2 
@@ -196,7 +196,7 @@ export default function ExecutiveProtectionPage() {
           <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
               <Star className="w-12 h-12 text-primary mx-auto mb-8 animate-pulse" />
               <h2 className="text-3xl md:text-5xl font-bold text-dark-blue mb-8 uppercase tracking-tighter">
-                The <span className="text-primary">NYC Standard</span> of Protection.
+                The <span className="text-primary italic font-black">NYC Standard</span> of Protection.
               </h2>
               <div className="max-w-4xl mx-auto">
                   <p className="text-xl text-gray-700 font-light leading-relaxed">
@@ -204,9 +204,9 @@ export default function ExecutiveProtectionPage() {
                   </p>
                   
                   <div className="mt-12 flex flex-wrap justify-center gap-8 text-[11px] font-black uppercase tracking-[0.3em] text-dark-blue/60">
-                      <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary"/> Real-World Tactical Mastery</span>
-                      <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary"/> Scrutinized Training Modules</span>
-                      <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary"/> Advanced Defensive Tactics</span>
+                      <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary italic font-black"/> Real-World Tactical Mastery</span>
+                      <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary italic font-black"/> Scrutinized Training Modules</span>
+                      <span className="flex items-center gap-2"><CheckCircle2 size={16} className="text-primary italic font-black"/> Advanced Defensive Tactics</span>
                   </div>
               </div>
           </div>

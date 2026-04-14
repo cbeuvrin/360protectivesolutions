@@ -90,7 +90,7 @@ export default function FederalContractingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-2xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-6 max-w-5xl mx-auto leading-tight md:leading-none uppercase px-6"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] uppercase px-6"
           >
             Federal Contracting & <br className="hidden md:block" /> Government Services
           </motion.h1>
@@ -120,7 +120,7 @@ export default function FederalContractingPage() {
 
       {/* Overview Section */}
       <section className="py-12 md:py-24 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div className="space-y-6">
               <motion.h2 
@@ -193,7 +193,7 @@ export default function FederalContractingPage() {
 
       {/* Core Competencies Grid */}
       <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="text-center mb-16">
             <motion.span 
               initial={{ opacity: 0, y: 30 }}
@@ -237,7 +237,7 @@ export default function FederalContractingPage() {
 
       {/* Differentiators Section */}
       <section className="py-32 bg-dark-blue text-white overflow-hidden relative">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/3">
               <motion.span 

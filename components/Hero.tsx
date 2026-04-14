@@ -48,11 +48,11 @@ export function Hero() {
                                 transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } 
                             }
                         }}
-                        className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-heading mb-6 tracking-tight leading-[1.1] max-w-4xl text-white"
+                        className="text-4xl md:text-5xl lg:text-7xl font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-6xl text-white uppercase"
                     >
                         Executive Protection NYC:
                         <br />
-                        <span className="text-[#ce161f]">Tailored Solutions</span> for Elite Security
+                        <span className="text-primary italic font-black">Tailored Solutions</span> for Elite Security
                     </motion.h1>
 
                     <motion.h2 
@@ -64,9 +64,9 @@ export function Hero() {
                                 transition: { duration: 0.8, ease: "easeOut" } 
                             }
                         }}
-                        className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 tracking-wider max-w-2xl"
+                        className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 tracking-wider max-w-2xl uppercase"
                     >
-                        100% Military & Law Enforcement <br /> Veteran-Owned Security Service
+                        100% MILITARY & LAW ENFORCEMENT <br /> VETERAN-OWNED SECURITY SERVICE
                     </motion.h2>
 
                     <motion.p 

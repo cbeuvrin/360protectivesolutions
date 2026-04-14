@@ -30,7 +30,7 @@ export function CompanyOverview() {
                         Who We Are
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        360 Protective Solutions is a premier security firm dedicated to providing bespoke protection services.
+                        Worldwide Security Options is a premier security firm dedicated to providing bespoke protection services.
                         We blend military-grade precision with corporate-level discretion.
                     </p>
                 </div>

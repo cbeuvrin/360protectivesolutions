@@ -8,31 +8,37 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import { useModal } from "@/context/ModalContext";
 
 const services = [
-    { name: "Anti-Piracy Film Surveillance", href: "/services/anti-piracy" },
     { name: "Executive Protection & Security Drivers", href: "/services/executive-protection" },
     { name: "Federal Contracting & Government Services", href: "/federal-contracting" },
     { name: "Force Protection Specialists", href: "/services/force-protection" },
     { name: "Protection Specialists", href: "/services/protection-specialist" },
+    { name: "Anti-Piracy Film Surveillance", href: "/services/anti-piracy" },
 ];
 
 const industries = [
-    { name: "Commercial Security", href: "#commercial" },
-    { name: "Construction Site Security", href: "#construction" },
-    { name: "Event Security", href: "#event" },
-    { name: "Financial Institution Security", href: "#financial" },
+    { name: "Commercial Security & Concierge", href: "/industries/commercial-security" },
+    { name: "Construction Site Security", href: "/industries/construction-security" },
+    { name: "Event Security", href: "/industries/event-security" },
+    { name: "Financial Institution Security", href: "/industries/financial-security" },
     { name: "Hotel Security", href: "#hotel" },
-    { name: "Port & Maritime Security", href: "#port-maritime" },
-    { name: "Residential Security", href: "#residential" },
-    { name: "Warehouse Security", href: "#warehouse" },
+    { name: "Port & Maritime Security", href: "/industries/port-maritime-security" },
+    { name: "Residential Security & Private Estates", href: "/industries/residential-security" },
+    { name: "Warehouse & Logistics Security", href: "/industries/warehouse-security" },
+    { name: "REQUEST A FACILITY ASSESSMENT", href: "/contact" },
 ];
 
 const technologySubMenu = [
-    { name: "360 TRAX", href: "#360-trax" },
-    { name: "Camera Monitoring", href: "#camera-monitoring" },
-    { name: "Virtual Engineering", href: "#virtual-engineering" },
-    { name: "Virtual Greeting | Concierge", href: "#virtual-greeting" },
-    { name: "Virtual Guard Services", href: "#virtual-guard" },
-    { name: "Weapons Detection", href: "#weapons-detection" },
+    { name: "360 TRAX", href: "/technology/360-trax" },
+    { name: "Camera Monitoring", href: "/technology/camera-monitoring" },
+    { name: "Virtual Engineering", href: "/technology/virtual-engineering" },
+    { name: "Virtual Greeting | Concierge", href: "/technology/virtual-greeting" },
+    { name: "Virtual Guard Services", href: "/technology/virtual-guard" },
+    { name: "Weapons Detection", href: "/technology/weapons-detection" },
+];
+
+const resourcesSubMenu = [
+    { name: "Careers: 360 Alliance", href: "/resources/careers" },
+    { name: "Media Center", href: "/resources/media-center" },
 ];
 
 const navLinks = [
@@ -53,9 +59,12 @@ const navLinks = [
         href: "#technology",
         subMenu: technologySubMenu
     },
-    { name: "Resources", href: "#resources" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { 
+        name: "Resources", 
+        href: "#resources",
+        subMenu: resourcesSubMenu
+    },
+    { name: "Blog", href: "/blog" },
 ];
 
 export function Navbar() {
@@ -77,26 +86,26 @@ export function Navbar() {
     return (
         <motion.nav 
             variants={{
-                visible: { y: 0 },
-                hidden: { y: -150 }
+                visible: { y: 0, opacity: 1 },
+                hidden: { y: -200, opacity: 0 }
             }}
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed top-10 left-1/2 -translate-x-1/2 z-50 bg-white border border-black/10 h-20 flex items-center rounded-sm w-[calc(100%-3rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] shadow-xl"
+            className="fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-white border border-black/10 h-20 flex items-center rounded-sm w-[calc(100%-3rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] shadow-2xl px-8"
         >
-            <div className="w-full px-8 flex items-center justify-between h-full">
+            <div className="w-full flex items-center justify-between h-full">
                 {/* Logo Section */}
-                <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+                <Link href="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0 min-w-[200px] 2xl:min-w-[250px]">
                     <img 
-                        src="/images/logo.png" 
-                        alt="360 PROTECTION" 
-                        className="h-10 md:h-12 w-auto object-contain"
+                        src="/images/wso32.png" 
+                        alt="WORLDWIDE SECURITY OPTIONS" 
+                        className="h-10 md:h-14 w-auto object-contain"
                     />
                 </Link>
 
                 {/* Navigation Section */}
                 <div className="flex items-center h-full">
-                    <div className="hidden xl:flex items-center gap-6 h-full">
+                    <div className="hidden xl:flex items-center gap-4 2xl:gap-8 h-full">
                         {navLinks.map((link) => (
                             <div 
                                 key={link.name} 
@@ -106,7 +115,7 @@ export function Navbar() {
                             >
                                 <Link
                                     href={link.href}
-                                    className="text-[11px] font-bold text-dark-blue hover:text-primary transition-all duration-300 uppercase tracking-widest whitespace-nowrap flex items-center gap-1"
+                                    className="text-[11px] font-black text-dark-blue hover:text-primary transition-all duration-300 uppercase tracking-[0.1em] 2xl:tracking-[0.2em] whitespace-nowrap flex items-center gap-1.5"
                                 >
                                     {link.name}
                                     {link.subMenu && <ChevronDown size={14} className={cn("transition-transform duration-300", hoveredLink === link.name && "rotate-180")} />}
@@ -126,7 +135,12 @@ export function Navbar() {
                                                 <Link
                                                     key={sIdx}
                                                     href={sub.href}
-                                                    className="block px-6 py-3 text-[10px] font-bold text-dark-blue hover:text-primary hover:bg-gray-50 uppercase tracking-widest transition-all border-l-2 border-transparent hover:border-primary"
+                                                    className={cn(
+                                                        "block px-6 py-3 text-[10px] font-bold uppercase tracking-widest transition-all border-l-2 border-transparent",
+                                                        sub.name.includes("FACILITY ASSESSMENT") 
+                                                            ? "text-primary hover:bg-primary/5 border-l-primary" 
+                                                            : "text-dark-blue hover:text-primary hover:bg-gray-50 hover:border-primary"
+                                                    )}
                                                 >
                                                     {sub.name}
                                                 </Link>
@@ -138,11 +152,11 @@ export function Navbar() {
                         ))}
                     </div>
 
-                    <div className="h-6 w-[1px] bg-black/10 mx-6 hidden xl:block" />
+                    <div className="h-6 w-[1px] bg-black/10 mx-4 2xl:mx-8 hidden xl:block" />
 
                     <button 
                         onClick={openModal}
-                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-black uppercase tracking-widest text-[13px] whitespace-nowrap cursor-pointer"
+                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-black uppercase tracking-[0.1em] 2xl:tracking-[0.2em] text-[12px] 2xl:text-[13px] whitespace-nowrap cursor-pointer"
                     >
                         Get Started
                     </button>
@@ -150,7 +164,7 @@ export function Navbar() {
                     {/* Mobile Menu Icon */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="xl:hidden p-2 text-dark-blue hover:text-primary transition-colors"
+                        className="xl:hidden p-2 text-dark-blue hover:text-primary transition-colors ml-4"
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -165,7 +179,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-24 left-6 md:left-12 lg:left-20 w-[calc(100vw-3rem)] md:w-[600px] bg-white border border-black/10 rounded-sm shadow-xl p-6 md:p-10 origin-top-left pointer-events-auto max-h-[80vh] overflow-y-auto custom-scrollbar"
+                        className="absolute top-full left-0 mt-4 w-full bg-white border border-black/10 rounded-sm shadow-2xl p-6 md:p-10 origin-top overflow-y-auto custom-scrollbar max-h-[80vh]"
                     >
                         <div className="grid grid-cols-1 gap-2">
                             {navLinks.map((link) => (
@@ -194,17 +208,6 @@ export function Navbar() {
                                     )}
                                 </div>
                             ))}
-                        </div>
-                        <div className="mt-8 pt-6 border-t border-black/5 flex justify-center">
-                            <button 
-                                onClick={() => {
-                                    setIsOpen(false);
-                                    openModal();
-                                }}
-                                className="w-full md:hidden py-4 bg-primary text-white text-center rounded-xl font-bold uppercase tracking-widest hover:bg-red-700 transition-colors cursor-pointer"
-                            >
-                                Get Started
-                            </button>
                         </div>
                     </motion.div>
                 )}

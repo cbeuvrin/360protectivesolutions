@@ -26,10 +26,10 @@ export function AboutHero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-bold text-dark-blue leading-tight mb-8"
+                            className="text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 uppercase leading-[0.9]"
                         >
                             Experience where <br className="hidden md:block" />
-                            it <span className="text-primary font-black">matters most</span>.
+                            it <span className="text-primary italic font-black">matters most</span>.
                         </motion.h1>
                         <motion.div 
                             initial={{ opacity: 0, y: 20 }}
@@ -59,8 +59,8 @@ export function AboutHero() {
                     >
                         <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px]">
                             <img 
-                                src="/logo-round.png" 
-                                alt="360 Protection Symbol" 
+                                src="/images/wso-corporate.png" 
+                                alt="Worldwide Security Options" 
                                 className="w-full h-full object-contain filter drop-shadow-2xl opacity-90 hover:opacity-100 transition-opacity duration-500"
                             />
                             {/* Subtle background glow */}

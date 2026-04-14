@@ -39,7 +39,7 @@ export default function ContactPage() {
 
       {/* Contact Content */}
       <section className="py-24">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-6xl">
           <div className="grid lg:grid-cols-12 gap-16">
             
             {/* Contact Info */}
@@ -55,7 +55,7 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <div className="flex gap-6">
                   <div className="w-12 h-12 bg-gray-50 flex items-center justify-center rounded-sm shrink-0">
-                    <MapPin className="text-primary" size={20} />
+                    <MapPin className="text-primary italic font-black" size={20} />
                   </div>
                   <div>
                     <h4 className="text-xs font-black uppercase tracking-widest text-dark-blue/40 mb-1">Headquarters</h4>
@@ -66,7 +66,7 @@ export default function ContactPage() {
 
                 <div className="flex gap-6">
                   <div className="w-12 h-12 bg-gray-50 flex items-center justify-center rounded-sm shrink-0">
-                    <Phone className="text-primary" size={20} />
+                    <Phone className="text-primary italic font-black" size={20} />
                   </div>
                   <div>
                     <h4 className="text-xs font-black uppercase tracking-widest text-dark-blue/40 mb-1">Direct Line</h4>
@@ -77,7 +77,7 @@ export default function ContactPage() {
 
                 <div className="flex gap-6">
                   <div className="w-12 h-12 bg-gray-50 flex items-center justify-center rounded-sm shrink-0">
-                    <Mail className="text-primary" size={20} />
+                    <Mail className="text-primary italic font-black" size={20} />
                   </div>
                   <div>
                     <h4 className="text-xs font-black uppercase tracking-widest text-dark-blue/40 mb-1">Confidential Email</h4>
@@ -88,11 +88,11 @@ export default function ContactPage() {
 
               <div className="p-8 bg-gray-50 border border-gray-100 rounded-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <ShieldCheck className="text-primary" size={24} />
+                  <ShieldCheck className="text-primary italic font-black" size={24} />
                   <span className="font-bold text-dark-blue uppercase tracking-widest text-xs">Vetted & Licensed</span>
                 </div>
                 <p className="text-xs text-gray-400 leading-normal">
-                  360 Protective Solutions is a licensed and insured private security firm. 
+                  Worldwide Security Options is a licensed and insured private security firm. 
                   All personnel undergo rigorous federal background checks and tactical certification.
                 </p>
               </div>

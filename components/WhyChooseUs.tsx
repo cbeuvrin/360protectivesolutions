@@ -44,7 +44,7 @@ export function WhyChooseUs() {
                 <img 
                     src="https://360protectivesolutions.com/wp-content/uploads/2025/02/Pattern_img.png" 
                     alt="Pattern Background" 
-                    className="w-full max-w-7xl object-contain min-h-[600px] select-none"
+                    className="w-full max-w-6xl object-contain min-h-[600px] select-none"
                 />
             </div>
 

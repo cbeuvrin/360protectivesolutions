@@ -48,7 +48,7 @@ export function LandscapeStats() {
             
             <div className="absolute inset-0 z-0 flex items-center justify-center opacity-[0.35] pointer-events-none">
                 <div 
-                    className="w-full h-full max-w-7xl mx-auto world-map-mask"
+                    className="w-full h-full max-w-6xl mx-auto world-map-mask"
                     style={{
                         backgroundImage: 'radial-gradient(circle, #334155 1.5px, transparent 1.5px)',
                         backgroundSize: '4px 4px'
