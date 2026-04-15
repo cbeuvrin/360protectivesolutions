@@ -123,7 +123,7 @@ export default function FinancialSecurityPage() {
                             onClick={openModal}
                             className="bg-primary hover:bg-red-700 text-white px-10 py-5 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-2xl"
                         >
-                            CONSULT WITH A FINANCIAL SECURITY EXPERT
+                            Consult with a Financial Security Expert
                         </button>
                     </motion.div>
                 </div>
@@ -304,7 +304,7 @@ export default function FinancialSecurityPage() {
                         onClick={openModal}
                         className="bg-primary hover:bg-black text-white px-12 py-6 rounded-sm font-black  tracking-[0.2em] transition-all transform hover:scale-105 shadow-xl"
                     >
-                        CONSULT WITH A FINANCIAL SECURITY EXPERT
+                        Consult with a Financial Security Expert
                     </button>
                     <p className="mt-8 text-gray-500 font-bold  tracking-widest text-sm">
                         Worldwide Security Options

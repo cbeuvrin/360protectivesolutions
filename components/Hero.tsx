@@ -23,7 +23,7 @@ export function Hero() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 w-[calc(100%-3rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] mx-auto text-left text-white h-full flex flex-col justify-center pt-32 lg:pt-40 pb-20">
+            <div className="relative z-10 w-[calc(100%-2rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] mx-auto text-left text-white h-full flex flex-col justify-center pt-24 md:pt-32 lg:pt-40 pb-20">
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -48,7 +48,7 @@ export function Hero() {
                                 transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } 
                             }
                         }}
-                        className="font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-4xl text-white uppercase text-fluid-h1"
+                        className="font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-5xl text-white uppercase text-[1.7rem] md:text-[3.5rem] lg:text-fluid-h1"
                     >
                         Executive Protection NYC:
                         <br />
@@ -66,7 +66,7 @@ export function Hero() {
                                 transition: { duration: 0.8, ease: "easeOut" } 
                             }
                         }}
-                        className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 tracking-wider max-w-2xl"
+                        className="text-[17px] md:text-2xl lg:text-3xl font-bold text-white mb-6 tracking-wider max-w-2xl"
                     >
                         100% Military & Law Enforcement <br /> Veteran-Owned Security Service
                     </motion.h2>
@@ -82,7 +82,7 @@ export function Hero() {
                         }}
                         className="text-[14px] text-gray-200 mb-10 max-w-2xl font-normal leading-relaxed"
                     >
-                        <strong className="font-bold text-white">Executive Protection NYC</strong> delivers premier security services across the <strong className="font-bold text-white">United States, Canada, and Mexico</strong>. Headquartered in New York City, our elite team of <strong className="font-bold text-white">military and law enforcement veterans</strong> provides proprietary, tailored client protection solutions. Experience the gold standard in physical security with the top-rated experts in NYC.
+                        The premier choice for <strong className="font-bold text-white">elite security</strong> within <strong className="font-bold text-white">New York City</strong>. Our team of <strong className="font-bold text-white">military and law enforcement veterans</strong> provides proprietary, <strong className="font-bold text-white">tailored protection solutions</strong> designed for the city's unique landscape. Experience the <strong className="font-bold text-white">gold standard in physical security</strong> with NYC’s top-rated experts.
                     </motion.p>
 
                     <motion.div 
@@ -98,9 +98,9 @@ export function Hero() {
                     >
                         <button
                             onClick={openModal}
-                            className="inline-block px-8 py-3.5 bg-primary text-white text-base md:text-lg font-bold tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm cursor-pointer"
+                            className="inline-block px-8 py-3.5 bg-primary text-white text-base md:text-lg font-bold tracking-widest hover:bg-red-700 transition-all hover:scale-105 rounded-sm cursor-pointer uppercase"
                         >
-                            Get Started
+                            GET STARTED
                         </button>
                     </motion.div>
                 </motion.div>

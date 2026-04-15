@@ -345,7 +345,7 @@ export default function ForceProtectionPage() {
               href="/#contact"
               className="bg-white text-black px-12 py-6 rounded-full font-bold  tracking-widest text-sm hover:scale-105 transition-all duration-300 shadow-black/20 shadow-2xl hover:bg-primary"
             >
-              REQUEST A TACTICAL ASSESSMENT
+              Request a Tactical Assessment
             </Link>
             <p className="text-xs font-bold  tracking-[0.3em] text-white/50">
               Operational Priority - 24/7 Response

@@ -38,7 +38,7 @@ const features = [
 
 export function WhyChooseUs() {
     return (
-        <section className="py-32 bg-[#222334] relative overflow-hidden text-white w-full">
+        <section className="py-20 md:py-32 bg-[#222334] relative overflow-hidden text-white w-full">
             {/* Professional Pattern Image Background - Extremely Subtle Centered Top */}
             <div className="absolute inset-x-0 top-0 z-0 flex justify-center opacity-10 pointer-events-none">
                 <img 

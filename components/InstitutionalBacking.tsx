@@ -25,8 +25,8 @@ export function InstitutionalBacking() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32 bg-white overflow-hidden">
-      <div className="w-full px-8 md:px-16 lg:px-24 xl:px-32 mb-16 text-center">
+    <section className="py-20 md:py-32 bg-white overflow-hidden">
+      <div className="w-full px-6 md:px-16 lg:px-24 xl:px-32 mb-12 md:mb-16 text-center">
         <motion.span 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export function InstitutionalBacking() {
         </motion.h2>
       </div>
 
-      <div className="flex flex-col lg:flex-row h-[315px] lg:h-[700px] w-full gap-2 px-2">
+      <div className="flex flex-col lg:flex-row h-[600px] md:h-[700px] w-full gap-2 px-2">
         {backingItems.map((item, idx) => (
           <motion.div
             key={idx}

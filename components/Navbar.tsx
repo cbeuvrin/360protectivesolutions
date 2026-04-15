@@ -20,7 +20,7 @@ const industries = [
     { name: "Construction Site Security", href: "/industries/construction-security" },
     { name: "Event Security", href: "/industries/event-security" },
     { name: "Financial Institution Security", href: "/industries/financial-security" },
-    { name: "Hotel Security", href: "#hotel" },
+    { name: "Hotel Security", href: "/industries/hotel-security" },
     { name: "Port & Maritime Security", href: "/industries/port-maritime-security" },
     { name: "Residential Security & Private Estates", href: "/industries/residential-security" },
     { name: "Warehouse & Logistics Security", href: "/industries/warehouse-security" },
@@ -91,7 +91,7 @@ export function Navbar() {
             }}
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-white border border-black/10 h-20 flex items-center rounded-sm w-[calc(100%-3rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] shadow-2xl px-8"
+            className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-50 bg-white border border-black/10 h-16 md:h-20 flex items-center rounded-sm w-[calc(100%-2rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] shadow-2xl px-4 md:px-8"
         >
             <div className="w-full flex items-center justify-between h-full">
                 {/* Logo Section */}
