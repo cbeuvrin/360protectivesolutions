@@ -48,11 +48,13 @@ export function Hero() {
                                 transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } 
                             }
                         }}
-                        className="font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-2xl text-white uppercase text-fluid-h1"
+                        className="font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-4xl text-white uppercase text-fluid-h1"
                     >
                         Executive Protection NYC:
                         <br />
-                        <span className="text-primary italic font-black">Tailored Solutions</span> for Elite Security
+                        <span className="text-primary italic font-black">Tailored Solutions</span>
+                        <br />
+                        for Elite Security
                     </motion.h1>
 
                     <motion.h2 

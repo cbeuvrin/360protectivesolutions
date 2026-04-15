@@ -27,6 +27,8 @@
        Max: 96px (6rem)
     */
     font-size: clamp(2.5rem, 2vw + 2rem, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
   }
 }
 
@@ -34,9 +36,6 @@
 @media (min-width: 1024px) and (max-width: 1600px) {
   .text-fluid-h1 {
     font-size: clamp(2.25rem, 2vw + 1.85rem, 4.5rem);
-  }
-    line-height: 0.95;
-    letter-spacing: -0.04em;
   }
 }
 
