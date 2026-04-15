@@ -105,7 +105,7 @@ export function Navbar() {
 
                 {/* Navigation Section */}
                 <div className="flex items-center h-full">
-                    <div className="hidden xl:flex items-center gap-4 2xl:gap-8 h-full">
+                    <div className="hidden xl:flex items-center gap-8 2xl:gap-12 h-full">
                         {navLinks.map((link) => (
                             <div 
                                 key={link.name} 
