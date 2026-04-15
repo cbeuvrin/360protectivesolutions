@@ -115,7 +115,7 @@ export function Navbar() {
                             >
                                 <Link
                                     href={link.href}
-                                    className="text-[11px] font-black text-dark-blue hover:text-primary transition-all duration-300 uppercase tracking-[0.1em] 2xl:tracking-[0.2em] whitespace-nowrap flex items-center gap-1.5"
+                                    className="text-[11px] font-bold text-dark-blue hover:text-primary transition-all duration-300 uppercase tracking-[0.1em] 2xl:tracking-[0.2em] whitespace-nowrap flex items-center gap-1.5"
                                 >
                                     {link.name}
                                     {link.subMenu && <ChevronDown size={14} className={cn("transition-transform duration-300", hoveredLink === link.name && "rotate-180")} />}
@@ -136,7 +136,7 @@ export function Navbar() {
                                                     key={sIdx}
                                                     href={sub.href}
                                                     className={cn(
-                                                        "block px-6 py-3 text-[10px] font-bold uppercase tracking-widest transition-all border-l-2 border-transparent",
+                                                        "block px-6 py-3 text-[10px] font-semibold uppercase tracking-widest transition-all border-l-2 border-transparent",
                                                         sub.name.includes("FACILITY ASSESSMENT") 
                                                             ? "text-primary hover:bg-primary/5 border-l-primary" 
                                                             : "text-dark-blue hover:text-primary hover:bg-gray-50 hover:border-primary"
@@ -156,7 +156,7 @@ export function Navbar() {
 
                     <button 
                         onClick={openModal}
-                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-black  tracking-[0.1em] 2xl:tracking-[0.2em] text-[12px] 2xl:text-[13px] whitespace-nowrap cursor-pointer"
+                        className="hidden md:block text-primary hover:text-red-700 transition-all duration-300 font-bold tracking-[0.1em] 2xl:tracking-[0.2em] text-[12px] 2xl:text-[13px] whitespace-nowrap cursor-pointer"
                     >
                         Get Started
                     </button>

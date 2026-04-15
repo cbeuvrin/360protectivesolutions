@@ -100,7 +100,7 @@ export default function VirtualEngineeringPage() {
                             <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Centralized Vision Powered
                             </span>
-                            <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8  leading-[0.9]">
+                            <h1 className="uppercase text-5xl md:text-6xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 leading-[0.9]">
                                 Virtual <span className="text-primary italic font-black">Engineering</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-500 font-light mb-10 max-w-3xl leading-relaxed">

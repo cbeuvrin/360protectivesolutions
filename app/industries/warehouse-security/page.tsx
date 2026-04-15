@@ -111,7 +111,7 @@ export default function WarehouseSecurityPage() {
                         <span className="bg-primary text-white font-black  tracking-[0.4em] text-[10px] py-2 px-6 mb-8 inline-block">
                             Supply Chain Integrity
                         </span>
-                        <h1 className="uppercase text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9]  px-6">
+                        <h1 className="uppercase text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] px-6">
                             Warehouse & <br className="hidden md:block" />
                             <span className="text-primary italic font-black">Logistics Security</span>
                         </h1>

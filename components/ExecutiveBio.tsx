@@ -35,7 +35,7 @@ export function ExecutiveBio() {
                                     className="group relative flex items-center h-14"
                                 >
                                     {/* Text Pill first (Background) */}
-                                    <div className="bg-[#0077B5] text-white py-3 pl-14 pr-8 rounded-full font-bold  tracking-widest text-[10px] shadow-lg z-10 transition-all duration-300 group-hover:pr-10 whitespace-nowrap">
+                                    <div className="bg-[#0077B5] text-white py-3 pl-[4.5rem] pr-8 rounded-full font-bold tracking-widest text-[10px] shadow-lg z-10 transition-all duration-300 group-hover:pr-10 whitespace-nowrap">
                                         Connect on LinkedIn
                                     </div>
                                     {/* Icon Circle (Foreground - Offset to the left) */}
