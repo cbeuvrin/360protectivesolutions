@@ -23,7 +23,7 @@ export function Hero() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 w-[calc(100%-3rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] mx-auto text-center text-white h-full flex flex-col justify-center items-center pt-24 md:pt-32 lg:pt-0">
+            <div className="relative z-10 w-[calc(100%-3rem)] md:w-[calc(100%-6rem)] lg:w-[calc(100%-10rem)] max-w-[90rem] mx-auto text-left text-white h-full flex flex-col justify-center pt-32 lg:pt-40 pb-20">
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -48,7 +48,7 @@ export function Hero() {
                                 transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } 
                             }
                         }}
-                        className="font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-6xl text-white uppercase text-fluid-h1"
+                        className="font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-2xl text-white uppercase text-fluid-h1"
                     >
                         Executive Protection NYC:
                         <br />
@@ -92,7 +92,7 @@ export function Hero() {
                                 transition: { duration: 0.5, ease: "easeOut" } 
                             }
                         }}
-                        className="flex flex-wrap gap-4 justify-center"
+                        className="flex flex-wrap gap-4"
                     >
                         <button
                             onClick={openModal}
