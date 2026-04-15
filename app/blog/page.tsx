@@ -44,7 +44,7 @@ export default function BlogPage() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-8 leading-[0.9]"
+                        className="font-bold tracking-tighter mb-8 leading-[0.9] text-fluid-h1"
                     >
                         WSO <span className="text-primary italic font-black">Strategic</span> Blog
                     </motion.h1>

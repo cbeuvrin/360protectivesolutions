@@ -19,6 +19,19 @@
   --font-heading: var(--font-raleway);
 }
 
+@layer utilities {
+  .text-fluid-h1 {
+    /* Responsive scaling: 
+       Min: 40px (2.5rem)
+       Scales with viewport percentage
+       Max: 96px (6rem)
+    */
+    font-size: clamp(2.5rem, 2vw + 2rem, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0F172A;

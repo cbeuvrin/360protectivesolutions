@@ -59,7 +59,7 @@ export default function AntiPiracyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 leading-[0.9] uppercase"
+                className="font-bold text-dark-blue tracking-tighter mb-8 leading-[0.9] uppercase text-fluid-h1"
               >
                 Anti-Piracy Film Surveillance: <br />
                 <span className="text-primary italic font-black">Protecting the Silver Screen.</span>

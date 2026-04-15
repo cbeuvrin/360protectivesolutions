@@ -79,7 +79,7 @@ export default function WeaponsDetectionPage() {
                             <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Proactive Intelligence Response
                             </span>
-                            <h1 className="uppercase text-5xl md:text-6xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 leading-[0.9]">
+                            <h1 className="uppercase font-bold text-dark-blue tracking-tighter mb-8 leading-[0.9] text-fluid-h1">
                                 AI <span className="text-primary italic font-black">Weapons Detection</span>
                             </h1>
  Broadway-style weight update

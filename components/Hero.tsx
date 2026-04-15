@@ -48,7 +48,7 @@ export function Hero() {
                                 transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } 
                             }
                         }}
-                        className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-6xl text-white uppercase"
+                        className="font-bold font-heading mb-8 tracking-tighter leading-[0.9] max-w-6xl text-white uppercase text-fluid-h1"
                     >
                         Executive Protection NYC:
                         <br />

@@ -110,7 +110,7 @@ export default function CameraMonitoringPage() {
                             <span className="text-primary font-black  tracking-[0.4em] text-xs mb-6 inline-block">
                                 Intelligent Surveillance
                             </span>
-                            <h1 className="uppercase text-5xl md:text-6xl lg:text-7xl font-bold text-dark-blue tracking-tighter mb-8 leading-[0.9]">
+                            <h1 className="uppercase font-bold text-dark-blue tracking-tighter mb-8 leading-[0.9] text-fluid-h1">
                                 24/7 <span className="text-primary italic font-black">Camera Monitoring</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-500 font-light mb-10 max-w-3xl leading-relaxed">

@@ -30,7 +30,7 @@ export default function ContactPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter"
+            className="font-bold tracking-tighter text-fluid-h1"
           >
             Contact
           </motion.h1>

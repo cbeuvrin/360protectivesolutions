@@ -49,7 +49,7 @@ export default function ExecutiveProtectionPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] px-6 uppercase"
+            className="font-bold tracking-tighter mb-8 max-w-6xl mx-auto leading-[0.9] px-6 uppercase text-fluid-h1"
           >
             Executive Protection <br className="hidden md:block" /> & Security Drivers
           </motion.h1>
