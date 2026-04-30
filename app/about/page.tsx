@@ -4,7 +4,6 @@ import { Navbar } from "@/components/Navbar";
 import { AboutHero } from "@/components/AboutHero";
 import { AboutVideos } from "@/components/AboutVideos";
 import { ExecutiveBio } from "@/components/ExecutiveBio";
-import { TeamSection } from "@/components/TeamSection";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 
@@ -15,7 +14,6 @@ export default function AboutPage() {
             <AboutHero />
             <AboutVideos />
             <ExecutiveBio />
-            <TeamSection />
             
             {/* Core Values Section with Gradient to Footer */}
             <section className="py-32 bg-gradient-to-b from-dark-blue to-[#222334] text-white">
