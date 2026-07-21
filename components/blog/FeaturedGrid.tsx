@@ -16,7 +16,7 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
     const displayPosts = posts.slice(0, 4);
 
     const getFeaturedImage = (post: WPPost) => {
-        return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/blog-placeholder.png";
+        return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/blog-placeholder.svg";
     };
 
     const getCategory = (post: WPPost) => {

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Worldwide Security Options">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111C33"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0v64" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#B51717" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#B51717" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- marca -->
+  <g transform="translate(800 430)">
+    <path d="M-150 -34 L-96 -34 L-123 34 Z" fill="#ffffff" fill-opacity="0.92"/>
+    <path d="M-104 -34 L-50 -34 L-77 34 Z" fill="#B51717"/>
+    <text x="-16" y="26" font-family="Helvetica, Arial, sans-serif" font-size="76"
+          font-weight="700" letter-spacing="6" fill="#ffffff" fill-opacity="0.92">WSO</text>
+  </g>
+
+  <rect x="700" y="486" width="200" height="3" fill="#B51717"/>
+
+  <text x="800" y="548" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="700" letter-spacing="10" fill="#ffffff" fill-opacity="0.42">
+    WORLDWIDE SECURITY OPTIONS
+  </text>
+</svg>

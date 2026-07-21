@@ -49,6 +49,100 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
+/* Cuerpo de los articulos del blog: el HTML viene de WordPress, asi que se
+   estiliza por etiqueta en vez de con clases de utilidad. */
+.article-body {
+  color: #3f4256;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+
+.article-body > * + * {
+  margin-top: 1.5rem;
+}
+
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  color: var(--dark-blue);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-top: 3rem;
+}
+
+.article-body h2 { font-size: 1.875rem; }
+.article-body h3 { font-size: 1.5rem; }
+.article-body h4 { font-size: 1.25rem; }
+
+.article-body a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-body strong { color: var(--dark-blue); font-weight: 700; }
+
+.article-body ul,
+.article-body ol {
+  padding-left: 1.5rem;
+}
+
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li { margin-top: 0.625rem; }
+.article-body li::marker { color: var(--primary); }
+
+.article-body img {
+  border-radius: 2px;
+  height: auto;
+  max-width: 100%;
+}
+
+.article-body figure { margin-block: 2.5rem; }
+
+.article-body figcaption {
+  color: #8a8da3;
+  font-size: 0.8125rem;
+  font-style: italic;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.article-body blockquote {
+  border-left: 3px solid var(--primary);
+  color: var(--dark-blue);
+  font-size: 1.25rem;
+  font-style: italic;
+  padding-left: 1.75rem;
+}
+
+.article-body hr {
+  border: 0;
+  border-top: 1px solid #e8e8ee;
+  margin-block: 3rem;
+}
+
+.article-body table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.article-body th,
+.article-body td {
+  border: 1px solid #e8e8ee;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.article-body th {
+  background: #f8f8fb;
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
 .world-map-mask {
   mask-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg");
   mask-size: 100% auto;

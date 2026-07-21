@@ -37,6 +37,9 @@ export interface WPPost {
             name: string;
             slug: string;
         }>>;
+        author?: Array<{
+            name: string;
+        }>;
     };
 }
 
@@ -51,6 +54,69 @@ export async function getPosts(perPage = 10, page = 1) {
     }
 
     return JSON.parse(rewriteMediaUrls(await res.text()));
+}
+
+export async function getPostBySlug(slug: string): Promise<WPPost | null> {
+    const res = await fetch(
+        `${BASE_URL}/posts?slug=${encodeURIComponent(slug)}&_embed`,
+        { next: { revalidate: 3600 } }
+    );
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch post");
+    }
+
+    const posts: WPPost[] = JSON.parse(rewriteMediaUrls(await res.text()));
+    return posts[0] ?? null;
+}
+
+// Solo se prerenderizan los mas recientes: el resto se genera bajo demanda para
+// no alargar el build con los 215 posts del archivo.
+export async function getRecentSlugs(limit = 30): Promise<string[]> {
+    const res = await fetch(`${BASE_URL}/posts?per_page=${limit}&_fields=slug`, {
+        next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) {
+        return [];
+    }
+
+    const posts: Array<{ slug: string }> = await res.json();
+    return posts.map((post) => post.slug);
+}
+
+// La mayoria de los posts repiten la imagen destacada como primera figura del
+// cuerpo. Como la cabecera del articulo ya la muestra, se recorta para no verla
+// dos veces seguidas. Si esa figura es otra imagen, se deja intacta.
+export function stripLeadingFeaturedImage(content: string, featuredUrl?: string) {
+    if (!featuredUrl) {
+        return content;
+    }
+
+    const fileName = featuredUrl.split("/").pop() ?? "";
+    const base = fileName.replace(/-\d+x\d+(?=\.\w+$)/, "").replace(/\.\w+$/, "");
+
+    if (!base) {
+        return content;
+    }
+
+    const leadingFigure = content.match(/^\s*<figure[\s\S]*?<\/figure>/);
+
+    return leadingFigure?.[0].includes(base)
+        ? content.slice(leadingFigure[0].length)
+        : content;
+}
+
+export function stripHtml(html: string) {
+    return html
+        .replace(/<[^>]*>/g, "")
+        .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+        .replace(/&nbsp;/g, " ")
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&#8217;|&rsquo;/g, "'")
+        .replace(/&hellip;/g, "...")
+        .trim();
 }
 
 export function formatPostDate(dateString: string) {

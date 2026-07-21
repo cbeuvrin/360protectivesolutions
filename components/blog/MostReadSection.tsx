@@ -17,7 +17,7 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
     const sidePosts = posts.slice(8, 13);
 
     const getFeaturedImage = (post: WPPost) => {
-        return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/blog-placeholder.png";
+        return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/blog-placeholder.svg";
     };
 
     const getCategory = (post: WPPost) => {
