@@ -144,11 +144,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .world-map-mask {
-  mask-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg");
+  mask-image: url("/images/world-map.svg");
   mask-size: 100% auto;
   mask-repeat: no-repeat;
   mask-position: center center;
-  -webkit-mask-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg");
+  -webkit-mask-image: url("/images/world-map.svg");
   -webkit-mask-size: 100% auto;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center center;

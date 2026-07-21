@@ -3,11 +3,25 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const SEEN_KEY = "wso:preloader-seen";
+
 export function Preloader() {
     const [progress, setProgress] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+    // Arranca apagado y solo se enciende si toca: asi al navegar entre paginas
+    // no aparece ni un parpadeo de la pantalla negra.
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        // La intro es un gesto de marca para quien llega al sitio. Repetirla en
+        // cada pagina costaba ~2,6s de pantalla negra por navegacion, asi que se
+        // muestra una sola vez por sesion.
+        if (sessionStorage.getItem(SEEN_KEY)) {
+            return;
+        }
+
+        sessionStorage.setItem(SEEN_KEY, "1");
+        setIsLoading(true);
+
         const interval = setInterval(() => {
             setProgress((prev) => {
                 if (prev >= 100) {

@@ -2,27 +2,32 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { LazyVideo } from "@/components/LazyVideo";
 
 const aboutItems = [
   {
     title: "Government Services",
     description: "Worldwide Security Options is proud to have serviced Federal Clients, including the Department of Homeland Security (DHS). This experience in high-stakes, government-level security allows us to bring a unique level of rigor and strategic crisis response to our private and corporate clients. When we say we meet threats head-on, we do so with protocols tested at the highest levels of national security.",
     video: "/videos/goverment.mp4",
+    poster: "/videos/posters/goverment.jpg",
   },
   {
     title: "HQ Training",
     description: "We don’t just hire security specialists; we build them. Through our HQ Training programs, we provide ongoing instruction to security professionals, ensuring they are certified in situational awareness, advanced weapons handling, and crisis management. Our commitment to education ensures that every member of the WSO team is prepared for the constantly evolving threats of the modern world.",
     video: "/videos/HQ Training.mp4",
+    poster: "/videos/posters/HQ Training.jpg",
   },
   {
     title: "360 Network",
     description: "Security today requires more than physical presence; it requires a holistic infrastructure. The 360 Network is our proprietary ecosystem that includes elite technology providers, specialized training partners, and top-tier security professionals. By integrating human intelligence with digital situational awareness, we ensure that our specialists have the best resources at their fingertips to protect what matters most.",
     video: "/videos/360 Network.mp4",
+    poster: "/videos/posters/360 Network.jpg",
   },
   {
     title: "Specialized Protection",
     description: "Worldwide Security Options serves a wide range of industries, adapting our tactical expertise to the unique risks of each sector: Corporate & Executive, Retail & Loss Prevention, Government & Infrastructure, and Private Estates.",
     video: "/videos/industrial1.mp4",
+    poster: "/videos/posters/industrial1.jpg",
   },
 ];
 
@@ -73,12 +78,9 @@ export function AboutVideos() {
               className="relative overflow-hidden rounded-3xl cursor-pointer group shadow-lg border border-gray-100"
             >
               {/* Video Background */}
-              <video
+              <LazyVideo
                 src={item.video}
-                autoPlay
-                muted
-                loop
-                playsInline
+                poster={item.poster}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
               />
               

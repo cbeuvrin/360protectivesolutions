@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Eye, Calendar } from "lucide-react";
 import Link from "next/link";
-import { WPPost, formatPostDate } from "@/lib/wordpress";
+import { WPPost, formatPostDate, getFeaturedImage } from "@/lib/wordpress";
 
 interface MostReadSectionProps {
     posts: WPPost[];
@@ -15,10 +15,6 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
     // Use posts from index 4 onwards for this section
     const mainPosts = posts.slice(4, 8);
     const sidePosts = posts.slice(8, 13);
-
-    const getFeaturedImage = (post: WPPost) => {
-        return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/blog-placeholder.svg";
-    };
 
     const getCategory = (post: WPPost) => {
         return post._embedded?.["wp:term"]?.[0]?.[0]?.name || "Uncategorized";
@@ -77,7 +73,7 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                                 className="flex gap-6 group cursor-pointer border-b border-gray-100 pb-6 last:border-0"
                             >
                                 <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-sm bg-gray-100">
-                                    <img src={getFeaturedImage(post)} alt={post.title.rendered} className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" />
+                                    <img src={getFeaturedImage(post, 300)} alt={post.title.rendered} className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" />
                                 </div>
                                 <div className="flex-1">
                                     <h4 className="text-[11px] font-bold text-dark-blue tracking-tight mb-3 leading-snug group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />

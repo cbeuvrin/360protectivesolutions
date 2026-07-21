@@ -9,6 +9,7 @@ import {
     getPostBySlug,
     getPosts,
     getRecentSlugs,
+    getFeaturedImage,
     stripHtml,
     stripLeadingFeaturedImage,
     WPPost,
@@ -53,11 +54,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 const getCategory = (post: WPPost) =>
     post._embedded?.["wp:term"]?.[0]?.[0]?.name || "Intelligence";
 
-const PLACEHOLDER = "/images/blog-placeholder.svg";
-
-// Sin fallback: la cabecera solo muestra imagen si el post realmente tiene una.
-const getFeaturedImage = (post: WPPost) =>
-    post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+// La cabecera solo muestra imagen si el post realmente tiene una.
+const hasFeaturedImage = (post: WPPost) =>
+    Boolean(post._embedded?.["wp:featuredmedia"]?.[0]);
 
 export default async function BlogPostPage({ params }: PageProps) {
     const { slug } = await params;
@@ -71,7 +70,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         .filter((item: WPPost) => item.id !== post.id)
         .slice(0, 3);
 
-    const featured = getFeaturedImage(post);
+    const featured = hasFeaturedImage(post) ? getFeaturedImage(post, 1024) : undefined;
     const author = post._embedded?.author?.[0]?.name;
 
     return (
@@ -160,7 +159,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 >
                                     <div className="relative aspect-video overflow-hidden bg-gray-100">
                                         <img
-                                            src={getFeaturedImage(item) ?? PLACEHOLDER}
+                                            src={getFeaturedImage(item)}
                                             alt={stripHtml(item.title.rendered)}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         />

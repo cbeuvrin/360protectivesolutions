@@ -2,22 +2,26 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { LazyVideo } from "@/components/LazyVideo";
 
 const backingItems = [
   {
     title: "Government Services",
     description: "We have served the DHS (Homeland Security)",
     video: "/videos/goverment.mp4",
+    poster: "/videos/posters/goverment.jpg",
   },
   {
     title: "HQ Training",
     description: "We don't just hire, we train the industry",
     video: "/videos/HQ Training.mp4",
+    poster: "/videos/posters/HQ Training.jpg",
   },
   {
     title: "360 Network",
     description: "Our network of technology partners",
     video: "/videos/360 Network.mp4",
+    poster: "/videos/posters/360 Network.jpg",
   },
 ];
 
@@ -68,14 +72,11 @@ export function InstitutionalBacking() {
             className="relative overflow-hidden rounded-3xl cursor-pointer group"
           >
             {/* Video Background */}
-            <video
-              src={item.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-            />
+            <LazyVideo
+                src={item.video}
+                poster={item.poster}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+              />
             
             {/* Dark Overlay - Standardized to a premium feel */}
             <div 

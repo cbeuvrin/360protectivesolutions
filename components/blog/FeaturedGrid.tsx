@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Eye, User, Calendar } from "lucide-react";
 import Link from "next/link";
-import { WPPost, formatPostDate } from "@/lib/wordpress";
+import { WPPost, formatPostDate, getFeaturedImage } from "@/lib/wordpress";
 
 interface FeaturedGridProps {
     posts: WPPost[];
@@ -14,10 +14,6 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
 
     // Use the first 4 posts for the grid
     const displayPosts = posts.slice(0, 4);
-
-    const getFeaturedImage = (post: WPPost) => {
-        return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/blog-placeholder.svg";
-    };
 
     const getCategory = (post: WPPost) => {
         return post._embedded?.["wp:term"]?.[0]?.[0]?.name || "Uncategorized";
@@ -47,7 +43,7 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                             className="lg:col-span-8 relative group overflow-hidden rounded-sm shadow-xl"
                         >
                             <Link href={`/blog/${displayPosts[0].slug}`} className="block h-full cursor-pointer">
-                                <img src={getFeaturedImage(displayPosts[0])} alt={displayPosts[0].title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={getFeaturedImage(displayPosts[0], 1024)} alt={displayPosts[0].title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
                                     <span className="bg-primary/95 text-white font-black  text-[10px] tracking-[0.3em] py-1.5 px-4 mb-6 inline-block w-fit">
                                         {getCategory(displayPosts[0])}

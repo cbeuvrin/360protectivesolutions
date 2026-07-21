@@ -32,6 +32,9 @@ export interface WPPost {
         "wp:featuredmedia"?: Array<{
             source_url: string;
             alt_text: string;
+            media_details?: {
+                sizes?: Record<string, { source_url: string; width: number }>;
+            };
         }>;
         "wp:term"?: Array<Array<{
             name: string;
@@ -83,6 +86,26 @@ export async function getRecentSlugs(limit = 30): Promise<string[]> {
 
     const posts: Array<{ slug: string }> = await res.json();
     return posts.map((post) => post.slug);
+}
+
+export const BLOG_PLACEHOLDER = "/images/blog-placeholder.svg";
+
+// WordPress ya genera versiones redimensionadas de cada imagen, pero source_url
+// apunta siempre al original: hay destacadas de 5 MB entrando en tarjetas de
+// 430px. Se elige la variante mas pequenya que cubra el ancho que se necesita y
+// solo se cae al original si no hay ninguna.
+export function getFeaturedImage(post: WPPost, minWidth = 768) {
+    const media = post._embedded?.["wp:featuredmedia"]?.[0];
+
+    if (!media) {
+        return BLOG_PLACEHOLDER;
+    }
+
+    const candidates = Object.values(media.media_details?.sizes ?? {})
+        .filter((size) => size.width >= minWidth)
+        .sort((a, b) => a.width - b.width);
+
+    return candidates[0]?.source_url ?? media.source_url ?? BLOG_PLACEHOLDER;
 }
 
 // La mayoria de los posts repiten la imagen destacada como primera figura del
