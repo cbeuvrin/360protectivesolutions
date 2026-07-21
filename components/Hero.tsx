@@ -10,14 +10,17 @@ export function Hero() {
         <section className="relative h-screen min-h-[600px] w-full flex items-center overflow-hidden">
             {/* Background Video */}
             <div className="absolute inset-0 z-0">
+                {/* El poster pinta al instante mientras el video termina de bajar:
+                    al estar sobre el pliegue, es lo que fija el primer render. */}
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
+                    poster="/videos/posters/hero-video-2.jpg"
                     className="absolute inset-0 w-full h-full object-cover"
                 >
-                    <source src="/videos/hero-video-2.mp4?v=2" type="video/mp4" />
+                    <source src="/videos/hero-video-2.mp4?v=3" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
             </div>
