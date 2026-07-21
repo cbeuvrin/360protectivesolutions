@@ -42,7 +42,7 @@ export function WhyChooseUs() {
             {/* Professional Pattern Image Background - Extremely Subtle Centered Top */}
             <div className="absolute inset-x-0 top-0 z-0 flex justify-center opacity-10 pointer-events-none">
                 <img 
-                    src="https://360protectivesolutions.com/wp-content/uploads/2025/02/Pattern_img.png" 
+                    src="/pattern-bg.png"
                     alt="Pattern Background" 
                     className="w-full max-w-6xl object-contain min-h-[600px] select-none"
                 />

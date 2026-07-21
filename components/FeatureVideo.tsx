@@ -37,7 +37,8 @@ export function FeatureVideo() {
                             playsInline 
                             className="w-full h-full object-cover"
                         >
-                            <source src="https://360protectivesolutions.com/wp-content/uploads/2024/08/Y2meta.app-WSO-Worldwide-Security-Options-English-1.mp4" type="video/mp4" />
+                            {/* 30 MB: se sirve desde el hosting viejo en vez de versionarlo en el repo */}
+                            <source src="https://api.360protectivesolutions.com/wp-content/uploads/2024/08/Y2meta.app-WSO-Worldwide-Security-Options-English-1.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                     </div>
