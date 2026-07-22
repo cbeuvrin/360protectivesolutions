@@ -12,7 +12,7 @@ export function Footer() {
                     <div className="flex flex-col items-center gap-8">
                         <Link href="/" className="inline-block group">
                             <img 
-                                src="/images/wso31.png" 
+                                src="/images/wso31.webp" 
                                 alt="WORLDWIDE SECURITY OPTIONS" 
                                 className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
                             />

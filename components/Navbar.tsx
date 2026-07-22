@@ -97,7 +97,7 @@ export function Navbar() {
                 {/* Logo Section */}
                 <Link href="/" className="flex items-center hover:opacity-80 transition-opacity flex-shrink-0 min-w-[200px] 2xl:min-w-[250px]">
                     <img 
-                        src="/images/wso32.png" 
+                        src="/images/wso32.webp" 
                         alt="WORLDWIDE SECURITY OPTIONS" 
                         className="h-10 md:h-14 w-auto object-contain"
                     />

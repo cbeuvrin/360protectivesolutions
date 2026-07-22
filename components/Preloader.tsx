@@ -55,7 +55,7 @@ export function Preloader() {
                             className="flex flex-col items-center mb-12"
                         >
                             <img 
-                                src="/images/wso31.png" 
+                                src="/images/wso31.webp" 
                                 alt="Worldwide Security Options" 
                                 className="h-20 w-auto object-contain mb-6"
                             />
