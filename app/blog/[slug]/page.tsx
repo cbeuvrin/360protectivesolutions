@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { PostImage } from "@/components/blog/PostImage";
 import { Footer } from "@/components/Footer";
 import {
     formatPostDate,
@@ -75,7 +76,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         .filter((item: WPPost) => item.id !== post.id)
         .slice(0, 3);
 
-    const featured = hasFeaturedImage(post) ? getFeaturedImage(post, 1024) : undefined;
+    const featured = hasFeaturedImage(post) ? getFeaturedImage(post, 1536) : undefined;
     const author = post._embedded?.author?.[0]?.name;
 
     return (
@@ -123,10 +124,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <div className="bg-dark-blue">
                     <div className="container mx-auto px-6 max-w-4xl">
                         <div className="relative aspect-video overflow-hidden rounded-sm shadow-2xl translate-y-px">
-                            <img
+                            <PostImage
                                 src={featured}
                                 alt={stripHtml(post.title.rendered)}
-                                className="w-full h-full object-cover"
+                                sizes="(max-width: 896px) 100vw, 896px"
+                                priority
+                                className="object-cover"
                             />
                         </div>
                     </div>
@@ -163,10 +166,11 @@ export default async function BlogPostPage({ params }: PageProps) {
                                     className="group overflow-hidden bg-white shadow-sm border border-gray-100 rounded-sm hover:shadow-xl transition-all"
                                 >
                                     <div className="relative aspect-video overflow-hidden bg-gray-100">
-                                        <img
+                                        <PostImage
                                             src={getFeaturedImage(item)}
                                             alt={stripHtml(item.title.rendered)}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                     </div>
                                     <div className="p-8">

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Eye, Calendar } from "lucide-react";
 import Link from "next/link";
 import { WPPost, formatPostDate, getFeaturedImage } from "@/lib/wordpress";
+import { PostImage } from "@/components/blog/PostImage";
 
 interface MostReadSectionProps {
     posts: WPPost[];
@@ -42,7 +43,12 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                                     className="group overflow-hidden bg-white shadow-sm border border-gray-100 rounded-sm hover:shadow-xl transition-all"
                                 >
                                     <div className="relative aspect-video overflow-hidden">
-                                        <img src={getFeaturedImage(post)} alt={post.title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                        <PostImage
+                                            src={getFeaturedImage(post)}
+                                            alt={post.title.rendered}
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
                                         <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                     <div className="p-8">
@@ -72,8 +78,13 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="flex gap-6 group cursor-pointer border-b border-gray-100 pb-6 last:border-0"
                             >
-                                <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-sm bg-gray-100">
-                                    <img src={getFeaturedImage(post, 300)} alt={post.title.rendered} className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" />
+                                <div className="relative w-24 h-24 flex-shrink-0 overflow-hidden rounded-sm bg-gray-100">
+                                    <PostImage
+                                        src={getFeaturedImage(post, 300)}
+                                        alt={post.title.rendered}
+                                        sizes="96px"
+                                        className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
+                                    />
                                 </div>
                                 <div className="flex-1">
                                     <h4 className="text-[11px] font-bold text-dark-blue tracking-tight mb-3 leading-snug group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />

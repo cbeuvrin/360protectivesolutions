@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Eye, User, Calendar } from "lucide-react";
 import Link from "next/link";
 import { WPPost, formatPostDate, getFeaturedImage } from "@/lib/wordpress";
+import { PostImage } from "@/components/blog/PostImage";
 
 interface FeaturedGridProps {
     posts: WPPost[];
@@ -43,7 +44,13 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                             className="lg:col-span-8 relative group overflow-hidden rounded-sm shadow-xl"
                         >
                             <Link href={`/blog/${displayPosts[0].slug}`} className="block h-full cursor-pointer">
-                                <img src={getFeaturedImage(displayPosts[0], 1024)} alt={displayPosts[0].title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <PostImage
+                                    src={getFeaturedImage(displayPosts[0], 1536)}
+                                    alt={displayPosts[0].title.rendered}
+                                    sizes="(max-width: 1024px) 100vw, 66vw"
+                                    priority
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
                                     <span className="bg-primary/95 text-white font-black  text-[10px] tracking-[0.3em] py-1.5 px-4 mb-6 inline-block w-fit">
                                         {getCategory(displayPosts[0])}
@@ -71,7 +78,12 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                                 className="relative h-[300px] group overflow-hidden rounded-sm shadow-xl"
                             >
                                 <Link href={`/blog/${displayPosts[1].slug}`} className="block h-full cursor-pointer">
-                                    <img src={getFeaturedImage(displayPosts[1])} alt={displayPosts[1].title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                    <PostImage
+                                        src={getFeaturedImage(displayPosts[1])}
+                                        alt={displayPosts[1].title.rendered}
+                                        sizes="(max-width: 1024px) 100vw, 33vw"
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent flex flex-col justify-end p-8">
                                         <span className="bg-primary/95 text-white font-black text-[10px] tracking-[0.3em] py-1.5 px-4 mb-4 inline-block w-fit">
                                             {getCategory(displayPosts[1])}
@@ -99,7 +111,12 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                                     className="flex-1 relative group overflow-hidden rounded-sm shadow-xl h-[200px] lg:h-full"
                                 >
                                     <Link href={`/blog/${post.slug}`} className="block h-full cursor-pointer">
-                                        <img src={getFeaturedImage(post)} alt={post.title.rendered} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                        <PostImage
+                                            src={getFeaturedImage(post)}
+                                            alt={post.title.rendered}
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 17vw"
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent flex flex-col justify-end p-6">
                                             <span className="bg-primary/95 text-white font-black text-[8px] tracking-[0.3em] py-1 px-3 mb-3 inline-block w-fit">
                                                 {getCategory(post)}

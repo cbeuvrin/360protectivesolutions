@@ -61,6 +61,17 @@ async function legacyBlogRedirects() {
 }
 
 const nextConfig: NextConfig = {
+  images: {
+    // Las imagenes del blog se quedan en WordPress: el flujo de publicacion no
+    // cambia. Next las sirve convertidas a WebP/AVIF desde su CDN.
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.360protectivesolutions.com",
+        pathname: "/wp-content/uploads/**",
+      },
+    ],
+  },
   // Hay un package-lock.json suelto en el home del usuario y Turbopack elegia
   // ese directorio como raiz del workspace.
   turbopack: {
