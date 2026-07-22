@@ -106,7 +106,7 @@ export default function ExecutiveProtectionPage() {
                className="relative rounded-[2rem] overflow-hidden shadow-2xl h-[500px]"
             >
               <img 
-                src="/images/services/driver-2.png" 
+                src="/images/services/driver-2.webp" 
                 alt="WSO Professional Security Driver" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
