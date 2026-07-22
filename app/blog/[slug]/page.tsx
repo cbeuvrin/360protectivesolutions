@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { PostImage } from "@/components/blog/PostImage";
+import { ArticleCTA } from "@/components/blog/ArticleCTA";
+import { ArticleSidebar } from "@/components/blog/ArticleSidebar";
 import { Footer } from "@/components/Footer";
 import {
     formatPostDate,
@@ -72,15 +74,21 @@ export default async function BlogPostPage({ params }: PageProps) {
         notFound();
     }
 
-    const related: WPPost[] = (await getPosts(4))
-        .filter((item: WPPost) => item.id !== post.id)
-        .slice(0, 3);
+    // Se piden de una vez los de la barra lateral y los del final, para no
+    // repetir el mismo articulo en las dos zonas.
+    const pool: WPPost[] = (await getPosts(10)).filter(
+        (item: WPPost) => item.id !== post.id
+    );
+    const sidebar = pool.slice(0, 5);
+    const related = pool.slice(5, 8);
 
     const featured = hasFeaturedImage(post) ? getFeaturedImage(post, 1536) : undefined;
     const author = post._embedded?.author?.[0]?.name;
 
+    // overflow-x-clip y no -hidden: hidden convierte a main en contenedor de
+    // scroll, y eso anula el sticky de la barra lateral.
     return (
-        <main className="min-h-screen bg-white font-sans text-gray-900 overflow-x-hidden">
+        <main className="min-h-screen bg-white font-sans text-gray-900 overflow-x-clip">
             <Navbar />
 
             {/* Hero */}
@@ -137,15 +145,29 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
             )}
 
-            {/* Article body */}
-            <article className="pb-24 px-6">
-                <div
-                    className="container mx-auto max-w-3xl article-body"
-                    dangerouslySetInnerHTML={{
-                        __html: stripLeadingFeaturedImage(post.content.rendered, featured),
-                    }}
-                />
-            </article>
+            {/* Article body + sidebar */}
+            <div className="px-6 pb-24">
+                <div className="container mx-auto grid max-w-[1400px] grid-cols-1 gap-16 lg:grid-cols-12">
+                    <article className="lg:col-span-8">
+                        <div
+                            className="article-body max-w-3xl"
+                            dangerouslySetInnerHTML={{
+                                __html: stripLeadingFeaturedImage(post.content.rendered, featured),
+                            }}
+                        />
+
+                        <div className="max-w-3xl">
+                            <ArticleCTA />
+                        </div>
+                    </article>
+
+                    {/* Solo escritorio: en movil ya se llega a estos mismos posts
+                        al final de la pagina. */}
+                    <aside className="hidden lg:col-span-4 lg:block">
+                        <ArticleSidebar posts={sidebar} />
+                    </aside>
+                </div>
+            </div>
 
             {/* Related */}
             {related.length > 0 && (
