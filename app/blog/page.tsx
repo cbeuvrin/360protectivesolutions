@@ -4,7 +4,13 @@ import { Footer } from "@/components/Footer";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { FeaturedGrid } from "@/components/blog/FeaturedGrid";
 import { MostReadSection } from "@/components/blog/MostReadSection";
-import { getPosts, WPPost } from "@/lib/wordpress";
+import { Pagination } from "@/components/blog/Pagination";
+import {
+    getPostsByOffset,
+    POSTS_ON_FIRST_PAGE,
+    totalBlogPages,
+    WPPost,
+} from "@/lib/wordpress";
 
 export const revalidate = 3600;
 
@@ -18,10 +24,13 @@ export default async function BlogPage() {
     // Se resuelve en el servidor: el HTML ya sale con los posts y el navegador
     // se ahorra descargar la respuesta de la API de WordPress.
     let posts: WPPost[] = [];
+    let pages = 1;
     let failed = false;
 
     try {
-        posts = await getPosts(15);
+        const { posts: firstPage, total } = await getPostsByOffset(0, POSTS_ON_FIRST_PAGE);
+        posts = firstPage;
+        pages = totalBlogPages(total);
     } catch (error) {
         console.error("Error loading posts:", error);
         failed = true;
@@ -47,12 +56,7 @@ export default async function BlogPage() {
                     {/* Most Read (Layout 2) - Uses posts from index 4 onwards */}
                     <MostReadSection posts={posts} />
 
-                    {/* Pagination / Load More */}
-                    <section className="py-24 text-center bg-gray-50 border-t border-gray-100">
-                        <button className="px-12 py-5 bg-dark-blue text-white font-black  tracking-[0.2em] text-xs hover:bg-primary transition-all rounded-sm shadow-xl">
-                            Explore Full Archive
-                        </button>
-                    </section>
+                    <Pagination current={1} total={pages} />
                 </>
             )}
 

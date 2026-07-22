@@ -59,6 +59,39 @@ export async function getPosts(perPage = 10, page = 1) {
     return JSON.parse(rewriteMediaUrls(await res.text()));
 }
 
+// La primera pagina usa el layout destacado (4 + 9). El resto son rejillas
+// uniformes, asi que llevan su propio tamanyo.
+export const POSTS_ON_FIRST_PAGE = 13;
+export const POSTS_PER_PAGE = 12;
+
+export function offsetForPage(page: number) {
+    return page <= 1 ? 0 : POSTS_ON_FIRST_PAGE + (page - 2) * POSTS_PER_PAGE;
+}
+
+export function totalBlogPages(total: number) {
+    if (total <= POSTS_ON_FIRST_PAGE) {
+        return 1;
+    }
+
+    return 1 + Math.ceil((total - POSTS_ON_FIRST_PAGE) / POSTS_PER_PAGE);
+}
+
+export async function getPostsByOffset(offset: number, perPage: number) {
+    const res = await fetch(
+        `${BASE_URL}/posts?_embed&per_page=${perPage}&offset=${offset}`,
+        { next: { revalidate: 3600 } }
+    );
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch posts");
+    }
+
+    return {
+        posts: JSON.parse(rewriteMediaUrls(await res.text())) as WPPost[],
+        total: Number(res.headers.get("x-wp-total") ?? 0),
+    };
+}
+
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
     const res = await fetch(
         `${BASE_URL}/posts?slug=${encodeURIComponent(slug)}&_embed`,

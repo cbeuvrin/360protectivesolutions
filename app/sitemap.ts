@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPostRefs } from "@/lib/wordpress";
+import { getAllPostRefs, totalBlogPages } from "@/lib/wordpress";
 
 export const revalidate = 3600;
 
@@ -62,6 +62,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.6,
             }))
         );
+
+        // Las paginas del archivo: son la ruta por la que se llega a los posts
+        // antiguos navegando.
+        for (let page = 2; page <= totalBlogPages(posts.length); page += 1) {
+            pages.push({
+                url: `${SITE_URL}/blog/page/${page}`,
+                lastModified: now,
+                changeFrequency: "weekly" as const,
+                priority: 0.4,
+            });
+        }
     } catch (error) {
         console.error("Sitemap: could not load posts", error);
     }
