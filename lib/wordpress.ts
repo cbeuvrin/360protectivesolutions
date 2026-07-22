@@ -130,6 +130,32 @@ export function stripLeadingFeaturedImage(content: string, featuredUrl?: string)
         : content;
 }
 
+// Para el sitemap hacen falta los 215, no solo la primera pagina: la API tope a
+// 100 por peticion, asi que se recorre hasta agotar x-wp-totalpages.
+export async function getAllPostRefs(): Promise<Array<{ slug: string; modified: string }>> {
+    const perPage = 100;
+    const refs: Array<{ slug: string; modified: string }> = [];
+    let page = 1;
+    let totalPages = 1;
+
+    do {
+        const res = await fetch(
+            `${BASE_URL}/posts?per_page=${perPage}&page=${page}&_fields=slug,modified`,
+            { next: { revalidate: 3600 } }
+        );
+
+        if (!res.ok) {
+            break;
+        }
+
+        totalPages = Number(res.headers.get("x-wp-totalpages") ?? 1);
+        refs.push(...(await res.json()));
+        page += 1;
+    } while (page <= totalPages);
+
+    return refs;
+}
+
 export function stripHtml(html: string) {
     return html
         .replace(/<[^>]*>/g, "")

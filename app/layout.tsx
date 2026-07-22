@@ -8,8 +8,14 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
+  // Sin esto las canonicas y las og:image se emiten relativas, y los
+  // rastreadores no pueden resolverlas.
+  metadataBase: new URL("https://www.360protectivesolutions.com"),
   title: "Executive Protection NYC | Worldwide Security Options",
   description: "Tailored Solutions for Elite Security",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 import { ModalProvider } from "@/context/ModalContext";

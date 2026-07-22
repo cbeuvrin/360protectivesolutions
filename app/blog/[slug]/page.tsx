@@ -41,6 +41,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
         title: `${title} | Worldwide Security Options`,
         description,
+        // El WordPress viejo sigue sirviendo una copia de cada articulo en el
+        // subdominio api: la canonica le dice a Google cual es la buena.
+        alternates: {
+            canonical: `/blog/${slug}`,
+        },
         openGraph: {
             title,
             description,
