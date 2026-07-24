@@ -12,7 +12,10 @@ import {
     totalBlogPages,
 } from "@/lib/wordpress";
 
-export const revalidate = 3600;
+// 60s y no una hora: al publicar desde WordPress el articulo debe aparecer
+// enseguida. Vercel cachea igual, asi que esto es como mucho una peticion por
+// minuto a WordPress, y solo si alguien esta visitando.
+export const revalidate = 60;
 
 interface PageProps {
     params: Promise<{ page: string }>;
