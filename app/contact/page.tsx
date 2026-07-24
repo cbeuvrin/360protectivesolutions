@@ -59,8 +59,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-black  tracking-widest text-dark-blue/40 mb-1">Headquarters</h4>
-                    <p className="text-dark-blue font-bold">New York City, NY</p>
-                    <p className="text-gray-500 text-sm font-light">Tri-State Operations Center</p>
+                    <p className="text-dark-blue font-bold">42 Broadway, Suite #12-109<br />New York, NY 10004</p>
+                    <p className="text-gray-500 text-sm font-light">Serving New York &amp; New Jersey</p>
                   </div>
                 </div>
 
@@ -70,7 +70,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-black  tracking-widest text-dark-blue/40 mb-1">Direct Line</h4>
-                    <p className="text-dark-blue font-bold">+1 (555) 360-PROT</p>
+                    <p className="text-dark-blue font-bold">(347) 450-2021</p>
                     <p className="text-gray-500 text-sm font-light">Available 24/7</p>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-black  tracking-widest text-dark-blue/40 mb-1">Confidential Email</h4>
-                    <p className="text-dark-blue font-bold">ops@360protectivesolutions.com</p>
+                    <p className="text-dark-blue font-bold">corporate@360protectivesolutions.com</p>
                   </div>
                 </div>
               </div>

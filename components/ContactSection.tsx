@@ -35,15 +35,15 @@ export function ContactSection() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-400">
                             <div className="flex items-start space-x-4">
                                 <MapPin className="text-primary mt-1" size={20} />
-                                <p>123 Security Avenue,<br />New York, NY 10001</p>
+                                <p>42 Broadway, Suite #12-109,<br />New York, NY 10004</p>
                             </div>
                             <div className="flex items-start space-x-4">
                                 <Phone className="text-primary mt-1" size={20} />
-                                <p>+1 (555) 123-4567</p>
+                                <p>(347) 450-2021</p>
                             </div>
                             <div className="flex items-start space-x-4">
                                 <Mail className="text-primary mt-1" size={20} />
-                                <p>info@360protectivesolutions.com</p>
+                                <p>corporate@360protectivesolutions.com</p>
                             </div>
                         </div>
                     </div>

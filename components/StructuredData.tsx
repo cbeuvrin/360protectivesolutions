@@ -1,10 +1,9 @@
 /**
  * Datos estructurados de la organizacion.
  *
- * Solo se declara informacion verificable en el propio sitio. Telefono y
- * direccion se han dejado fuera a proposito: los que figuran hoy son marcadores
- * de posicion (+1 555..., "123 Security Avenue") y publicarlos como datos
- * estructurados le diria a Google que son reales.
+ * Los datos de contacto son los reales de la empresa (recuperados de la pagina
+ * Contact del WordPress). Google los usa para el panel de conocimiento y las
+ * busquedas locales.
  */
 const ORGANIZATION = {
     "@context": "https://schema.org",
@@ -14,13 +13,21 @@ const ORGANIZATION = {
     url: "https://www.360protectivesolutions.com",
     logo: "https://www.360protectivesolutions.com/images/wso32.webp",
     description:
-        "Veteran-owned executive protection, corporate and residential security firm serving New York City.",
-    email: "info@360protectivesolutions.com",
-    areaServed: {
-        "@type": "City",
-        name: "New York City",
-        containedInPlace: { "@type": "State", name: "New York" },
+        "Veteran-owned executive protection, corporate and residential security firm serving New York and New Jersey.",
+    email: "corporate@360protectivesolutions.com",
+    telephone: "+1-347-450-2021",
+    address: {
+        "@type": "PostalAddress",
+        streetAddress: "42 Broadway, Suite #12-109",
+        addressLocality: "New York",
+        addressRegion: "NY",
+        postalCode: "10004",
+        addressCountry: "US",
     },
+    areaServed: [
+        { "@type": "State", name: "New York" },
+        { "@type": "State", name: "New Jersey" },
+    ],
     knowsAbout: [
         "Executive Protection",
         "Residential Security",

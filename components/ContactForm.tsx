@@ -73,7 +73,7 @@ export function ContactForm({ dark = false }: ContactFormProps) {
           <label className={labelClasses}>Phone Number</label>
           <input
             type="tel"
-            placeholder="+1 (555) 000-0000"
+            placeholder="(347) 450-2021"
             className={inputClasses}
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
