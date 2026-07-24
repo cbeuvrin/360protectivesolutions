@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Executive Protection NYC | Worldwide Security Options",
+    description:
+        "Veteran-owned executive protection, security drivers and corporate security across New York City. Licensed, trained specialists with federal-level experience.",
+    alternates: { canonical: "/" },
+};
+
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { ServicesGrid } from "@/components/ServicesGrid";
