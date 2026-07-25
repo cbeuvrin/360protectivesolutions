@@ -42,7 +42,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const title = stripHtml(post.title.rendered);
     const description = stripHtml(post.excerpt.rendered).slice(0, 160);
+    // Si el post no tiene imagen destacada, se comparte con la tarjeta de marca
+    // en vez de sin imagen.
     const image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+    const shareImage = image ? { url: image } : { url: "/og-default.png", width: 1200, height: 630 };
 
     return {
         title: `${title} | Worldwide Security Options`,
@@ -57,7 +60,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description,
             type: "article",
             publishedTime: post.date,
-            images: image ? [{ url: image }] : undefined,
+            images: [shareImage],
         },
     };
 }
