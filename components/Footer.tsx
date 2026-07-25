@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
     return (
@@ -18,10 +18,9 @@ export function Footer() {
                             />
                         </Link>
                         <div className="flex space-x-6">
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Twitter size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Linkedin size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Instagram size={20} /></a>
+                            <a href="https://www.facebook.com/360protectivesolutions" target="_blank" rel="noopener noreferrer" aria-label="360 Protective Solutions on Facebook" className="text-gray-400 hover:text-primary transition-colors"><Facebook size={20} /></a>
+                            <a href="https://www.linkedin.com/company/360-protective-solutions%E2%84%A2/" target="_blank" rel="noopener noreferrer" aria-label="360 Protective Solutions on LinkedIn" className="text-gray-400 hover:text-primary transition-colors"><Linkedin size={20} /></a>
+                            <a href="https://www.instagram.com/360protectivesolutions/" target="_blank" rel="noopener noreferrer" aria-label="360 Protective Solutions on Instagram" className="text-gray-400 hover:text-primary transition-colors"><Instagram size={20} /></a>
                         </div>
                     </div>
 

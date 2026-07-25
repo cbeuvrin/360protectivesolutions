@@ -28,6 +28,11 @@ const ORGANIZATION = {
         { "@type": "State", name: "New York" },
         { "@type": "State", name: "New Jersey" },
     ],
+    sameAs: [
+        "https://www.facebook.com/360protectivesolutions",
+        "https://www.linkedin.com/company/360-protective-solutions%E2%84%A2/",
+        "https://www.instagram.com/360protectivesolutions/",
+    ],
     knowsAbout: [
         "Executive Protection",
         "Residential Security",
