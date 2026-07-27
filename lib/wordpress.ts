@@ -49,7 +49,7 @@ export interface WPPost {
 export async function getPosts(perPage = 10, page = 1) {
     const res = await fetch(
         `${BASE_URL}/posts?_embed&per_page=${perPage}&page=${page}`,
-        { next: { revalidate: 3600 } } // Revalidate every hour
+        { next: { revalidate: 60 } } // Revalidate every minute
     );
 
     if (!res.ok) {
@@ -79,7 +79,7 @@ export function totalBlogPages(total: number) {
 export async function getPostsByOffset(offset: number, perPage: number) {
     const res = await fetch(
         `${BASE_URL}/posts?_embed&per_page=${perPage}&offset=${offset}`,
-        { next: { revalidate: 3600 } }
+        { next: { revalidate: 60 } }
     );
 
     if (!res.ok) {
@@ -95,7 +95,7 @@ export async function getPostsByOffset(offset: number, perPage: number) {
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
     const res = await fetch(
         `${BASE_URL}/posts?slug=${encodeURIComponent(slug)}&_embed`,
-        { next: { revalidate: 3600 } }
+        { next: { revalidate: 60 } }
     );
 
     if (!res.ok) {
@@ -110,7 +110,7 @@ export async function getPostBySlug(slug: string): Promise<WPPost | null> {
 // no alargar el build con los 215 posts del archivo.
 export async function getRecentSlugs(limit = 30): Promise<string[]> {
     const res = await fetch(`${BASE_URL}/posts?per_page=${limit}&_fields=slug`, {
-        next: { revalidate: 3600 },
+        next: { revalidate: 60 },
     });
 
     if (!res.ok) {
@@ -174,7 +174,7 @@ export async function getAllPostRefs(): Promise<Array<{ slug: string; modified: 
     do {
         const res = await fetch(
             `${BASE_URL}/posts?per_page=${perPage}&page=${page}&_fields=slug,modified`,
-            { next: { revalidate: 3600 } }
+            { next: { revalidate: 60 } }
         );
 
         if (!res.ok) {
