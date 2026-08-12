@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { BLOG_PLACEHOLDER } from "@/lib/wordpress";
 
 interface PostImageProps {
     src: string;
     alt: string;
-    /** Ancho que ocupara el hueco, para que Next genere el srcset correcto. */
+    /** Ancho que ocupara el hueco; se usa para elegir la variante de WordPress. */
     sizes: string;
     className?: string;
     /** Solo para la imagen que domina la primera pantalla. */
@@ -12,11 +11,13 @@ interface PostImageProps {
 }
 
 /**
- * Imagen de post servida a traves del optimizador de Next.
+ * Imagen de post.
  *
- * Los originales siguen en WordPress: Vercel los busca una vez, los convierte a
- * WebP/AVIF, los redimensiona al hueco real y los cachea en su CDN. Sin esto
- * llegaban PNG de 700 KB a tarjetas de 430px desde un origen unico sin CDN.
+ * NO pasa por el optimizador de Vercel (`unoptimized`), a proposito. WordPress ya
+ * sirve las imagenes en WebP y ya redimensionadas: getFeaturedImage() elige la
+ * variante del tamanyo correcto. Re-optimizarlas en Vercel no aportaba nada y
+ * consumia cuota de pago -- al superarla, el optimizador devuelve 402 y las
+ * imagenes dejan de verse. Sirviendolas directas desde WordPress eso no ocurre.
  */
 export function PostImage({ src, alt, sizes, className, priority }: PostImageProps) {
     return (
@@ -26,9 +27,7 @@ export function PostImage({ src, alt, sizes, className, priority }: PostImagePro
             fill
             sizes={sizes}
             priority={priority}
-            // El marcador de posicion es un SVG local: no hay nada que optimizar
-            // y el optimizador rechaza SVG salvo que se habilite explicitamente.
-            unoptimized={src === BLOG_PLACEHOLDER}
+            unoptimized
             className={className}
         />
     );
