@@ -143,6 +143,37 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+/* Galeria de trabajos dentro de un articulo. El HTML lo inyecta WordPress, asi
+   que se estiliza por clase desde aqui. Masonry con columnas para mezclar fotos
+   verticales y horizontales sin recortarlas. */
+.wso-gallery {
+  columns: 3;
+  column-gap: 12px;
+  margin-block: 2.5rem;
+}
+
+.wso-gallery img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  break-inside: avoid;
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.wso-gallery img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
+}
+
+@media (max-width: 900px) {
+  .wso-gallery { columns: 2; }
+}
+
+@media (max-width: 560px) {
+  .wso-gallery { columns: 1; }
+}
+
 .world-map-mask {
   mask-image: url("/images/world-map.svg");
   mask-size: 100% auto;
