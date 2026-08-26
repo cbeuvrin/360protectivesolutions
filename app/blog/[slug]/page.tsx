@@ -152,7 +152,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             )}
 
             {/* Article body + sidebar */}
-            <div className="px-6 pb-24">
+            <div className="px-6 pt-16 pb-24">
                 <div className="container mx-auto grid max-w-[1400px] grid-cols-1 gap-16 lg:grid-cols-12">
                     <article className="lg:col-span-8">
                         <div
