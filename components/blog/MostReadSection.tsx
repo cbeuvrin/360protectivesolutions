@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { Eye, Calendar } from "lucide-react";
 import Link from "next/link";
-import { WPPost, formatPostDate, getFeaturedImage } from "@/lib/wordpress";
+import { PostCard, cardImage, formatPostDate } from "@/lib/wordpress";
 import { PostImage } from "@/components/blog/PostImage";
 
 interface MostReadSectionProps {
-    posts: WPPost[];
+    posts: PostCard[];
 }
 
 export const MostReadSection = ({ posts }: MostReadSectionProps) => {
@@ -16,10 +16,6 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
     // Use posts from index 4 onwards for this section
     const mainPosts = posts.slice(4, 8);
     const sidePosts = posts.slice(8, 13);
-
-    const getCategory = (post: WPPost) => {
-        return post._embedded?.["wp:term"]?.[0]?.[0]?.name || "Uncategorized";
-    };
 
     return (
         <section className="py-24 px-6 md:px-12 lg:px-24 bg-white">
@@ -44,8 +40,8 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                                 >
                                     <div className="relative aspect-video overflow-hidden">
                                         <PostImage
-                                            src={getFeaturedImage(post)}
-                                            alt={post.title.rendered}
+                                            src={cardImage(post, "medium")}
+                                            alt={post.alt}
                                             sizes="(max-width: 768px) 100vw, 33vw"
                                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
@@ -53,9 +49,9 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                                     </div>
                                     <div className="p-8">
                                         <span className="inline-block px-3 py-1 bg-gray-50 text-blue-600 text-[10px] font-bold border border-blue-600/30 mb-4 rounded-sm">
-                                            {getCategory(post)}
+                                            {post.category}
                                         </span>
-                                        <h3 className="text-xl font-bold text-dark-blue tracking-tighter leading-tight mb-6 group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                                        <h3 className="text-xl font-bold text-dark-blue tracking-tighter leading-tight mb-6 group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
                                         <div className="flex gap-4 opacity-50 mt-auto">
                                             <div className="flex items-center gap-2 text-[10px] font-bold  tracking-widest text-dark-blue">
                                                 <Calendar size={12} className="text-primary" /> {formatPostDate(post.date)}
@@ -80,21 +76,21 @@ export const MostReadSection = ({ posts }: MostReadSectionProps) => {
                             >
                                 <div className="relative w-24 h-24 flex-shrink-0 overflow-hidden rounded-sm bg-gray-100">
                                     <PostImage
-                                        src={getFeaturedImage(post, 300)}
-                                        alt={post.title.rendered}
+                                        src={cardImage(post, "small")}
+                                        alt={post.alt}
                                         sizes="96px"
                                         className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
                                     />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="text-[11px] font-bold text-dark-blue tracking-tight mb-3 leading-snug group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                                    <h4 className="text-[11px] font-bold text-dark-blue tracking-tight mb-3 leading-snug group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
                                     <div className="flex gap-4 opacity-40">
                                         <div className="flex items-center gap-1.5 text-[9px] font-bold  tracking-widest text-dark-blue">
                                             <Calendar size={10} className="text-primary font-black" /> {formatPostDate(post.date)}
                                         </div>
                                     </div>
                                     <span className="inline-block mt-3 px-2 py-0.5 bg-gray-50 text-blue-600 text-[8px] font-bold border border-blue-600/30 rounded-sm">
-                                        {getCategory(post)}
+                                        {post.category}
                                     </span>
                                 </div>
                             </motion.div>

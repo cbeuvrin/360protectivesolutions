@@ -6,16 +6,17 @@ import { BlogHero } from "@/components/blog/BlogHero";
 import { PostGrid } from "@/components/blog/PostGrid";
 import { Pagination } from "@/components/blog/Pagination";
 import {
-    getPostsByOffset,
+    getPostCards,
     offsetForPage,
     POSTS_PER_PAGE,
     totalBlogPages,
 } from "@/lib/wordpress";
 
-// 60s y no una hora: al publicar desde WordPress el articulo debe aparecer
-// enseguida. Vercel cachea igual, asi que esto es como mucho una peticion por
-// minuto a WordPress, y solo si alguien esta visitando.
-export const revalidate = 60;
+// Un dia. Cada reescritura ISR se factura y con 60s un rastreador bastaba para
+// regenerar todo el blog cada hora. Lo nuevo aparece al momento igualmente:
+// WordPress avisa a /api/revalidate al publicar. Next exige aqui un literal,
+// asi que no se puede importar WP_REVALIDATE.
+export const revalidate = 86400;
 
 interface PageProps {
     params: Promise<{ page: string }>;
@@ -28,7 +29,7 @@ function parsePage(raw: string) {
 // Son pocas y baratas de generar: se prerenderizan todas para que la navegacion
 // por el archivo sea instantanea.
 export async function generateStaticParams() {
-    const { total } = await getPostsByOffset(0, 1);
+    const { total } = await getPostCards(0, 1);
     const pages = totalBlogPages(total);
 
     return Array.from({ length: Math.max(pages - 1, 0) }, (_, i) => ({
@@ -63,7 +64,7 @@ export default async function BlogArchivePage({ params }: PageProps) {
         redirect("/blog");
     }
 
-    const { posts, total } = await getPostsByOffset(offsetForPage(page), POSTS_PER_PAGE);
+    const { cards: posts, total } = await getPostCards(offsetForPage(page), POSTS_PER_PAGE);
     const pages = totalBlogPages(total);
 
     if (page > pages || posts.length === 0) {

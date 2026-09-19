@@ -5,6 +5,15 @@ const WP_LEGACY_HOST = "https://360protectivesolutions.com";
 
 const BASE_URL = `${WP_HOST}/wp-json/wp/v2`;
 
+// Un dia y no un minuto. Cada reescritura de una ruta ISR cuenta en la factura
+// de Vercel, y con 242 rutas del blog a 60s un solo rastreador las quemaba
+// todas cada hora. El contenido nuevo no espera al dia: WordPress avisa a
+// /api/revalidate al publicar y se purga la etiqueta.
+export const WP_REVALIDATE = 86400;
+export const WP_CACHE_TAG = "wp-posts";
+
+const CACHE = { next: { revalidate: WP_REVALIDATE, tags: [WP_CACHE_TAG] } };
+
 // WordPress genera las URLs de /wp-content apuntando al dominio principal, que
 // ahora responde Vercel. Solo se reescriben los medios: los permalinks no se
 // tocan porque los enlaces del blog se arman con el slug.
@@ -21,6 +30,14 @@ function rewriteMediaUrls(payload: string) {
         .split(escapeSlashes(legacy)).join(escapeSlashes(current));
 }
 
+interface WPMedia {
+    source_url: string;
+    alt_text: string;
+    media_details?: {
+        sizes?: Record<string, { source_url: string; width: number }>;
+    };
+}
+
 export interface WPPost {
     id: number;
     title: { rendered: string };
@@ -29,13 +46,7 @@ export interface WPPost {
     date: string;
     slug: string;
     _embedded?: {
-        "wp:featuredmedia"?: Array<{
-            source_url: string;
-            alt_text: string;
-            media_details?: {
-                sizes?: Record<string, { source_url: string; width: number }>;
-            };
-        }>;
+        "wp:featuredmedia"?: WPMedia[];
         "wp:term"?: Array<Array<{
             name: string;
             slug: string;
@@ -46,17 +57,65 @@ export interface WPPost {
     };
 }
 
-export async function getPosts(perPage = 10, page = 1) {
-    const res = await fetch(
-        `${BASE_URL}/posts?_embed&per_page=${perPage}&page=${page}`,
-        { next: { revalidate: 60 } } // Revalidate every minute
-    );
+// Lo unico que necesita una tarjeta del listado. Se recorta aqui, en la capa
+// de datos, porque las tarjetas son componentes cliente: todo lo que reciban
+// como prop acaba serializado dentro del HTML. Con el objeto entero de
+// WordPress, /blog pesaba 341 KB de los que solo se pintaban titulo, fecha,
+// categoria e imagen.
+export interface PostCard {
+    id: number;
+    slug: string;
+    date: string;
+    /** HTML tal cual lo entrega WordPress (entidades incluidas). */
+    title: string;
+    /** Titulo en texto plano, para atributos alt. */
+    alt: string;
+    category: string;
+    /** Variante mas pequenya que cubre cada hueco; null si no hay destacada. */
+    image: { small: string; medium: string; large: string } | null;
+}
 
-    if (!res.ok) {
-        throw new Error("Failed to fetch posts");
-    }
+export const BLOG_PLACEHOLDER = "/images/blog-placeholder.svg";
 
-    return JSON.parse(rewriteMediaUrls(await res.text()));
+// WordPress ya genera versiones redimensionadas de cada imagen, pero source_url
+// apunta siempre al original: hay destacadas de 5 MB entrando en tarjetas de
+// 430px. Se elige la variante mas pequenya que cubra el ancho que se necesita y
+// solo se cae al original si no hay ninguna.
+function pickSize(media: WPMedia, minWidth: number) {
+    const candidates = Object.values(media.media_details?.sizes ?? {})
+        .filter((size) => size.width >= minWidth)
+        .sort((a, b) => a.width - b.width);
+
+    return candidates[0]?.source_url ?? media.source_url;
+}
+
+export function getFeaturedImage(post: WPPost, minWidth = 768) {
+    const media = post._embedded?.["wp:featuredmedia"]?.[0];
+    return media ? pickSize(media, minWidth) ?? BLOG_PLACEHOLDER : BLOG_PLACEHOLDER;
+}
+
+export function cardImage(card: PostCard, size: keyof NonNullable<PostCard["image"]>) {
+    return card.image?.[size] ?? BLOG_PLACEHOLDER;
+}
+
+function toCard(post: WPPost): PostCard {
+    const media = post._embedded?.["wp:featuredmedia"]?.[0];
+
+    return {
+        id: post.id,
+        slug: post.slug,
+        date: post.date,
+        title: post.title.rendered,
+        alt: stripHtml(post.title.rendered),
+        category: post._embedded?.["wp:term"]?.[0]?.[0]?.name ?? "Uncategorized",
+        image: media
+            ? {
+                  small: pickSize(media, 300),
+                  medium: pickSize(media, 768),
+                  large: pickSize(media, 1536),
+              }
+            : null,
+    };
 }
 
 // La primera pagina usa el layout destacado (4 + 9). El resto son rejillas
@@ -76,18 +135,27 @@ export function totalBlogPages(total: number) {
     return 1 + Math.ceil((total - POSTS_ON_FIRST_PAGE) / POSTS_PER_PAGE);
 }
 
-export async function getPostsByOffset(offset: number, perPage: number) {
-    const res = await fetch(
-        `${BASE_URL}/posts?_embed&per_page=${perPage}&offset=${offset}`,
-        { next: { revalidate: 60 } }
-    );
+// Tarjetas para los listados. Se pide a WordPress lo justo: _embed solo de
+// imagen y categoria, y _fields sin content ni excerpt. _links tiene que ir en
+// _fields o _embed deja de funcionar.
+export async function getPostCards(offset: number, perPage: number) {
+    const params = new URLSearchParams({
+        per_page: String(perPage),
+        offset: String(offset),
+        _embed: "wp:featuredmedia,wp:term",
+        _fields: "id,slug,date,title,_links,_embedded",
+    });
+
+    const res = await fetch(`${BASE_URL}/posts?${params}`, CACHE);
 
     if (!res.ok) {
         throw new Error("Failed to fetch posts");
     }
 
+    const posts: WPPost[] = JSON.parse(rewriteMediaUrls(await res.text()));
+
     return {
-        posts: JSON.parse(rewriteMediaUrls(await res.text())) as WPPost[],
+        cards: posts.map(toCard),
         total: Number(res.headers.get("x-wp-total") ?? 0),
     };
 }
@@ -95,7 +163,7 @@ export async function getPostsByOffset(offset: number, perPage: number) {
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
     const res = await fetch(
         `${BASE_URL}/posts?slug=${encodeURIComponent(slug)}&_embed`,
-        { next: { revalidate: 60 } }
+        CACHE
     );
 
     if (!res.ok) {
@@ -107,11 +175,9 @@ export async function getPostBySlug(slug: string): Promise<WPPost | null> {
 }
 
 // Solo se prerenderizan los mas recientes: el resto se genera bajo demanda para
-// no alargar el build con los 215 posts del archivo.
+// no alargar el build con los 200 y pico posts del archivo.
 export async function getRecentSlugs(limit = 30): Promise<string[]> {
-    const res = await fetch(`${BASE_URL}/posts?per_page=${limit}&_fields=slug`, {
-        next: { revalidate: 60 },
-    });
+    const res = await fetch(`${BASE_URL}/posts?per_page=${limit}&_fields=slug`, CACHE);
 
     if (!res.ok) {
         return [];
@@ -119,26 +185,6 @@ export async function getRecentSlugs(limit = 30): Promise<string[]> {
 
     const posts: Array<{ slug: string }> = await res.json();
     return posts.map((post) => post.slug);
-}
-
-export const BLOG_PLACEHOLDER = "/images/blog-placeholder.svg";
-
-// WordPress ya genera versiones redimensionadas de cada imagen, pero source_url
-// apunta siempre al original: hay destacadas de 5 MB entrando en tarjetas de
-// 430px. Se elige la variante mas pequenya que cubra el ancho que se necesita y
-// solo se cae al original si no hay ninguna.
-export function getFeaturedImage(post: WPPost, minWidth = 768) {
-    const media = post._embedded?.["wp:featuredmedia"]?.[0];
-
-    if (!media) {
-        return BLOG_PLACEHOLDER;
-    }
-
-    const candidates = Object.values(media.media_details?.sizes ?? {})
-        .filter((size) => size.width >= minWidth)
-        .sort((a, b) => a.width - b.width);
-
-    return candidates[0]?.source_url ?? media.source_url ?? BLOG_PLACEHOLDER;
 }
 
 // La mayoria de los posts repiten la imagen destacada como primera figura del
@@ -163,7 +209,7 @@ export function stripLeadingFeaturedImage(content: string, featuredUrl?: string)
         : content;
 }
 
-// Para el sitemap hacen falta los 215, no solo la primera pagina: la API tope a
+// Para el sitemap hacen falta todos, no solo la primera pagina: la API tope a
 // 100 por peticion, asi que se recorre hasta agotar x-wp-totalpages.
 export async function getAllPostRefs(): Promise<Array<{ slug: string; modified: string }>> {
     const perPage = 100;
@@ -174,7 +220,7 @@ export async function getAllPostRefs(): Promise<Array<{ slug: string; modified: 
     do {
         const res = await fetch(
             `${BASE_URL}/posts?per_page=${perPage}&page=${page}&_fields=slug,modified`,
-            { next: { revalidate: 60 } }
+            CACHE
         );
 
         if (!res.ok) {

@@ -1,9 +1,16 @@
 import type { MetadataRoute } from "next";
 import { getAllPostRefs, totalBlogPages } from "@/lib/wordpress";
 
-export const revalidate = 3600;
+// Un dia, como el resto del blog. Al publicar, /api/revalidate lo purga.
+export const revalidate = 86400;
 
 export const SITE_URL = "https://www.360protectivesolutions.com";
+
+// Fecha fija para las rutas que no salen de WordPress. Antes era new Date() en
+// cada regeneracion, y eso le decia a Google que 44 URLs cambiaban cada hora:
+// cuando lastmod miente, Google deja de fiarse tambien del de los posts.
+// Actualizar a mano cuando se cambie de verdad alguna pagina fija.
+const STATIC_LAST_MOD = new Date("2026-09-01");
 
 // Rutas estaticas del sitio. Se listan a mano a proposito: asi anyadir una
 // pagina obliga a decidir su prioridad en vez de colarse sin criterio.
@@ -40,11 +47,9 @@ const staticRoutes: Array<{ path: string; priority: number }> = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const now = new Date();
-
     const pages: MetadataRoute.Sitemap = staticRoutes.map(({ path, priority }) => ({
         url: `${SITE_URL}${path}`,
-        lastModified: now,
+        lastModified: STATIC_LAST_MOD,
         changeFrequency: path === "/blog" ? "daily" : "monthly",
         priority,
     }));
@@ -68,7 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (let page = 2; page <= totalBlogPages(posts.length); page += 1) {
             pages.push({
                 url: `${SITE_URL}/blog/page/${page}`,
-                lastModified: now,
+                lastModified: STATIC_LAST_MOD,
                 changeFrequency: "weekly" as const,
                 priority: 0.4,
             });

@@ -3,6 +3,11 @@
 import Link from "next/link";
 import { Facebook, Linkedin, Instagram } from "lucide-react";
 
+// Fijo a proposito: con new Date() el anyo quedaba grabado en el HTML estatico
+// en el build y el navegador lo recalculaba al hidratar, con aviso de
+// desajuste cada enero. Subirlo en el primer deploy del anyo.
+const COPYRIGHT_YEAR = 2026;
+
 export function Footer() {
     return (
         <footer className="bg-[#222334] text-white py-12 border-t border-white/10">
@@ -60,7 +65,7 @@ export function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 text-center md:text-left">
-                    <p className="mb-4 md:mb-0">&copy; {new Date().getFullYear()} Worldwide Security Options. <br className="md:hidden" /> All rights reserved.</p>
+                    <p className="mb-4 md:mb-0">&copy; {COPYRIGHT_YEAR} Worldwide Security Options. <br className="md:hidden" /> All rights reserved.</p>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
                         <span>NY License #11000123456</span>
                         <span className="hidden md:block">|</span>

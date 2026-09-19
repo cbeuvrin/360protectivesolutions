@@ -8,9 +8,10 @@ import { ArticleCTA } from "@/components/blog/ArticleCTA";
 import { ArticleSidebar } from "@/components/blog/ArticleSidebar";
 import { Footer } from "@/components/Footer";
 import {
+    cardImage,
     formatPostDate,
     getPostBySlug,
-    getPosts,
+    getPostCards,
     getRecentSlugs,
     getFeaturedImage,
     stripHtml,
@@ -18,10 +19,11 @@ import {
     WPPost,
 } from "@/lib/wordpress";
 
-// 60s y no una hora: al publicar desde WordPress el articulo debe aparecer
-// enseguida. Vercel cachea igual, asi que esto es como mucho una peticion por
-// minuto a WordPress, y solo si alguien esta visitando.
-export const revalidate = 60;
+// Un dia. Cada reescritura ISR se factura y con 60s un rastreador bastaba para
+// regenerar todo el blog cada hora. Lo nuevo aparece al momento igualmente:
+// WordPress avisa a /api/revalidate al publicar. Next exige aqui un literal,
+// asi que no se puede importar WP_REVALIDATE.
+export const revalidate = 86400;
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -81,10 +83,11 @@ export default async function BlogPostPage({ params }: PageProps) {
     }
 
     // Se piden de una vez los de la barra lateral y los del final, para no
-    // repetir el mismo articulo en las dos zonas.
-    const pool: WPPost[] = (await getPosts(10)).filter(
-        (item: WPPost) => item.id !== post.id
-    );
+    // repetir el mismo articulo en las dos zonas. Son tarjetas, no posts
+    // enteros: se pintan 8 y se piden 9 por si el actual esta entre ellos.
+    const pool = (await getPostCards(0, 9)).cards
+        .filter((item) => item.id !== post.id)
+        .slice(0, 8);
     const sidebar = pool.slice(0, 5);
     const related = pool.slice(5, 8);
 
@@ -195,19 +198,19 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 >
                                     <div className="relative aspect-video overflow-hidden bg-gray-100">
                                         <PostImage
-                                            src={getFeaturedImage(item)}
-                                            alt={stripHtml(item.title.rendered)}
+                                            src={cardImage(item, "medium")}
+                                            alt={item.alt}
                                             sizes="(max-width: 768px) 100vw, 33vw"
                                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                     </div>
                                     <div className="p-8">
                                         <span className="inline-block px-3 py-1 bg-gray-50 text-blue-600 text-[10px] font-bold border border-blue-600/30 mb-4 rounded-sm">
-                                            {getCategory(item)}
+                                            {item.category}
                                         </span>
                                         <h3
                                             className="text-xl font-bold text-dark-blue tracking-tighter leading-tight mb-6 group-hover:text-primary transition-colors"
-                                            dangerouslySetInnerHTML={{ __html: item.title.rendered }}
+                                            dangerouslySetInnerHTML={{ __html: item.title }}
                                         />
                                         <span className="flex items-center gap-2 text-[10px] font-bold tracking-widest text-dark-blue opacity-50">
                                             <Calendar size={12} className="text-primary" />

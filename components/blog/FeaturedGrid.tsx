@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { Eye, User, Calendar } from "lucide-react";
 import Link from "next/link";
-import { WPPost, formatPostDate, getFeaturedImage } from "@/lib/wordpress";
+import { PostCard, cardImage, formatPostDate } from "@/lib/wordpress";
 import { PostImage } from "@/components/blog/PostImage";
 
 interface FeaturedGridProps {
-    posts: WPPost[];
+    posts: PostCard[];
 }
 
 export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
@@ -15,10 +15,6 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
 
     // Use the first 4 posts for the grid
     const displayPosts = posts.slice(0, 4);
-
-    const getCategory = (post: WPPost) => {
-        return post._embedded?.["wp:term"]?.[0]?.[0]?.name || "Uncategorized";
-    };
 
     return (
         <section className="py-12 px-6 md:px-12 lg:px-24 bg-gray-50/50">
@@ -45,17 +41,17 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                         >
                             <Link href={`/blog/${displayPosts[0].slug}`} className="block h-full cursor-pointer">
                                 <PostImage
-                                    src={getFeaturedImage(displayPosts[0], 1536)}
-                                    alt={displayPosts[0].title.rendered}
+                                    src={cardImage(displayPosts[0], "large")}
+                                    alt={displayPosts[0].alt}
                                     sizes="(max-width: 1024px) 100vw, 66vw"
                                     priority
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
                                     <span className="bg-primary/95 text-white font-black  text-[10px] tracking-[0.3em] py-1.5 px-4 mb-6 inline-block w-fit">
-                                        {getCategory(displayPosts[0])}
+                                        {displayPosts[0].category}
                                     </span>
-                                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tighter leading-none group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[0].title.rendered }} />
+                                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tighter leading-none group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[0].title }} />
                                     <div className="flex gap-6 mt-4 opacity-70">
                                         <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-white">
                                             <Calendar size={14} className="text-primary" /> {formatPostDate(displayPosts[0].date)}
@@ -79,16 +75,16 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                             >
                                 <Link href={`/blog/${displayPosts[1].slug}`} className="block h-full cursor-pointer">
                                     <PostImage
-                                        src={getFeaturedImage(displayPosts[1])}
-                                        alt={displayPosts[1].title.rendered}
+                                        src={cardImage(displayPosts[1], "medium")}
+                                        alt={displayPosts[1].alt}
                                         sizes="(max-width: 1024px) 100vw, 33vw"
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent flex flex-col justify-end p-8">
                                         <span className="bg-primary/95 text-white font-black text-[10px] tracking-[0.3em] py-1.5 px-4 mb-4 inline-block w-fit">
-                                            {getCategory(displayPosts[1])}
+                                            {displayPosts[1].category}
                                         </span>
-                                        <h3 className="text-xl md:text-2xl font-bold text-white tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[1].title.rendered }} />
+                                        <h3 className="text-xl md:text-2xl font-bold text-white tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: displayPosts[1].title }} />
                                         <div className="flex gap-4 mt-6 opacity-60">
                                             <div className="flex items-center gap-2 text-[10px] font-bold tracking-widest text-white">
                                                 <Calendar size={12} className="text-primary" /> {formatPostDate(displayPosts[1].date)}
@@ -112,16 +108,16 @@ export const FeaturedGrid = ({ posts }: FeaturedGridProps) => {
                                 >
                                     <Link href={`/blog/${post.slug}`} className="block h-full cursor-pointer">
                                         <PostImage
-                                            src={getFeaturedImage(post)}
-                                            alt={post.title.rendered}
+                                            src={cardImage(post, "medium")}
+                                            alt={post.alt}
                                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 17vw"
                                             className="object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent flex flex-col justify-end p-6">
                                             <span className="bg-primary/95 text-white font-black text-[8px] tracking-[0.3em] py-1 px-3 mb-3 inline-block w-fit">
-                                                {getCategory(post)}
+                                                {post.category}
                                             </span>
-                                            <h4 className="text-[10px] md:text-xs font-bold text-white tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                                            <h4 className="text-[10px] md:text-xs font-bold text-white tracking-tighter leading-tight group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title }} />
                                             <div className="flex gap-3 mt-4 opacity-50">
                                                 <div className="flex items-center gap-2 text-[8px] font-bold text-white">
                                                     <Calendar size={10} className="text-primary font-black" /> {formatPostDate(post.date)}

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Calendar } from "lucide-react";
-import { WPPost, formatPostDate, getFeaturedImage, stripHtml } from "@/lib/wordpress";
+import { PostCard, cardImage, formatPostDate } from "@/lib/wordpress";
 import { PostImage } from "@/components/blog/PostImage";
 
 interface ArticleSidebarProps {
-    posts: WPPost[];
+    posts: PostCard[];
 }
 
 /**
@@ -35,8 +35,8 @@ export const ArticleSidebar = ({ posts }: ArticleSidebarProps) => {
                         >
                             <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-sm bg-gray-100">
                                 <PostImage
-                                    src={getFeaturedImage(post, 300)}
-                                    alt={stripHtml(post.title.rendered)}
+                                    src={cardImage(post, "small")}
+                                    alt={post.alt}
                                     sizes="80px"
                                     className="object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0"
                                 />
@@ -45,7 +45,7 @@ export const ArticleSidebar = ({ posts }: ArticleSidebarProps) => {
                             <div className="flex-1">
                                 <h3
                                     className="mb-2 text-[13px] font-bold leading-snug tracking-tight text-dark-blue transition-colors group-hover:text-primary"
-                                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                                    dangerouslySetInnerHTML={{ __html: post.title }}
                                 />
                                 <span className="flex items-center gap-1.5 text-[9px] font-bold tracking-widest text-dark-blue opacity-40">
                                     <Calendar size={10} className="text-primary" />

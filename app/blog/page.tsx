@@ -6,16 +6,17 @@ import { FeaturedGrid } from "@/components/blog/FeaturedGrid";
 import { MostReadSection } from "@/components/blog/MostReadSection";
 import { Pagination } from "@/components/blog/Pagination";
 import {
-    getPostsByOffset,
+    getPostCards,
     POSTS_ON_FIRST_PAGE,
     totalBlogPages,
-    WPPost,
+    PostCard,
 } from "@/lib/wordpress";
 
-// 60s y no una hora: al publicar desde WordPress el articulo debe aparecer
-// enseguida. Vercel cachea igual, asi que esto es como mucho una peticion por
-// minuto a WordPress, y solo si alguien esta visitando.
-export const revalidate = 60;
+// Un dia. Cada reescritura ISR se factura y con 60s un rastreador bastaba para
+// regenerar todo el blog cada hora. Lo nuevo aparece al momento igualmente:
+// WordPress avisa a /api/revalidate al publicar. Next exige aqui un literal,
+// asi que no se puede importar WP_REVALIDATE.
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
     title: "WSO Strategic Blog | Worldwide Security Options",
@@ -26,13 +27,13 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
     // Se resuelve en el servidor: el HTML ya sale con los posts y el navegador
     // se ahorra descargar la respuesta de la API de WordPress.
-    let posts: WPPost[] = [];
+    let posts: PostCard[] = [];
     let pages = 1;
     let failed = false;
 
     try {
-        const { posts: firstPage, total } = await getPostsByOffset(0, POSTS_ON_FIRST_PAGE);
-        posts = firstPage;
+        const { cards, total } = await getPostCards(0, POSTS_ON_FIRST_PAGE);
+        posts = cards;
         pages = totalBlogPages(total);
     } catch (error) {
         console.error("Error loading posts:", error);
